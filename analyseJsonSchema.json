@@ -1,0 +1,166 @@
+{
+  "type": "object",
+  "properties": {
+    "series": {
+      "type": "object",
+      "properties": {
+        "description": { "type": "string", "description": "对于整体剧本风格的描述，用尽量简短的字数来描述" }
+      },
+      "required": ["description"],
+      "additionalProperties": false
+    },
+    "characters": {
+      "type": "array",
+      "description": "角色列表",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "description": "角色ID，相同角色需要使用相同ID" },
+          "name": { "type": "string", "description": "角色名称" },
+          "description": { "type": "string", "description": "角色描述" },
+          "appearance_prompt": { "type": "string", "description": "人物长相描述" },
+          "styles": {
+            "type": "array",
+            "description": "角色造型",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string", "description": "标题" },
+                "prompt": { "type": "string", "description": "造型提示词" }
+              },
+              "required": ["title"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["id", "name"],
+        "additionalProperties": false
+      }
+    },
+    "scenes": {
+      "type": "array",
+      "description": "场景列表",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "description": "场景ID，相同场景需要使用相同ID" },
+          "name": { "type": "string", "description": "名称" },
+          "description": { "type": "string", "description": "场景描述" },
+          "areas": {
+            "type": "array",
+            "description": "场景区域",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string", "description": "标题" },
+                "reference_objects": { "type": "string", "description": "参照物" },
+                "prompt": { "type": "string", "description": "提示词" }
+              },
+              "required": ["title"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["id", "name"],
+        "additionalProperties": false
+      }
+    },
+    "creatures": {
+      "type": "array",
+      "description": "生物列表",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "description": "生物ID" },
+          "name": { "type": "string", "description": "名称" },
+          "description": { "type": "string", "description": "生物描述" },
+          "prompt": { "type": "string", "description": "提示词" }
+        },
+        "required": ["id", "name"],
+        "additionalProperties": false
+      }
+    },
+    "props": {
+      "type": "array",
+      "description": "道具列表",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "description": "道具ID" },
+          "name": { "type": "string", "description": "名称" },
+          "description": { "type": "string", "description": "道具描述" },
+          "prompt": { "type": "string", "description": "提示词" }
+        },
+        "required": ["id", "name"],
+        "additionalProperties": false
+      }
+    },
+    "storyboards": {
+      "type": "array",
+      "description": "分镜列表",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string", "description": "标题" },
+          "summary": { "type": "string", "description": "故事整体摘要" },
+          "script": { "type": "string", "description": "当前分镜使用到的剧本原文" },
+          "sort_order": { "type": "integer", "description": "分镜列表排序" },
+          "scenes": {
+            "type": "array",
+            "description": "分镜场景列表",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string", "description": "分镜场景标题" },
+                "script": { "type": "string", "description": "当前场景用到的剧本原文" },
+                "sort_order": { "type": "integer", "description": "场景排序" },
+                "storyboard_scenes": { "type": "string", "description": "分镜对应场景ID" },
+                "storyboard_characters": {
+                  "type": "array",
+                  "description": "分镜出现人物ID列表",
+                  "items": { "type": "string" }
+                },
+                "shots": {
+                  "type": "array",
+                  "description": "镜头列表",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": { "type": "string", "description": "标题" },
+                      "shot_summary": { "type": "string", "description": "分镜描述" },
+                      "sort_order": { "type": "integer", "description": "镜头的展示位置排序" },
+                      "shot_scenes": { "type": "string", "description": "镜头对应场景ID" },
+                      "shot_characters": {
+                        "type": "array",
+                        "description": "镜头对应人物ID列表",
+                        "items": { "type": "string" }
+                      },
+                      "shot_props": {
+                        "type": "array",
+                        "description": "镜头对应道具ID列表",
+                        "items": { "type": "string" }
+                      },
+                      "shot_creatures": {
+                        "type": "array",
+                        "description": "镜头对应生物ID列表",
+                        "items": { "type": "string" }
+                      }
+                    },
+                    "required": ["title", "shot_summary", "sort_order", "shot_scenes"],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": ["title", "script", "sort_order", "storyboard_scenes"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["title", "summary", "script"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["characters", "scenes", "creatures", "props", "storyboards"],
+  "additionalProperties": false
+}

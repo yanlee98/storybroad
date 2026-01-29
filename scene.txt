@@ -1,0 +1,349 @@
+```json
+{
+  "script_info": {
+    "script_description": "灾难求生+系统逆袭+黄金瞳超能力+沙漠生存冒险"
+  },
+  "characters": [
+    {
+      "character_id": "C1",
+      "character_name": "沈乐",
+      "character_background": "7岁生存专家，拥有黄金瞳超能力，冷静睿智的灾难求生者",
+      "character_appearance_prompt": "7岁男孩，稚嫩脸庞，大眼睛明亮聪慧，短发黑色整齐，肤色健康，眼神坚毅锐利",
+      "character_style_prompt": "儿童休闲装，黄色卡通帽子，小书包，简单T恤短裤，运动鞋"
+    },
+    {
+      "character_id": "C2",
+      "character_name": "沈明远",
+      "character_background": "沈乐父亲，沉稳中年男人，关爱家人但初期不信任儿子",
+      "character_appearance_prompt": "中年男性，35-40岁，方脸浓眉，短发微卷，肤色偏深，眼神关切",
+      "character_style_prompt": "商务休闲装，深色衬衫，休闲长裤，皮鞋，稳重成熟"
+    },
+    {
+      "character_id": "C3",
+      "character_name": "林芳",
+      "character_background": "沈乐母亲，温柔坚强，后期完全信任儿子判断",
+      "character_appearance_prompt": "35岁左右女性，温柔面容，长发束起，眉眼慈爱，肤色白皙",
+      "character_style_prompt": "简约妈妈装，浅色上衣，舒适长裤，平底鞋，实用配饰"
+    },
+    {
+      "character_id": "C4",
+      "character_name": "沈悦",
+      "character_background": "沈乐妹妹，年幼胆小，依赖哥哥保护",
+      "character_appearance_prompt": "5-6岁小女孩，圆圆脸蛋，大眼睛含泪，齐肩发，肤色粉嫩",
+      "character_style_prompt": "儿童连衣裙，小皮鞋，可爱发饰，娇小柔弱"
+    },
+    {
+      "character_id": "C5",
+      "character_name": "赵亮",
+      "character_background": "赵氏集团老板，傲慢刻薄，初期质疑沈乐",
+      "character_appearance_prompt": "中年男性，肥胖体型，圆脸油腻，小眼睛，金链子墨镜",
+      "character_style_prompt": "暴发户装扮，大金表金链子，名牌服装，墨镜，嚣张姿态"
+    },
+    {
+      "character_id": "C6",
+      "character_name": "周丽",
+      "character_background": "赵亮女友，娇气刻薄，跟随赵亮质疑沈乐",
+      "character_appearance_prompt": "年轻女性，浓妆艳抹，长发波浪，尖下巴，长美甲",
+      "character_style_prompt": "性感装扮，紧身裙，高跟鞋，夸张首饰，娇气表情"
+    },
+    {
+      "character_id": "C7",
+      "character_name": "陈昊",
+      "character_background": "理智乘客，后期认可沈乐能力并协助",
+      "character_appearance_prompt": "30岁男性，端正五官，短发利落，肤色健康，眼神正直",
+      "character_style_prompt": "休闲运动装，T恤牛仔裤，运动鞋，实用背包"
+    },
+    {
+      "character_id": "C8",
+      "character_name": "小胖(王德发)",
+      "character_background": "乐观胖子乘客，幽默风趣，后期信任沈乐",
+      "character_appearance_prompt": "年轻男性，圆胖体型，圆脸憨厚，短发，笑容可掬",
+      "character_style_prompt": "宽松休闲装，大号T恤，运动裤，胖乎乎形象"
+    },
+    {
+      "character_id": "C9",
+      "character_name": "老王",
+      "character_background": "普通乘客，沉默寡言但关键时刻配合",
+      "character_appearance_prompt": "中年男性，普通面容，短发花白，肤色偏黑，沉稳表情",
+      "character_style_prompt": "简单工装，深色外套，耐磨裤子，朴实装扮"
+    },
+    {
+      "character_id": "C10",
+      "character_name": "马超",
+      "character_background": "暴躁乘客，初期质疑沈乐，后期后悔",
+      "character_appearance_prompt": "30岁男性，粗犷面容，寸头，浓眉大眼，暴躁表情",
+      "character_style_prompt": "运动装束，背心短裤，肌肉体型，急躁姿态"
+    },
+    {
+      "character_id": "C11",
+      "character_name": "老陈",
+      "character_background": "年长乘客，经验丰富但保守",
+      "character_appearance_prompt": "50岁男性，皱纹明显，灰白短发，沧桑面容，沉稳眼神",
+      "character_style_prompt": "传统服装，衬衫长裤，老式皮鞋，保守风格"
+    },
+    {
+      "character_id": "C12",
+      "character_name": "刘色",
+      "character_background": "普通乘客，随大流行动",
+      "character_appearance_prompt": "年轻男性，普通长相，短发，中等身材，中性表情",
+      "character_style_prompt": "日常休闲装，T恤牛仔裤，普通鞋款"
+    },
+    {
+      "character_id": "C13",
+      "character_name": "向真",
+      "character_background": "女性乘客，胆小谨慎",
+      "character_appearance_prompt": "年轻女性，清秀面容，长发披肩，柔弱气质，担忧表情",
+      "character_style_prompt": "淑女装扮，连衣裙，平底鞋，温柔风格"
+    },
+    {
+      "character_id": "C14",
+      "character_name": "季仁",
+      "character_background": "自私乘客，为自保推倒沈悦引发危机",
+      "character_appearance_prompt": "中年男性，瘦削面容，尖下巴，眼神闪烁，自私表情",
+      "character_style_prompt": "普通西装，衬衫领带，文弱书生样"
+    },
+    {
+      "character_id": "C15",
+      "character_name": "冯狂",
+      "character_background": "受伤乘客，腿部流血但坚持求生",
+      "character_appearance_prompt": "中年男性，痛苦面容，腿部受伤，咬牙坚持，坚强表情",
+      "character_style_prompt": "受伤状态，破损衣物，绷带包扎，狼狈但顽强"
+    },
+    {
+      "character_id": "C16",
+      "character_name": "丁蕊",
+      "character_background": "空乘人员，专业尽责但初期不信沈乐",
+      "character_appearance_prompt": "年轻女性，端庄面容，盘发整齐，空乘妆容，专业表情",
+      "character_style_prompt": "空乘制服，丝巾领结，高跟鞋，专业干练"
+    },
+    {
+      "character_id": "C17",
+      "character_name": "幸存者甲",
+      "character_background": "普通幸存者，随众行动",
+      "character_appearance_prompt": "普通男性，中等年龄，大众面容，惊恐表情",
+      "character_style_prompt": "日常服装，简单实用，普通装扮"
+    },
+    {
+      "character_id": "C18",
+      "character_name": "幸存者乙",
+      "character_background": "普通幸存者，跟随大部队",
+      "character_appearance_prompt": "普通女性，中等年龄，平凡面容，担忧神情",
+      "character_style_prompt": "日常女装，舒适实用，普通风格"
+    },
+    {
+      "character_id": "C19",
+      "character_name": "李教授",
+      "character_background": "考古探险队领队，傲慢专家后被事实打脸",
+      "character_appearance_prompt": "50岁男性，学者面容，金丝眼镜，灰白头发，傲慢表情",
+      "character_style_prompt": "学者装扮，卡其色探险服，眼镜，专业装备"
+    },
+    {
+      "character_id": "C20",
+      "character_name": "小胡",
+      "character_background": "探险队员，忠诚于李教授",
+      "character_appearance_prompt": "年轻男性，精悍面容，短发，健壮体型，专注表情",
+      "character_style_prompt": "探险队制服，实用装备，干练形象"
+    },
+    {
+      "character_id": "C21",
+      "character_name": "林娜",
+      "character_background": "女性探险队员，冷静专业",
+      "character_appearance_prompt": "年轻女性，英气面容，马尾辫，健康肤色，坚毅眼神",
+      "character_style_prompt": "女性探险装，实用服装，运动鞋，干练风格"
+    },
+    {
+      "character_id": "C22",
+      "character_name": "小李",
+      "character_background": "年轻探险队员，尊重教授但有自己的判断",
+      "character_appearance_prompt": "20多岁男性，青春面容，短发，阳光气质，认真表情",
+      "character_style_prompt": "探险队年轻装束，活力四射，专业装备"
+    },
+    {
+      "character_id": "C23",
+      "character_name": "庄强",
+      "character_background": "探险队员，经验丰富",
+      "character_appearance_prompt": "中年男性，粗犷面容，短发，肌肉发达，沉稳表情",
+      "character_style_prompt": "资深探险装，耐磨服装，实用装备"
+    },
+    {
+      "character_id": "C24",
+      "character_name": "马贪",
+      "character_background": "探险队员，跟随队伍行动",
+      "character_appearance_prompt": "普通男性，中等年纪，平凡面容，专注神情",
+      "character_style_prompt": "标准探险装，统一制服，专业形象"
+    },
+    {
+      "character_id": "C25",
+      "character_name": "火人",
+      "character_background": "越野车司机，被雷击烧死",
+      "character_appearance_prompt": "中年男性，司机形象，普通面容，惊恐表情",
+      "character_style_prompt": "司机服装，简单实用，悲剧命运"
+    },
+    {
+      "character_id": "C26",
+      "character_name": "司机",
+      "character_background": "探险队司机，专业驾驶",
+      "character_appearance_prompt": "专业司机形象，专注面容，沉稳气质",
+      "character_style_prompt": "司机制服，专业装备，稳重风格"
+    },
+    {
+      "character_id": "C27",
+      "character_name": "探险队员A",
+      "character_background": "普通探险队员",
+      "character_appearance_prompt": "探险队员标准形象，健康肤色，专业表情",
+      "character_style_prompt": "探险队统一服装，实用装备"
+    },
+    {
+      "character_id": "C28",
+      "character_name": "探险队员B",
+      "character_background": "探险队员，车祸/龙卷风中死亡",
+      "character_appearance_prompt": "年轻男性，探险队员形象，悲剧命运",
+      "character_style_prompt": "标准探险装，遇难状态"
+    },
+    {
+      "character_id": "C29",
+      "character_name": "探险队员C",
+      "character_background": "探险队员，车祸/龙卷风中死亡",
+      "character_appearance_prompt": "普通队员，遇难形象，惊恐表情",
+      "character_style_prompt": "探险服装，悲剧结局"
+    },
+    {
+      "character_id": "C30",
+      "character_name": "探险队员D",
+      "character_background": "幸存探险队员",
+      "character_appearance_prompt": "探险队员，劫后余生，疲惫面容",
+      "character_style_prompt": "破损探险装，幸存状态"
+    },
+    {
+      "character_id": "C31",
+      "character_name": "探险队员甲",
+      "character_background": "最后幸存探险队员",
+      "character_appearance_prompt": "坚韧队员，顽强求生，坚定眼神",
+      "character_style_prompt": "探险队服装，幸存者形象"
+    }
+  ],
+  "backdrops": [
+    {
+      "backdrop_id": "B1",
+      "backdrop_name": "场1-1 ⽇ 内 飞机头等舱",
+      "backdrop_prompt": "飞机头等舱内景，白天光线，豪华真皮座椅，精致内饰，舷窗透入阳光，高级航空氛围，突发颠簸混乱状态，物品散落，乘客惊恐"
+    },
+    {
+      "backdrop_id": "B2",
+      "backdrop_name": "场1-2 ⽇ 外 沙漠，飞机残骸",
+      "backdrop_prompt": "沙漠飞机坠毁现场，烈日灼烧，黄沙漫天，飞机残骸散落，浓烟滚滚，幸存者狼狈爬出，荒凉绝望的沙漠景观"
+    },
+    {
+      "backdrop_id": "B3",
+      "backdrop_name": "场2-1 ⽇ 外 沙漠，飞机残骸",
+      "backdrop_prompt": "沙漠风暴前夕，风力增强，沙砾飞扬，飞机残骸作为背景，天空阴暗，沙尘暴逼近的压迫感，幸存者恐慌聚集"
+    },
+    {
+      "backdrop_id": "B4",
+      "backdrop_name": "场2-2 ⽇ 外 沙漠",
+      "backdrop_prompt": "沙漠探险队营地，几顶帐篷，越野车停靠，骆驼群，敦煌考古队标志，风沙中的模糊轮廓，求生希望与危机并存"
+    },
+    {
+      "backdrop_id": "B5",
+      "backdrop_name": "场3-1 ⽇ 外 沙漠，探险队营地处",
+      "backdrop_prompt": "龙卷风肆虐沙漠，乌云密布，闪电撕裂天空，帐篷被撕碎，越野车翻倒，沙石飞舞，地狱般的风暴场景"
+    },
+    {
+      "backdrop_id": "B6",
+      "backdrop_name": "场3-2 ⽇ 外 沙漠，风暴中",
+      "backdrop_prompt": "上帝视角沙漠风暴，巨大龙卷风连接天地，沙墙遮天，闪电如骨架，渺小车队驼队在风暴中挣扎求生"
+    },
+    {
+      "backdrop_id": "B7",
+      "backdrop_name": "场4-1 ⽇ 外 巨石缝隙，龙卷风边缘",
+      "backdrop_prompt": "巨石缝隙避难所，狭窄空间，众人挤在一起，外面龙卷风咆哮，闪电频现，紧张压抑的求生环境"
+    },
+    {
+      "backdrop_id": "B8",
+      "backdrop_name": "场4-2 ⽇ 外 巨石缝隙，龙卷风边缘",
+      "backdrop_prompt": "巨石缝隙内救援场景，众人拉拽绳子，紧张计时，风沙呼啸，血迹斑斑的绳子，生死攸关的救援行动"
+    },
+    {
+      "backdrop_id": "B9",
+      "backdrop_name": "场4-3 ⽇ 外 巨石缝隙，龙卷风边缘",
+      "backdrop_prompt": "风暴中沈乐救妹场景，狂风肆虐，沈悦在风中挣扎，沈乐艰难前进，闪电威胁，兄妹生死相依"
+    },
+    {
+      "backdrop_id": "B10",
+      "backdrop_name": "场5-1 ⽇ 外 巨石缝隙，龙卷风边缘",
+      "backdrop_prompt": "风暴过后沙漠，天空转晴，阳光刺眼，沈乐护着妹妹趴在地上，众人赶来救援，劫后余生的感人场景"
+    }
+  ],
+  "creatures": [
+    {
+      "creature_id": "CR1",
+      "creature_name": "神秘地下生物",
+      "creature_prompt": "蜥蜴躯干与锯鳞蝰蛇头颅结合的巨型地下生物，布满毒瘤，在地下游弋，恐怖威胁"
+    }
+  ],
+  "props": [
+    {
+      "prop_id": "P1",
+      "prop_name": "瑞士军刀",
+      "prop_prompt": "多功能瑞士军刀，红色外壳，金属质感，多种工具组合，求生必备利器"
+    },
+    {
+      "prop_id": "P2",
+      "prop_name": "打火机",
+      "prop_prompt": "金属打火机，实用型，沙漠求生重要火源工具"
+    },
+    {
+      "prop_id": "P3",
+      "prop_name": "安全带绳索",
+      "prop_name": "安全带绳索",
+      "prop_prompt": "飞机安全带改造的救援绳索，结实耐用，血迹斑斑，救命工具"
+    },
+    {
+      "prop_id": "P4",
+      "prop_name": "小书包",
+      "prop_prompt": "沈乐的卡通小书包，黄色帽子搭配，装有求生物资，重要储物工具"
+    },
+    {
+      "prop_id": "P5",
+      "prop_name": "半瓶酒",
+      "prop_prompt": "飞机上遗留的半瓶酒，玻璃瓶装，求生时可能用作消毒或取暖"
+    },
+    {
+      "prop_id": "P6",
+      "prop_name": "金丝眼镜",
+      "prop_prompt": "李教授的金丝边眼镜，学者象征，傲慢知识的代表"
+    },
+    {
+      "prop_id": "P7",
+      "prop_name": "秒表",
+      "prop_prompt": "李教授的精密秒表，金属外壳，专业计时工具，救援关键时刻使用"
+    },
+    {
+      "prop_id": "P8",
+      "prop_name": "探险队越野车",
+      "prop_prompt": "沙漠探险越野车，印有敦煌考古队logo，专业装备，风暴中危险选择"
+    },
+    {
+      "prop_id": "P9",
+      "prop_name": "骆驼",
+      "prop_prompt": "沙漠骆驼，10匹群体，焦躁不安，风暴中安全交通工具"
+    },
+    {
+      "prop_id": "P10",
+      "prop_name": "帐篷",
+      "prop_prompt": "探险队航天级复合材料帐篷，深地螺旋锚固定，但最终被风暴撕碎"
+    }
+  ],
+  "episode_id": "EP1",
+  "episode_backdrops_sequence": [
+    {
+      "episode_backdrop": ["B1"],
+      "backdrop_related_characters": ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10", "C11", "C12", "C13", "C14", "C15", "C16", "C17", "C18"],
+      "backdrop_related_creatures": [],
+      "backdrop_related_props": [],
+      "episode_backdrop_description": "飞机头等舱内突发剧烈颠簸，沈乐觉醒黄金瞳系统预知飞机失事，但遭到赵亮等人质疑。飞机右翼引擎爆炸，机身剧烈倾斜坠毁，幸存者们陷入恐慌。",
+      "backdrop_script_content": "场1-1 ⽇ 内 飞机头等舱 ​\n人物：沈乐、沈明远、林芳、沈悦、赵亮、周丽、陈昊、小胖(王德发)、老王、马超、老陈、刘色、向真、季仁、冯狂、丁蕊、幸存者甲、幸存者乙 本集死亡：无​\n【镜头语言：开场即是剧烈颠簸的特写镜头——咖啡杯从桌上滑落摔碎，行李箱从行李架砸下，氧气罩掉下来，乘客的脸因失重而扭曲。】 【音效：警报声大作，乘客们的尖叫、哭喊，场面一片混乱。】 ​\n△飞机猛地失速下坠， 画面陷入彻底的黑暗！ 【音效：刺耳的金属撕裂声后，画面陷入彻底的黑暗与死寂。】​\n【黑暗中，7岁的沈乐猛然睁眼，他惊恐地大口喘息，惊骇地发现自己回到了飞机上。】 ​\n系统音：（机械音，在黑暗中响起）多灾难求生系统已启动！宿主沈乐，任务：带领家人度过所有灾难，可回到现实世界获得100亿！​\n沈乐：（内心OS，惊骇）我一个顶尖的生存专家，竟然被卷进了这种鬼系统里！​\n∆突然沈乐眼中闪过一道金光，​\n系统音： (机械音)新手金手指\"黄金瞳\"已激活。第一个灾难即将来临。​\n沈乐惊喜OS：黄金瞳？！ （用力闭眼睛再睁开眼睛，眼中闪过一道金色数据流，惊喜扫视机身，整个机舱在他眼中瞬间变成半透明的线框结构图）这黄金瞳竟然能看透物体结构！！​\n∆扫视飞机的沈乐，突然眉头紧锁，神色紧张OS：糟了！第一个灾难，是飞机失事！！已经撑不住了！​\n【沈乐视角：机右翼引擎核心的一个连接件上布满了细微的金属疲劳裂缝，】​\n【特效：裂缝处闪烁着危险的红色警报光芒】，在巨大的气流压力下，正以惊人的速度扩大！ ​\n∆他猛地看向父母， 稚嫩的脸上满是与年龄不符的焦急，额头甚至渗出细密的冷汗。 ​\n沈乐：（急切，声音带着一丝颤抖）爸！妈！我们得马上做好防冲击准备！这飞机要出事了！ ​\n∆坐在前排挂着金链子，戴着墨镜，带着大金表的赵亮听到了， 他不耐烦回头瞥了一眼沈乐。 ​\n赵亮：（语气刻薄、嫌弃大声呵斥）经济舱的穷鬼，能不能管好自己家熊孩子？咒大家呢？！​\n周丽：（娇嗔地白了赵亮一眼，又看向沈乐一家，语气阴阳怪气）就是，飞机哪那么容易出事，一看就是第一次坐飞机，没见识！！​\n∆【陈昊正在放好行李，听到沈乐的话，皱了皱眉。】​\n沈明远瞪了一眼赵亮方向：（皱眉呵斥）乐乐，别乱开这种玩笑！不吉利！ ​\n∆小胖从前排探出头，笑嘻嘻地说：\"没事儿！小孩子嘛！（看沈乐）小帅哥是不是灾难片看多了？！害怕了？...那都是假的！！（锤座椅靠背）咱飞机结实着呢！​\n沈乐着急：我不是...​\n林芳温柔摸沈乐头打断：乐乐听话，再坚持一下，等到了敦煌，带你和妹妹去看壁画上的仙女儿！​\n沈乐：(语气急切坚定) 妈！我说的是真的！！​\n沈乐立刻朝丁蕊急迫大喊：乘务组快通知所有人抱头！防冲击！飞机右翼引擎出现严重故障，马上就要爆炸了！（丁蕊严肃不解的朝沈乐走来）​\n赵亮：(不耐烦起身指着乐乐，怒目圆瞪，凶狠大骂) 你这熊孩子没完了是吧？！你爹妈不教育你，我替他们教育！（怒走向沈乐，大骂）飞机开好好的怎么会爆炸？？！我看你特么就是欠揍了！（抬手要打沈乐）​\n∆就在赵亮话音，抬起手的瞬间—— ​\n∆轰隆！一声巨响，右翼引擎彻底爆炸，一团火球在窗外爆开！机身剧烈倾斜！ ​\n∆突然失重感瞬间袭来，机舱内所有人都被甩得东倒西歪。​\n∆沈明远和林芳猛地回头看向沈乐，脸上血色尽失，眼神里混杂着惊恐与难以置信。​\n△众人惊慌，​\n∆赵亮脸上的肉都在颤抖，墨镜已经斜着卡在脸上，露出惊恐紧张的嘴脸。​\n赵亮：（紧张快速）我草我草我草我草...（崩溃大喊）飞机真特么出事啦~！..​\n周丽则闭着眼睛，有着长美甲的双手抓扣紧赵亮手臂边晃边大声尖叫：啊~~~~...我不想死啊！.....​\n△突然飞机晃动更加剧烈，幅度更大，氧气面罩迅速掉落，有的人从座椅上弹起，但被安全带拽着，行李纷纷掉落，砸到乘客，所有物品乱飞。​\n△丁蕊摔到陈昊身上，又被甩到另一边撞到另一侧扶手上。小胖惊慌要带氧气面罩。​\n沈乐：（眼神坚定，大吼，用最简洁的指令）都把头低下！抱紧！飞机要坠下去了！！​\n∆沈明远和林芳迅速做出防撞姿势，林芳还一个手护着沈悦，身体朝沈悦那边倾侧，沈明远则一手护着自己，一手护着沈乐。​\n机长V.O：（声音绝望，夹杂电流声）Mayday！Mayday！我们坠机了！​\n∆机翼带着火团冒着黑烟，极速向下坠落。​\n△窗外的沙漠地面急速放大。在一声震耳欲聋的巨响和金属撕裂声中，画面再次陷入黑暗。"
+    }
+  ]
+}
+```
