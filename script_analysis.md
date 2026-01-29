@@ -34,6 +34,8 @@
 3. **道具/生物描述**：prop_prompt和creature_prompt控制在60字以内
 4. **剧集描述**：episode_description控制在30字以内
 5. **剧集内容**：episode_content存储剧集剧本原文（完整内容）
+    - 如果单个剧集内容过长导致接近32k tokens限制，优先保证episode_content的完整性
+    - 如必要，可适当精简其他字段的描述，但episode_content必须完整
 
 ## 解析目标
 
