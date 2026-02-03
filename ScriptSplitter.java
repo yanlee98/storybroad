@@ -12,11 +12,40 @@ import java.util.regex.Pattern;
  * 
  * 功能：将完整剧本按照分集标识自动切割为多个独立集数
  * 
- * 支持的分集标识格式：
- * - 数字+点：1.标题、2.标题
- * - 数字+顿号：1、标题、2、标题
- * - 第X集：第1集 标题、第2集 标题
- * - 中文数字：第一集 标题、第二集 标题
+ * 支持的分集标识格式（仅支持"第X集"格式）：
+ * 
+ * 基础格式：
+ * - 第1集、第2集、第3集
+ * - 第一集、第二集、第三集（中文数字）
+ * 
+ * 带标题格式（支持多种分隔符）：
+ * - 第1集 标题（空格分隔）
+ * - 第1集.标题（点号分隔）
+ * - 第1集、标题（顿号分隔）
+ * - 第1集:标题（英文冒号）
+ * - 第1集：标题（中文冒号）
+ * - 第1集——标题（破折号）
+ * - 第1集-标题（连字符）
+ * 
+ * 带括号格式：
+ * - 【第1集】标题（方括号）
+ * - 《第1集》标题（书名号）
+ * - （第1集）标题（圆括号）
+ * - [第1集]标题（英文方括号）
+ * 
+ * 括号+分隔符组合：
+ * - 【第1集】:标题、《第一集》.标题 等
+ * 
+ * 输出格式：
+ * {
+ *   "episodes": [
+ *     {
+ *       "episode_id": "EP1",
+ *       "episode_name": "第1集",  // 只输出"第X集"，不包含标题
+ *       "episode_content": "剧本内容..."
+ *     }
+ *   ]
+ * }
  * 
  * 依赖：org.json
  * Maven: 
@@ -27,14 +56,16 @@ import java.util.regex.Pattern;
  * </dependency>
  * 
  * @author 剧本分集系统
- * @version 1.0
+ * @version 2.0
  */
 public class ScriptSplitter {
     
     // 正则表达式：匹配所有支持的分集标识格式
+    // private static final String EPISODE_REGEX = 
+    //     "(?:^|\\n)\\s*(\\d+)[\\.、]\\s*([^\\n]*?)\\s*$" +
+    //     "|(?:^|\\n)\\s*[【《(\\[]?\\s*((?:第)?(?:[一二三四五六七八九十百]+|\\d+)\\s*集)\\s*[】》)\\]]?\\s*[:：——\\-]?\\s*([^\\n]*?)\\s*$";
     private static final String EPISODE_REGEX = 
-        "(?:^|\\n)\\s*(\\d+)[\\.、]\\s*([^\\n]*?)\\s*$" +
-        "|(?:^|\\n)\\s*[【《(\\[]?\\s*((?:第)?(?:[一二三四五六七八九十百]+|\\d+)\\s*集)\\s*[】》)\\]]?\\s*[:：——\\-]?\\s*([^\\n]*?)\\s*$";
+    "(?:^|\\n)\\s*[【《(（\\[]?\\s*((?:第)?(?:[一二三四五六七八九十百]+|\\d+)\\s*集)\\s*[】》)）\\]]?\\s*[:：——\\-\\.、]?\\s*([^\\n]*?)\\s*$";
     
     // 中文数字映射表
     private static final Map<Character, Integer> CHINESE_DIGIT_MAP = new HashMap<>();
@@ -100,19 +131,22 @@ public class ScriptSplitter {
         while (matcher.find()) {
             Episode episode = new Episode();
             
-            // 判断匹配的是哪种格式
+            // 当前正则只支持"第X集"格式，捕获组：
+            // group(1): "第1集" 或 "第一集" 或 "1集"
+            // group(2): 标题（可选）
             if (matcher.group(1) != null) {
-                // 格式1: "1.标题" 或 "1、标题"
-                episode.episodeNumber = Integer.parseInt(matcher.group(1));
-                episode.episodeTitle = matcher.group(2) != null ? matcher.group(2).trim() : "";
-            } else if (matcher.group(3) != null) {
-                // 格式2: "第1集 标题" 或 "第一集 标题"
-                String episodeStr = matcher.group(3);
+                String episodeStr = matcher.group(1);
                 episode.episodeNumber = parseEpisodeNumber(episodeStr);
-                episode.episodeTitle = matcher.group(4) != null ? matcher.group(4).trim() : "";
+                episode.episodeTitle = matcher.group(2) != null ? matcher.group(2).trim() : "";
             }
             
-            episode.startPos = matcher.end(); // 内容起始位置（标识行之后）
+            // 保存标识行的起始位置（用于确定上一集的结束位置）
+            episode.lineStartPos = matcher.start();
+            
+            // 找到标识行之后的第一个换行符，从下一行开始作为内容起始位置
+            int matchEnd = matcher.end();
+            int nextLineStart = content.indexOf('\n', matchEnd);
+            episode.startPos = (nextLineStart != -1) ? nextLineStart + 1 : matchEnd;
             episodes.add(episode);
         }
         
@@ -132,11 +166,11 @@ public class ScriptSplitter {
             
             // 确定当前集的结束位置
             int endPos = (i + 1 < episodes.size()) 
-                ? episodes.get(i + 1).startPos  // 下一集的起始位置
-                : content.length();              // 或文件末尾
+                ? episodes.get(i + 1).lineStartPos  // 下一集标识行的起始位置
+                : content.length();                  // 或文件末尾
             
-            // 提取内容并去除首尾空白
-            current.episodeContent = content.substring(current.startPos, endPos).trim();
+            // 提取内容（包含标识行）并去除首尾空白
+            current.episodeContent = content.substring(current.lineStartPos, endPos).trim();
         }
         return episodes;
     }
@@ -166,7 +200,7 @@ public class ScriptSplitter {
         for (Episode ep : episodes) {
             JSONObject episodeObj = new JSONObject();
             episodeObj.put("episode_id", "EP" + ep.episodeNumber);
-            episodeObj.put("episode_name", "第" + ep.episodeNumber + "集");
+            episodeObj.put("episode_name", "第" + ep.episodeNumber + "集");  // 只显示"第X集"
             episodeObj.put("episode_content", ep.episodeContent);
             episodesArray.put(episodeObj);
         }
@@ -261,7 +295,8 @@ public class ScriptSplitter {
         int episodeNumber;      // 集号
         String episodeTitle;    // 集标题（可能为空）
         String episodeContent;  // 集内容
-        int startPos;           // 内容起始位置（用于切割）
+        int lineStartPos;       // 标识行起始位置
+        int startPos;           // 内容起始位置（标识行的下一行）
         
         @Override
         public String toString() {
@@ -281,49 +316,158 @@ public class ScriptSplitter {
     public static void main(String[] args) {
         ScriptSplitter splitter = new ScriptSplitter();
         
-        // 测试1：数字+点格式
-        System.out.println("========== 测试1：数字+点格式 ==========");
-        String test1 = "1.起初\n场1-1 日 内 房间\n剧本内容A\n\n2.逃生\n场2-1 日 外 森林\n剧本内容B";
+        System.out.println("================================================================================");
+        System.out.println("                      剧本分集工具 - 支持格式测试");
+        System.out.println("================================================================================");
+        System.out.println();
+        
+        // 测试1：基础"第X集"格式（无标题）
+        System.out.println("========== 测试1：基础格式（无标题） ==========");
+        String test1 = "第1集\n场1-1 日 内 房间\n剧本内容A\n\n第2集\n场2-1 日 外 森林\n剧本内容B";
         String result1 = splitter.splitScript(test1);
         System.out.println(result1);
         System.out.println();
         
-        // 测试2：顿号格式
-        System.out.println("========== 测试2：顿号格式 ==========");
-        String test2 = "1、开端\n剧本内容A\n\n2、发展\n剧本内容B";
+        // 测试2：带空格标题
+        System.out.println("========== 测试2：第X集 标题（空格分隔） ==========");
+        String test2 = "第1集 初遇\n剧本内容A\n\n第2集 离别\n剧本内容B";
         String result2 = splitter.splitScript(test2);
         System.out.println(result2);
         System.out.println();
         
-        // 测试3：第X集格式
-        System.out.println("========== 测试3：第X集格式 ==========");
-        String test3 = "第1集 初遇\n剧本内容A\n\n第2集 离别\n剧本内容B";
+        // 测试3：带点号标题
+        System.out.println("========== 测试3：第X集.标题（点号分隔） ==========");
+        String test3 = "第1集.起初\n剧本内容A\n\n第2集.发展\n剧本内容B";
         String result3 = splitter.splitScript(test3);
         System.out.println(result3);
         System.out.println();
         
-        // 测试4：中文数字
-        System.out.println("========== 测试4：中文数字 ==========");
-        String test4 = "第一集 序章\n剧本内容A\n\n第二集 起航\n剧本内容B";
+        // 测试4：带顿号标题
+        System.out.println("========== 测试4：第X集、标题（顿号分隔） ==========");
+        String test4 = "第1集、序幕\n剧本内容A\n\n第二集、尾声\n剧本内容B";
         String result4 = splitter.splitScript(test4);
         System.out.println(result4);
         System.out.println();
         
-        // 测试5：无分集标识
-        System.out.println("========== 测试5：无分集标识 ==========");
-        String test5 = "场1-1 日 内 房间\n这是一个没有分集标识的剧本\n对白内容...";
+        // 测试5：带冒号标题
+        System.out.println("========== 测试5：第X集：标题（英文冒号分隔） ==========");
+        String test5 = "第1集:开始\n剧本内容A\n\n第2集:结束\n剧本内容B";
         String result5 = splitter.splitScript(test5);
         System.out.println(result5);
         System.out.println();
         
-        // 测试6：中文数字转换
-        System.out.println("========== 测试6：中文数字转换 ==========");
-        ScriptSplitter testSplitter = new ScriptSplitter();
-        System.out.println("一 -> " + testSplitter.chineseToNumber("一"));
-        System.out.println("十 -> " + testSplitter.chineseToNumber("十"));
-        System.out.println("十一 -> " + testSplitter.chineseToNumber("十一"));
-        System.out.println("二十 -> " + testSplitter.chineseToNumber("二十"));
-        System.out.println("二十三 -> " + testSplitter.chineseToNumber("二十三"));
-        System.out.println("九十九 -> " + testSplitter.chineseToNumber("九十九"));
+        // 测试6：带中文冒号标题
+        System.out.println("========== 测试6：第X集：标题（中文冒号） ==========");
+        String test6 = "第1集：序幕\n剧本内容A\n\n第2集：终章\n剧本内容B";
+        String result6 = splitter.splitScript(test6);
+        System.out.println(result6);
+        System.out.println();
+        
+        // 测试7：带破折号标题
+        System.out.println("========== 测试7：第X集——标题（破折号） ==========");
+        String test7 = "第1集——相遇\n剧本内容A\n\n第2集——分离\n剧本内容B";
+        String result7 = splitter.splitScript(test7);
+        System.out.println(result7);
+        System.out.println();
+        
+        // 测试8：带连字符标题
+        System.out.println("========== 测试8：第X集-标题（连字符） ==========");
+        String test8 = "第1集-初始\n剧本内容A\n\n第2集-完结\n剧本内容B";
+        String result8 = splitter.splitScript(test8);
+        System.out.println(result8);
+        System.out.println();
+        
+        // 测试9：带方括号
+        System.out.println("========== 测试9：【第X集】标题（方括号） ==========");
+        String test9 = "【第1集】起点\n剧本内容A\n\n【第2集】终点\n剧本内容B";
+        String result9 = splitter.splitScript(test9);
+        System.out.println(result9);
+        System.out.println();
+        
+        // 测试10：带书名号
+        System.out.println("========== 测试10：《第X集》标题（书名号） ==========");
+        String test10 = "《第1集》开篇\n剧本内容A\n\n《第2集》收尾\n剧本内容B";
+        String result10 = splitter.splitScript(test10);
+        System.out.println(result10);
+        System.out.println();
+        
+        // 测试11：带圆括号
+        System.out.println("========== 测试11：（第X集）标题（圆括号） ==========");
+        String test11 = "（第1集）启程\n剧本内容A\n\n（第2集）归来\n剧本内容B";
+        String result11 = splitter.splitScript(test11);
+        System.out.println(result11);
+        System.out.println();
+        
+        // 测试12：带方括号（英文）
+        System.out.println("========== 测试12：[第X集]标题（英文方括号） ==========");
+        String test12 = "[第1集]序曲\n剧本内容A\n\n[第2集]尾声\n剧本内容B";
+        String result12 = splitter.splitScript(test12);
+        System.out.println(result12);
+        System.out.println();
+        
+        // 测试13：中文数字（含复合数字）
+        System.out.println("========== 测试13：第一集、第十一集、第十二集（中文数字） ==========");
+        String test13 = "第一集 序章\n剧本内容A\n\n第十一集 转折\n剧本内容B\n\n第十二集 高潮\n剧本内容C";
+        String result13 = splitter.splitScript(test13);
+        System.out.println(result13);
+        System.out.println();
+        
+        // 测试14：无分集标识
+        System.out.println("========== 测试14：无分集标识（默认第1集） ==========");
+        String test14 = "场1-1 日 内 房间\n这是一个没有分集标识的剧本\n对白内容...";
+        String result14 = splitter.splitScript(test14);
+        System.out.println(result14);
+        System.out.println();
+        
+        // 测试15：中文数字转换功能测试
+        System.out.println("========== 测试15：中文数字转换功能 ==========");
+        System.out.println("基础数字：");
+        System.out.println("  一 -> " + splitter.chineseToNumber("一") + 
+                         ", 五 -> " + splitter.chineseToNumber("五") + 
+                         ", 九 -> " + splitter.chineseToNumber("九"));
+        System.out.println("十位数：");
+        System.out.println("  十 -> " + splitter.chineseToNumber("十") + 
+                         ", 十一 -> " + splitter.chineseToNumber("十一") + 
+                         ", 十二 -> " + splitter.chineseToNumber("十二") + 
+                         ", 十五 -> " + splitter.chineseToNumber("十五"));
+        System.out.println("二十位数：");
+        System.out.println("  二十 -> " + splitter.chineseToNumber("二十") + 
+                         ", 二十一 -> " + splitter.chineseToNumber("二十一") + 
+                         ", 二十三 -> " + splitter.chineseToNumber("二十三"));
+        System.out.println("更大数字：");
+        System.out.println("  五十 -> " + splitter.chineseToNumber("五十") + 
+                         ", 九十九 -> " + splitter.chineseToNumber("九十九"));
+        System.out.println();
+        
+        System.out.println("================================================================================");
+        
+        // 测试16：真实剧本文件
+        System.out.println("========== 测试16：真实剧本文件《绝境先知-黄金瞳》 ==========");
+        try {
+            String realScript = new String(
+                java.nio.file.Files.readAllBytes(java.nio.file.Paths.get("绝境先知-黄金瞳.txt")),
+                "UTF-8"
+            );
+            String realResult = splitter.splitScript(realScript);
+            
+            // 只显示每集的基本信息，不显示完整内容
+            org.json.JSONObject jsonObj = new org.json.JSONObject(realResult);
+            org.json.JSONArray episodes = jsonObj.getJSONArray("episodes");
+            
+            System.out.println("✓ 共识别 " + episodes.length() + " 集：");
+            for (int i = 0; i < episodes.length(); i++) {
+                org.json.JSONObject ep = episodes.getJSONObject(i);
+                String content = ep.getString("episode_content");
+                System.out.println("  - " + ep.getString("episode_name") + 
+                                 " (内容长度: " + content.length() + " 字符)");
+            }
+        } catch (Exception e) {
+            System.out.println("✗ 无法读取剧本文件：" + e.getMessage());
+        }
+        
+        System.out.println();
+        System.out.println("================================================================================");
+        System.out.println("                               测试完成");
+        System.out.println("================================================================================");
     }
 }
