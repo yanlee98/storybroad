@@ -10,6 +10,30 @@
 4. **场景描述**：基于每个场景的剧本原文，生成该场景的简要描述（100字以内）
 5. **场景剧本提取**：从 剧集原文episode_content 中提取每个场景的完整剧本内容；每段内容始于该场景的名称（如"场1-1 ⽇ 内 飞机头等舱"），止于下一个场景名称之前
 
+## 场景ID映射（必须执行，禁止猜测）
+
+在解析 episode_content 之前，必须先基于输入资产列表 `backdrops` 构建“查表映射”，并**仅按字符串完全相等**输出 `episode_backdrop`：
+
+- **建立映射表**：对每条 `backdrops[i]` 生成键值对  
+  - key = `backdrops[i].backdrop_name`（完整字符串，包含“场x-x ⽇/日 内/外 ...”，每个字每个符号都必须一致）  
+  - value = `backdrops[i].backdrop_id`
+- **只允许精确匹配**：当某场景的 `backdrop_script_content` 的首行场景标识为 `scene_name` 时：  
+  - 若存在某个 `backdrops[i].backdrop_name` 与 `scene_name` **逐字符完全相等**（长度相同、每个字符相同，含空格与标点），则 `episode_backdrop` 必须输出为 `[该条目的 backdrop_id]`  
+  - 若不存在这样的条目，**禁止**输出任何 `B*`；必须将该场景的 `episode_backdrop` 输出为 `[]`（其余字段照常输出）
+- **禁止语义/模糊/相似度匹配**：不得根据“场景含义相近”“同一地点”“同一集逻辑”等理由填写 backdrop_id。例如：  
+  - 剧本首行为“场4-1 ⽇ 外 沙漠，营地处”，资产库有“场3-1 日 外 沙漠，探险队营地处”→ **不是**同一字符串（场号不同、地点不同），**禁止**填资产库中该条目的 backdrop_id，必须填 `[]`  
+  - 仅当剧本中的场景标识与某条 `backdrop_name` 一字不差时，才可填写该条目的 backdrop_id
+- **禁止一对多/多对一混用**：同一 `scene_name` 只对应唯一 backdrop_id；不同 `scene_name` 不得对应同一 backdrop_id。
+
+## 输出前自检（必须通过）
+
+在最终输出 JSON 前，必须对 `episode_backdrops_sequence` 中每个元素做一致性校验：
+
+- **校验规则**：取 `backdrop_script_content` 的**第一行**（到第一个换行符为止）得到 `scene_name`，去掉首尾空白后与资产库逐条比较：  
+  - 若存在某条 `backdrops[j].backdrop_name === scene_name`（字符串完全相等），则 `episode_backdrop` 只能为 `[backdrops[j].backdrop_id]`  
+  - 若不存在任何一条 `backdrop_name` 与 `scene_name` 完全相等：`episode_backdrop` 必须为 `[]`，**严禁**填写任何 `B*`（即禁止凭“语义相近”“同一场景类型”等理由填 ID）  
+  - 若当前输出为 `["Bx"]` 但 `backdrops 中 backdrop_id 为 Bx 的 backdrop_name` ≠ `scene_name`：视为错误，必须改为正确的 backdrop_id 或改为 `[]`
+
 **重要原则**：
 
 - 你的任务是【解析和提取】，不是创作新内容
@@ -68,9 +92,10 @@
 1. **只输出合法 JSON**，无任何解释文字；输出须为标准 JSON，不得包含 `//` 或 `/* */` 注释，不得在 JSON 前后添加说明或 Markdown 代码块标记
 2. **严格遵循“输出格式模板”**，字段名与结构不得删改
 3. **ID 引用准确**：episode_backdrop、backdrop_related_characters、backdrop_related_creatures、backdrop_related_props 中的 ID 必须全部来源于输入（资产列表）中的 backdrops、characters、creatures、props，且本集未出现的角色/生物/道具不得出现在该集的场景关联数组中
-4. **长度控制**：episode_backdrop_description 不超过 100 字；总输出不超过 32k tokens，必要时优先保证 backdrop_script_content 完整
-5. **场景划分准确**：按剧本场景标识划分，不遗漏任何场景，顺序与原文一致
-6. **关联元素完整**：每个场景中实际出现的角色、生物、道具均需填入对应数组，且 ID 正确
+4. **episode_backdrop 仅允许精确匹配（严格执行）**：每个条目的 episode_backdrop 只能根据"backdrop_script_content 第一行"与资产列表 backdrops[].backdrop_name 的**字符串完全相等**得出；判断方法为：提取 backdrop_script_content 第一行（到 \n 为止），去首尾空白后得到字符串 S，在资产库中查找是否存在某条 backdrop_name === S（长度相同、每个字符相同、含空格标点）；若找到则填该条的 backdrop_id，若找不到则该条 episode_backdrop 必须为 []，不得使用语义、相似度、"同一地点"、"场号接近"等理由填写任何 B*。参见"示例-4"。
+5. **长度控制**：episode_backdrop_description 不超过 100 字；总输出不超过 32k tokens，必要时优先保证 backdrop_script_content 完整
+6. **场景划分准确**：按剧本场景标识划分，不遗漏任何场景，顺序与原文一致
+7. **关联元素完整**：每个场景中实际出现的角色、生物、道具均需填入对应数组，且 ID 正确
 
 ## 输出格式模板（不要输出任何其他文字，只输出 JSON）
 
@@ -185,3 +210,48 @@
   ]
 }
 ```
+### 示例-4（场景名不匹配时必须填 [] 的示例）:
+
+**场景说明**：本示例展示当剧本中的场景名在资产库中找不到完全匹配时，必须将 `episode_backdrop` 填为 `[]`，严禁根据语义相似度填写任何 backdrop_id。
+
+**假设资产库 backdrops 包含**：
+```json
+{
+  "backdrop_id": "B5",
+  "backdrop_name": "场3-1 日 外 沙漠，探险队营地处"
+},
+{
+  "backdrop_id": "B6",
+  "backdrop_name": "场3-2 日 外 沙漠，风暴中"
+}
+```
+
+**剧本内容**（场景名已被修改，与资产库不匹配）：
+```json
+{
+  "episode_id": "EP3",
+  "episode_description": "龙卷风袭击沙漠营地，幸存者分两路逃生",
+  "episode_backdrops_sequence": [
+    {
+      "episode_backdrop": [],
+      "backdrop_related_characters": ["C1", "C2", "C3"],
+      "backdrop_related_creatures": ["CR1"],
+      "backdrop_related_props": ["P9"],
+      "episode_backdrop_description": "龙卷风袭击沙漠营地，幸存者混乱逃生，沈乐建议骑骆驼去巨石避难",
+      "backdrop_script_content": "场4-1 ⽇ 外 沙漠，营地处\n人物：沈乐、沈明远、林芳...\n∆乌云如墨，闪电如利爪撕裂长空..."
+    },
+    {
+      "episode_backdrop": ["B6"],
+      "backdrop_related_characters": ["C1", "C2", "C3"],
+      "backdrop_related_creatures": ["CR1"],
+      "backdrop_related_props": ["P9"],
+      "episode_backdrop_description": "沙漠风暴中，越野车队遭遇雷击和翻车事故",
+      "backdrop_script_content": "场3-2 日 外 沙漠，风暴中\n人物：沈乐、沈明远、林芳...\n【镜头语言：上帝视角俯拍..."
+    }
+  ]
+}
+```
+
+**解释**：
+- **第一个场景**：`backdrop_script_content` 首行为 `"场4-1 ⽇ 外 沙漠，营地处"`，但资产库中只有 `"场3-1 日 外 沙漠，探险队营地处"`（场号不同：4-1≠3-1；地点不同：营地处≠探险队营地处）→ 字符串**不完全相等** → 正确填写：`episode_backdrop = []`，**严禁**填 `["B5"]`
+- **第二个场景**：`backdrop_script_content` 首行为 `"场3-2 日 外 沙漠，风暴中"`，资产库中有 `"场3-2 日 外 沙漠，风暴中"`（完全相等）→ 正确填写：`episode_backdrop = ["B6"]`
