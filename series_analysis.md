@@ -4,9 +4,9 @@
 
 **你的核心任务**：
 
-1. **场景识别**：提取识别输入的剧集原文episode_content中的所有场景标识（提取的场景标识必须既是剧本原文的文本，又和资产列表中的场景名字backdrop_name文本内容完全一样，每个字每个词都一样），最后输出的episode_backdrop场景关联数组（只能有一个元素）中的元素就是“场景标识与场景名字backdrop_name完全一样”的那个场景的backdrop_id
+1. **场景识别**：将剧本场景标识与资产列表中的 backdrop_name 进行字符串精确匹配，匹配成功则输出对应的 backdrop_id
 2. **场景划分**：将剧集原文episode_content按场景标识划分，每个场景从当前场景标识开始，到下一个场景标识之前结束
-3. **关联元素提取**：根据每个场景的剧本内容以及资产列表中的角色、生物、道具信息，识别该场景中出现的角色、生物、道具（这些识别出来的角色、生物、道具需要在资产列表中，且和资产列表里的相应信息一样，之后就可以取“互相信息一样的对应的角色、生物、道具”的相应 ID 填入各场景的关联数组中）
+3. **关联元素提取**：识别每个场景中实际出现的角色、生物、道具，从资产列表中获取对应的 ID
 4. **场景描述**：基于每个场景的剧本原文，生成该场景的简要描述（100字以内）
 5. **场景剧本提取**：从 剧集原文episode_content 中提取每个场景的完整剧本内容；每段内容始于该场景的名称（如"场1-1 ⽇ 内 飞机头等舱"），止于下一个场景名称之前
 
@@ -15,24 +15,34 @@
 在解析 episode_content 之前，必须先基于输入资产列表 `backdrops` 构建“查表映射”，并**仅按字符串完全相等**输出 `episode_backdrop`：
 
 - **建立映射表**：对每条 `backdrops[i]` 生成键值对  
-  - key = `backdrops[i].backdrop_name`（完整字符串，包含“场x-x ⽇/日 内/外 ...”，每个字每个符号都必须一致）  
+  - key = `backdrops[i].backdrop_name`（完整的原始字符串，不做任何分析）
   - value = `backdrops[i].backdrop_id`
-- **只允许精确匹配**：当某场景的 `backdrop_script_content` 的首行场景标识为 `scene_name` 时：  
-  - 若存在某个 `backdrops[i].backdrop_name` 与 `scene_name` **逐字符完全相等**（长度相同、每个字符相同，含空格与标点），则 `episode_backdrop` 必须输出为 `[该条目的 backdrop_id]`  
-  - 若不存在这样的条目，**禁止**输出任何 `B*`；必须将该场景的 `episode_backdrop` 输出为 `[]`（其余字段照常输出）
-- **禁止语义/模糊/相似度匹配**：不得根据“场景含义相近”“同一地点”“同一集逻辑”等理由填写 backdrop_id。例如：  
-  - 剧本首行为“场4-1 ⽇ 外 沙漠，营地处”，资产库有“场3-1 日 外 沙漠，探险队营地处”→ **不是**同一字符串（场号不同、地点不同），**禁止**填资产库中该条目的 backdrop_id，必须填 `[]`  
-  - 仅当剧本中的场景标识与某条 `backdrop_name` 一字不差时，才可填写该条目的 backdrop_id
-- **禁止一对多/多对一混用**：同一 `scene_name` 只对应唯一 backdrop_id；不同 `scene_name` 不得对应同一 backdrop_id。
+
+- **匹配规则（唯一准则）**：
+  - 提取 `backdrop_script_content` 的第一行（到第一个 `\n` 为止），去除首尾空白，得到字符串 `scene_name`
+  - 在映射表中查找：是否存在某个 key **完全等于** `scene_name`（一模一样、一字不差、文本完全一致、逐字符比对相等）
+  - **若找到**：`episode_backdrop` = `[对应的唯一 backdrop_id]`（数组内只能有1个ID）
+  - **若找不到**：`episode_backdrop` = `[]`
+  - **严禁**根据"场景编号接近"、"地点描述相同"、"语义相似"、"同一集逻辑"等任何理由填写 backdrop_id
+
+- **关键示例（说明只有完全一致才匹配）**：
+  - 剧本首行：`"场4-1 ⽇ 外 沙漠，营地处"`，资产库有：`"场3-1 日 外 沙漠，探险队营地处"` → 字符串不一致 → 填 `[]`
+  - 剧本首行：`"场5-1 ⽇ 外 巨石缝隙"`，资产库有：`"场5-1 日 外 巨石缝隙"` → 字符不一致（⽇≠日）→ 填 `[]`
+  - 剧本首行：`"2—1场景：日，外，天兵校场"`，资产库有：`"3—1场景：日，外，天兵校场"` → 字符串不一致 → 填 `[]`
+  - **只有当两个字符串完全一模一样时，才可填写对应的 backdrop_id**
+
 
 ## 输出前自检（必须通过）
 
 在最终输出 JSON 前，必须对 `episode_backdrops_sequence` 中每个元素做一致性校验：
 
-- **校验规则**：取 `backdrop_script_content` 的**第一行**（到第一个换行符为止）得到 `scene_name`，去掉首尾空白后与资产库逐条比较：  
-  - 若存在某条 `backdrops[j].backdrop_name === scene_name`（字符串完全相等），则 `episode_backdrop` 只能为 `[backdrops[j].backdrop_id]`  
-  - 若不存在任何一条 `backdrop_name` 与 `scene_name` 完全相等：`episode_backdrop` 必须为 `[]`，**严禁**填写任何 `B*`（即禁止凭“语义相近”“同一场景类型”等理由填 ID）  
-  - 若当前输出为 `["Bx"]` 但 `backdrops 中 backdrop_id 为 Bx 的 backdrop_name` ≠ `scene_name`：视为错误，必须改为正确的 backdrop_id 或改为 `[]`
+- **校验规则**：
+  - 提取 `backdrop_script_content` 的第一行（到 `\n` 为止），去首尾空白后得到 `scene_name`
+  - 检查：资产库中是否存在某个 `backdrop_name === scene_name`（完全一致）
+  - **若存在** → `episode_backdrop` 只能填 `[对应的唯一 backdrop_id]`（数组内只能有1个ID）
+  - **若不存在** → `episode_backdrop` 必须填 `[]`
+  - **若填了 `["Bx"]` 但该 Bx 的 backdrop_name ≠ scene_name** → 错误，改为 `[]`
+  - **若填了多个ID** → 错误，只能填1个或0个
 
 **重要原则**：
 
@@ -40,7 +50,7 @@
 - 剧集中所有场景必须识别并划分，不能遗漏
 - 场景划分边界必须准确，每个场景的剧本内容完整、不重叠、不缺失
 - 各场景关联的角色、生物、道具必须与该场景剧本内容一致，引用 ID 必须来自输入资产列表
-- 剧集场景必须来源于资产列表的场景信息中，引用 ID 必须来自输入资产列表（但必须保证识别出来的场景标识和传入的场景名字backdrop_name完全一样，才可以引用其 场景资产ID ）
+- 所有 ID（backdrop_id、character_id等）必须来自输入资产列表，不得编造
 
 ## 输出长度限制
 
@@ -56,15 +66,15 @@
 
 ### 1. 单集场景序列（episode_backdrops_sequence）
 
-对当前剧集的 剧集原文episode_contentepisode_content 按场景划分后，输出一个场景序列数组。每个元素表示一个场景，包含：
+对当前剧集的 episode_content（剧集原文）按场景划分后，输出一个场景序列数组。每个元素表示一个场景，包含：
 
 - **episode_id**：当前剧集 ID，与输入中的 episode_id 一致（如 "EP1"）
 - **episode_description**: 当前剧集的简要描述（100字以内），对剧集内容进行总结描述
 - **episode_backdrops_sequence**：场景序列数组，每个元素包含：
-  - **episode_backdrop**：本条目对应的场景 ID 数组（引用 backdrops 中的 backdrop_id，如 ["B1"]），数组内仅一个 ID（但必须保证识别出来的场景标识和传入的场景名字backdrop_name完全一样，才可以引用其 场景资产ID ）
-  - **backdrop_related_characters**：本场景出现的角色 ID 数组（引用 characters，如 ["C1", "C2"]）（但必须保证识别出来的角色和传入的角色资产信息一样，才可以引用其 场景资产ID ）
-  - **backdrop_related_creatures**：本场景出现的生物 ID 数组（引用 creatures，如 ["CR1"]）（但必须保证识别出来的生物和传入的生物资产信息一样，才可以引用其 场景资产ID ）
-  - **backdrop_related_props**：本场景出现的道具 ID 数组（引用 props，如 ["P1", "P2"]）（但必须保证识别出来的道具和传入的道具资产信息一样，才可以引用其 场景资产ID ）
+  - **episode_backdrop**：本场景的场景 ID 数组，**只能包含唯一一个 backdrop_id**（如 ["B1"]）或为空数组 []。只有当 backdrop_script_content 首行与资产库中某个 backdrop_name 完全一致时，才填入该 backdrop_id，否则填 []。注意：数组内最多只能有1个元素
+  - **backdrop_related_characters**：本场景实际出现的角色 ID 数组（引用 characters，如 ["C1", "C2"]）
+  - **backdrop_related_creatures**：本场景实际出现的生物 ID 数组（引用 creatures，如 ["CR1"]）
+  - **backdrop_related_props**：本场景实际出现的道具 ID 数组（引用 props，如 ["P1", "P2"]）
   - **episode_backdrop_description**：本场景的简要描述（100 字以内，基于该场景剧本原文生成）
   - **backdrop_script_content**：本场景对应的剧本原文完整内容（从 剧集原文episode_content 中截取，每段内容始于该场景的名称（如"场1-1 ⽇ 内 飞机头等舱"），止于下一个场景名称之前）
 
@@ -83,16 +93,16 @@
 
 **场景序列解析注意事项**：
 
-- 剧集场景须包含在资产列表的场景信息中，且文本内容要和场景资产的backdrop_name文本完全一样，匹配 backdrops 中的相关信息，得到唯一 backdrop_id 填入 episode_backdrop
-- backdrop_script_content 必须包含该场景标识行及该场景内全部对话、动作描述等，直至下一个场景标识行之前（若剧本中没有场景标识行，则根据资产列表里的场景相关信息与剧集剧本进行分析匹配，自动根据场景划分出相应的连续的该场景剧本原文内容）
-- backdrop_related_characters / creatures / props 仅填该场景剧本内容中**实际出现**的角色、生物、道具，且 ID 必须来自输入的 characters、creatures、props（但必须保证识别出来的角色、生物、道具和传入的角色、生物、道具资产信息一样，才可以引用相应的 资产ID ）
+- **episode_backdrop 匹配规则**：backdrop_script_content 首行 === 资产库 backdrop_name（完全一致）→ 填 ["backdrop_id"]，否则 → 填 []
+- **backdrop_script_content**：必须包含该场景标识行及该场景内全部对话、动作描述等，直至下一个场景标识行之前
+- **backdrop_related_***：仅填该场景剧本内容中**实际出现**的角色、生物、道具，ID 必须来自输入资产列表
 
 ## 强制规则
 
 1. **只输出合法 JSON**，无任何解释文字；输出须为标准 JSON，不得包含 `//` 或 `/* */` 注释，不得在 JSON 前后添加说明或 Markdown 代码块标记
 2. **严格遵循“输出格式模板”**，字段名与结构不得删改
 3. **ID 引用准确**：episode_backdrop、backdrop_related_characters、backdrop_related_creatures、backdrop_related_props 中的 ID 必须全部来源于输入（资产列表）中的 backdrops、characters、creatures、props，且本集未出现的角色/生物/道具不得出现在该集的场景关联数组中
-4. **episode_backdrop 仅允许精确匹配（严格执行）**：每个条目的 episode_backdrop 只能根据"backdrop_script_content 第一行"与资产列表 backdrops[].backdrop_name 的**字符串完全相等**得出；判断方法为：提取 backdrop_script_content 第一行（到 \n 为止），去首尾空白后得到字符串 S，在资产库中查找是否存在某条 backdrop_name === S（长度相同、每个字符相同、含空格标点）；若找到则填该条的 backdrop_id，若找不到则该条 episode_backdrop 必须为 []，不得使用语义、相似度、"同一地点"、"场号接近"等理由填写任何 B*。参见"示例-4"。
+4. **episode_backdrop 匹配规则（严格执行）**：backdrop_script_content 首行 === 资产库 backdrop_name（完全一致）→ 填 ["backdrop_id"]（数组内只能有唯一一个ID），否则 → 填 []。严禁根据语义、相似度等理由填写。参见"示例-4"。
 5. **长度控制**：episode_backdrop_description 不超过 100 字；总输出不超过 32k tokens，必要时优先保证 backdrop_script_content 完整
 6. **场景划分准确**：按剧本场景标识划分，不遗漏任何场景，顺序与原文一致
 7. **关联元素完整**：每个场景中实际出现的角色、生物、道具均需填入对应数组，且 ID 正确
@@ -204,15 +214,15 @@
       "backdrop_related_characters": ["C2", "C4", "C7", "C9", "C12", "C17"],
       "backdrop_related_creatures": ["CR8", "CR9", "CR10"],
       "backdrop_related_props": ["P15", "P23", "P27", "P30", "P32"],
-      "episode_description": "07号实验体冲破冷冻舱苏醒，实验室大门自动关闭完成封锁，变异巨鼠从通风口窜出袭击众人，程峰带领众人寻找实验室应急出口，一路遭遇实验体围堵",
+      "episode_backdrop_description": "07号实验体冲破冷冻舱苏醒，实验室大门自动关闭完成封锁，变异巨鼠从通风口窜出袭击众人，程峰带领众人寻找实验室应急出口，一路遭遇实验体围堵",
       "backdrop_script_content": "场9-2 昼 内 实验室通道\n人物：程峰、陆铭、张琪、老杨、小柯、陈默 本集死亡：老杨\n∆“哐当”一声巨响，07号冷冻舱玻璃彻底碎裂，一个身形扭曲的人形实验体摔在地上，皮肤呈青灰色，浑身布满脓包，手指化为锋利的爪子，发出刺耳的嘶吼。\n实验室的金属大门轰然落下，发出沉闷的声响，红色的封锁提示灯在墙上不停闪烁，广播里传出机械的女声：“实验室检测到病毒泄露，实验体苏醒，启动一级封锁，所有出口关闭。”\n老杨吓得腿软，转身想往回跑，通风管道突然被撞破，数只体型如猫般大的变异巨鼠窜出，尖牙泛着寒光，一口咬在老杨的小腿上。\n老杨：（惨叫）“救我！快救我！”\n程峰抄起旁边的金属钢管，狠狠砸向巨鼠的头部，巨鼠被砸飞，却又有更多的巨鼠从通风口涌出来。\n陆铭拉着张琪和小柯跟在程峰身后：“应急出口在哪里？”\n程峰：（边打边退）“在实验室最底层的配电室，只有那里有手动解锁的装置，快跟我走！”\n∆人形实验体追了上来，一巴掌拍在旁边的金属柜上，柜子瞬间变形，陈默抬手开枪，子弹打在实验体身上仅留下一个小血洞，实验体彻底被激怒，嘶吼着朝众人猛冲。\n老杨被巨鼠围攻，浑身是伤，眼看就要撑不住，朝着众人的方向伸出手：“别丢下我……”\n∆实验体一爪子挥向老杨，老杨当场倒地，没了声息，众人看着这一幕，心头一紧，只能咬牙往前冲，通道里的灯光忽明忽暗，身后的嘶吼声和巨鼠的滋滋声越来越近。"
     }
   ]
 }
 ```
-### 示例-4（场景名不匹配时必须填 [] 的示例）:
+### 示例-4（字符串不一致时必须填 [] 的示例）:
 
-**场景说明**：本示例展示当剧本中的场景名在资产库中找不到完全匹配时，必须将 `episode_backdrop` 填为 `[]`，严禁根据语义相似度填写任何 backdrop_id。
+**场景说明**：剧本场景名与资产库 backdrop_name 不完全一致 → 填 `[]`。
 
 **假设资产库 backdrops 包含**：
 ```json
@@ -223,6 +233,15 @@
 {
   "backdrop_id": "B6",
   "backdrop_name": "场3-2 日 外 沙漠，风暴中"
+},
+{
+  "backdrop_id": "B7",
+  "backdrop_name": "场4-1 日 外 巨石缝隙，龙卷风边缘"
+},
+{
+  "backdrop_id": "B10",
+  "backdrop_name": "场5-1 日 外 巨石缝隙，龙卷风边缘"
+
 }
 ```
 
@@ -247,11 +266,20 @@
       "backdrop_related_props": ["P9"],
       "episode_backdrop_description": "沙漠风暴中，越野车队遭遇雷击和翻车事故",
       "backdrop_script_content": "场3-2 日 外 沙漠，风暴中\n人物：沈乐、沈明远、林芳...\n【镜头语言：上帝视角俯拍..."
+    },
+    {
+      "episode_backdrop": [],
+      "backdrop_related_characters": ["C1", "C2"],
+      "backdrop_related_creatures": ["CR2"],
+      "backdrop_related_props": ["P11"],
+      "episode_backdrop_description": "龙卷风过后，沈乐成功救回妹妹沈悦，地下传来异动",
+      "backdrop_script_content": "场5-1 ⽇ 外 巨石缝隙，龙卷风边缘\n人物：沈乐、沈明远、林芳、沈悦...\n∆巨石缝内，秒表上正在从10开始倒计时..."
     }
   ]
 }
 ```
 
 **解释**：
-- **第一个场景**：`backdrop_script_content` 首行为 `"场4-1 ⽇ 外 沙漠，营地处"`，但资产库中只有 `"场3-1 日 外 沙漠，探险队营地处"`（场号不同：4-1≠3-1；地点不同：营地处≠探险队营地处）→ 字符串**不完全相等** → 正确填写：`episode_backdrop = []`，**严禁**填 `["B5"]`
-- **第二个场景**：`backdrop_script_content` 首行为 `"场3-2 日 外 沙漠，风暴中"`，资产库中有 `"场3-2 日 外 沙漠，风暴中"`（完全相等）→ 正确填写：`episode_backdrop = ["B6"]`
+- **第一个场景**：剧本首行 `"场4-1 ⽇ 外 沙漠，营地处"` ≠ 资产库中的任何 backdrop_name → 字符串不一致 → 填 `[]`
+- **第二个场景**：剧本首行 `"场3-2 日 外 沙漠，风暴中"` === 资产库中的 `"场3-2 日 外 沙漠，风暴中"`（B6）→ 完全一致 → 填 `["B6"]`
+- **第三个场景**：剧本首行 `"场5-1 ⽇ 外 巨石缝隙，龙卷风边缘"` ≠ 资产库中的任何 backdrop_name（包括B7和B10，因为字符不完全相同）→ 字符串不一致 → 填 `[]`
