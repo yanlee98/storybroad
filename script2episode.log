@@ -58,3 +58,359 @@
     }
   ]
 }
+2026-02-05 20:25:34,006 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:25:34,010 [INFO] {
+  "script_info": {
+    "script_description": "灾难求生+系统异能+家庭亲情+人性考验"
+  },
+  "characters": [
+    {
+      "character_id": "C1",
+      "character_name": "沈乐",
+      "character_background": "中国，7岁，男性，顶尖生存专家意识重生，拥有黄金瞳异能，性格坚毅果断，在灾难中保护家人",
+      "character_appearance_prompt": "中国，7岁，男性，面容稚嫩清秀，大眼睛明亮有神，短发利落，肤色健康，表情坚定果敢，额头有细密汗珠",
+      "character_style_prompt": "中国，7岁，男性，戴小黄帽，背卡通书包，穿着休闲童装上衣，深色长裤下装，脚穿运动鞋，书包里装有求生工具"
+    },
+    {
+      "character_id": "C2",
+      "character_name": "沈明远",
+      "character_background": "中国，中年，男性，沈乐父亲，性格沉稳，起初不相信儿子但后来信任，在灾难中保护家人",
+      "character_appearance_prompt": "中国，中年，男性，面容温和，五官端正，短发略显凌乱，肤色健康，表情担忧中带着坚定，眼角有细纹",
+      "character_style_prompt": "中国，中年，男性，商务休闲装上衣，深色长裤下装，脚穿皮鞋，衣服在灾难中略显凌乱，手臂有保护性动作"
+    },
+    {
+      "character_id": "C3",
+      "character_name": "林芳",
+      "character_background": "中国，中年，女性，沈乐母亲，温柔坚强，始终信任儿子，在灾难中保护女儿沈悦",
+      "character_appearance_prompt": "中国，中年，女性，面容温婉，长发束起，五官柔和，肤色白皙，表情充满母爱与担忧，眼眶湿润",
+      "character_style_prompt": "中国，中年，女性，简约上衣，长裙下装，脚穿平底鞋，衣服在灾难中略显脏乱，手臂有保护孩子的动作"
+    },
+    {
+      "character_id": "C4",
+      "character_name": "沈悦",
+      "character_background": "中国，幼年，女性，沈乐妹妹，胆小可爱，在灾难中需要保护，腿部受伤",
+      "character_appearance_prompt": "中国，幼年，女性，小圆脸可爱，大眼睛充满恐惧，短发齐肩，肤色白皙，表情害怕哭泣，腿部有伤口",
+      "character_style_prompt": "中国，幼年，女性，童装连衣裙，脚穿小皮鞋，衣服在风沙中脏乱，腿部包扎伤口，被家人保护着"
+    },
+    {
+      "character_id": "C5",
+      "character_name": "赵亮",
+      "character_background": "中国，中年，男性，赵氏集团老板，傲慢刻薄，戴金链子墨镜大金表，性格自私暴躁",
+      "character_appearance_prompt": "中国，中年，男性，满脸横肉，戴墨镜，面部线条粗犷，肤色偏深，表情傲慢凶狠，额头有伤口流血",
+      "character_style_prompt": "中国，中年，男性，奢华休闲装上衣，名牌长裤下装，戴金链子大金表，墨镜歪斜，衣服在灾难中破损"
+    },
+    {
+      "character_id": "C6",
+      "character_name": "周丽",
+      "character_background": "中国，青年，女性，赵亮女友，娇气刻薄，长美甲，性格自私爱抱怨",
+      "character_appearance_prompt": "中国，青年，女性，妆容精致，长发披肩，五官艳丽，肤色白皙，表情娇嗔嫌弃，长美甲显眼",
+      "character_style_prompt": "中国，青年，女性，时尚连衣裙，高跟鞋，佩戴首饰，衣服在灾难中凌乱，手臂紧抓赵亮"
+    },
+    {
+      "character_id": "C7",
+      "character_name": "陈昊",
+      "character_background": "中国，青年，男性，乘客，理性善良，头部受伤，后来帮助沈乐救人",
+      "character_appearance_prompt": "中国，青年，男性，面容端正，短发整洁，五官分明，肤色健康，表情理性担忧，头部有伤口",
+      "character_style_prompt": "中国，青年，男性，休闲装上装，牛仔裤下装，运动鞋，衣服在灾难中脏乱，表现出助人态度"
+    },
+    {
+      "character_id": "C8",
+      "character_name": "小胖(王德发)",
+      "character_background": "中国，青年，男性，乘客，性格乐观幽默，体型偏胖，后来信任沈乐",
+      "character_appearance_prompt": "中国，青年，男性，圆脸胖乎乎，短发，五官和善，肤色健康，表情惊恐中带着幽默，体型偏胖",
+      "character_style_prompt": "中国，青年，男性，宽松T恤上衣，休闲裤下装，运动鞋，体型显胖，衣服在灾难中凌乱"
+    },
+    {
+      "character_id": "C9",
+      "character_name": "老王",
+      "character_background": "中国，中年，男性，乘客，驾驶越野车遇险",
+      "character_appearance_prompt": "中国，中年，男性，面容普通，短发，五官端正，肤色偏深，表情惊恐绝望",
+      "character_style_prompt": "中国，中年，男性，普通上衣，长裤下装，皮鞋，司机打扮，衣服在灾难中破损"
+    },
+    {
+      "character_id": "C10",
+      "character_name": "马超",
+      "character_background": "中国，青年，男性，乘客，性格急躁，后来受伤埋怨他人",
+      "character_appearance_prompt": "中国，青年，男性，面容粗犷，短发，五官分明，肤色健康，表情愤怒急躁，手臂烧伤",
+      "character_style_prompt": "中国，青年，男性，休闲装上装，牛仔裤下装，运动鞋，手臂有烧伤痕迹，衣服破损"
+    },
+    {
+      "character_id": "C11",
+      "character_name": "老陈",
+      "character_background": "中国，中年，男性，乘客，普通幸存者",
+      "character_appearance_prompt": "中国，中年，男性，面容普通，短发，五官端正，肤色健康，表情惊恐",
+      "character_style_prompt": "中国，中年，男性，普通上衣，长裤下装，皮鞋，幸存者打扮"
+    },
+    {
+      "character_id": "C12",
+      "character_name": "刘色",
+      "character_background": "中国，青年，男性，乘客，与马超同车遇险",
+      "character_appearance_prompt": "中国，青年，男性，面容普通，短发，五官端正，肤色健康，表情惊恐",
+      "character_style_prompt": "中国，青年，男性，休闲装上装，牛仔裤下装，运动鞋，幸存者打扮"
+    },
+    {
+      "character_id": "C13",
+      "character_name": "向真",
+      "character_background": "中国，青年，女性，乘客，被吹倒跌坐，后来在越野车中",
+      "character_appearance_prompt": "中国，青年，女性，面容清秀，长发，五官柔和，肤色白皙，表情惊恐",
+      "character_style_prompt": "中国，青年，女性，简约上衣，长裤下装，平底鞋，幸存者打扮"
+    },
+    {
+      "character_id": "C14",
+      "character_name": "季仁",
+      "character_background": "中国，中年，男性，乘客，自私推沈悦导致危险，性格冷漠",
+      "character_appearance_prompt": "中国，中年，男性，面容瘦削，短发，五官刻薄，肤色偏深，表情自私冷漠",
+      "character_style_prompt": "中国，中年，男性，普通上衣，长裤下装，皮鞋，表现出自私态度"
+    },
+    {
+      "character_id": "C15",
+      "character_name": "冯狂",
+      "character_background": "中国，青年，男性，乘客，腿部受伤，普通幸存者",
+      "character_appearance_prompt": "中国，青年，男性，面容普通，短发，五官端正，肤色健康，表情痛苦，腿部流血",
+      "character_style_prompt": "中国，青年，男性，休闲装上装，牛仔裤下装，运动鞋，腿部有伤口"
+    },
+    {
+      "character_id": "C16",
+      "character_name": "丁蕊",
+      "character_background": "中国，青年，女性，乘务员，受伤但尽职安抚乘客，性格专业坚强",
+      "character_appearance_prompt": "中国，青年，女性，面容清秀，盘发，五官端正，肤色白皙，表情专业坚强，头手臂有伤流血",
+      "character_style_prompt": "中国，青年，女性，乘务员制服上衣，裙装下装，高跟鞋，制服在灾难中破损，表现出专业态度"
+    },
+    {
+      "character_id": "C17",
+      "character_name": "幸存者甲",
+      "character_background": "中国，成年，性别不明，普通幸存者",
+      "character_appearance_prompt": "中国，成年，面容普通，发型普通，五官端正，肤色健康，表情惊恐",
+      "character_style_prompt": "中国，成年，普通上衣，长裤下装，普通鞋，幸存者打扮"
+    },
+    {
+      "character_id": "C18",
+      "character_name": "幸存者乙",
+      "character_background": "中国，成年，性别不明，普通幸存者",
+      "character_appearance_prompt": "中国，成年，面容普通，发型普通，五官端正，肤色健康，表情惊恐",
+      "character_style_prompt": "中国，成年，普通上衣，长裤下装，普通鞋，幸存者打扮"
+    },
+    {
+      "character_id": "C19",
+      "character_name": "李教授",
+      "character_background": "中国，中年，男性，敦煌考古探险队领队，戴金丝边眼镜，性格傲慢专业，后来被打脸",
+      "character_appearance_prompt": "中国，中年，男性，面容儒雅，戴金丝边眼镜，短发整齐，五官端正，肤色健康，表情傲慢后来震惊",
+      "character_style_prompt": "中国，中年，男性，探险服上衣，多功能裤下装，登山鞋，戴眼镜，教授气质，衣服在灾难中凌乱"
+    },
+    {
+      "character_id": "C20",
+      "character_name": "小胡",
+      "character_background": "中国，青年，男性，探险队员，李教授助手，忠诚专业",
+      "character_appearance_prompt": "中国，青年，男性，面容刚毅，短发，五官分明，肤色健康，表情严肃专业",
+      "character_style_prompt": "中国，青年，男性，探险队制服上衣，多功能裤下装，登山鞋，探险队员打扮"
+    },
+    {
+      "character_id": "C21",
+      "character_name": "林娜",
+      "character_background": "中国，青年，女性，探险队员，驾驶越野车",
+      "character_appearance_prompt": "中国，青年，女性，面容清秀，束发，五官端正，肤色健康，表情严肃",
+      "character_style_prompt": "中国，青年，女性，探险队制服上衣，多功能裤下装，登山鞋，女探险队员打扮"
+    },
+    {
+      "character_id": "C22",
+      "character_name": "小李",
+      "character_background": "中国，青年，男性，探险队员，向李教授报告风速，后来受伤",
+      "character_appearance_prompt": "中国，青年，男性，面容年轻，短发，五官清秀，肤色健康，表情焦急专业",
+      "character_style_prompt": "中国，青年，男性，探险队制服上衣，多功能裤下装，登山鞋，戴探险帽后来被吹跑"
+    },
+    {
+      "character_id": "C23",
+      "character_name": "庄强",
+      "character_background": "中国，青年，男性，探险队员，与林娜同车",
+      "character_appearance_prompt": "中国，青年，男性，面容普通，短发，五官端正，肤色健康，表情严肃",
+      "character_style_prompt": "中国，青年，男性，探险队制服上衣，多功能裤下装，登山鞋，探险队员打扮"
+    },
+    {
+      "character_id": "C24",
+      "character_name": "马贪",
+      "character_background": "中国，青年，男性，探险队员，与李教授同车",
+      "character_appearance_prompt": "中国，青年，男性，面容普通，短发，五官端正，肤色健康，表情严肃",
+      "character_style_prompt": "中国，青年，男性，探险队制服上衣，多功能裤下装，登山鞋，探险队员打扮"
+    },
+    {
+      "character_id": "C25",
+      "character_name": "火人",
+      "character_background": "中国，青年，男性，探险队员，被雷击烧死",
+      "character_appearance_prompt": "中国，青年，男性，面容普通，短发，五官端正，肤色健康，后来烧焦",
+      "character_style_prompt": "中国，青年，男性，探险队制服上衣，多功能裤下装，登山鞋，后来被烧焦"
+    },
+    {
+      "character_id": "C26",
+      "character_name": "司机",
+      "character_background": "中国，成年，男性，探险队司机",
+      "character_appearance_prompt": "中国，成年，男性，面容普通，短发，五官端正，肤色健康，表情严肃",
+      "character_style_prompt": "中国，成年，男性，司机制服上衣，长裤下装，皮鞋，司机打扮"
+    },
+    {
+      "character_id": "C27",
+      "character_name": "探险队员A",
+      "character_background": "中国，成年，性别不明，普通探险队员",
+      "character_appearance_prompt": "中国，成年，面容普通，发型普通，五官端正，肤色健康，表情严肃",
+      "character_style_prompt": "中国，成年，探险队制服上衣，多功能裤下装，登山鞋，探险队员打扮"
+    },
+    {
+      "character_id": "C28",
+      "character_name": "探险队员B",
+      "character_background": "中国，成年，性别不明，探险队员，车祸/龙卷风死亡",
+      "character_appearance_prompt": "中国，成年，面容普通，发型普通，五官端正，肤色健康",
+      "character_style_prompt": "中国，成年，探险队制服上衣，多功能裤下装，登山鞋，探险队员打扮"
+    },
+    {
+      "character_id": "C29",
+      "character_name": "探险队员C",
+      "character_background": "中国，成年，性别不明，探险队员，车祸/龙卷风死亡",
+      "character_appearance_prompt": "中国，成年，面容普通，发型普通，五官端正，肤色健康",
+      "character_style_prompt": "中国，成年，探险队制服上衣，多功能裤下装，登山鞋，探险队员打扮"
+    },
+    {
+      "character_id": "C30",
+      "character_name": "探险队员D",
+      "character_background": "中国，成年，性别不明，普通探险队员",
+      "character_appearance_prompt": "中国，成年，面容普通，发型普通，五官端正，肤色健康，表情严肃",
+      "character_style_prompt": "中国，成年，探险队制服上衣，多功能裤下装，登山鞋，探险队员打扮"
+    },
+    {
+      "character_id": "C31",
+      "character_name": "探险队员甲",
+      "character_background": "中国，成年，性别不明，普通探险队员",
+      "character_appearance_prompt": "中国，成年，面容普通，发型普通，五官端正，肤色健康，表情严肃",
+      "character_style_prompt": "中国，成年，探险队制服上衣，多功能裤下装，登山鞋，探险队员打扮"
+    }
+  ],
+  "backdrops": [
+    {
+      "backdrop_id": "B1",
+      "backdrop_name": "场1-1 ⽇ 内 飞机头等舱",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：飞机头等舱内部，日间内景，豪华座椅排列整齐，舷窗透入阳光，行李架关闭，小桌板收起，机舱顶灯柔和，高级地毯，静谧飞行氛围"
+    },
+    {
+      "backdrop_id": "B2",
+      "backdrop_name": "场1-2  ⽇ 外 沙漠，飞机残骸",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：沙漠中的飞机残骸，日间外景，金属碎片散落遍地，机身断裂冒烟，黄沙覆盖部分残骸，烈日当空，远处沙丘连绵，荒凉灾难场景"
+    },
+    {
+      "backdrop_id": "B3",
+      "backdrop_name": "场2-1 ⽇ 外 沙漠，飞机残骸",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：沙漠中的飞机残骸，日间外景，风沙开始增强，残骸在风中摇晃，远处沙尘暴正在形成，天空开始阴暗，灾难即将来临的氛围"
+    },
+    {
+      "backdrop_id": "B4",
+      "backdrop_name": "场2-2 ⽇ 外 沙漠，",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：广阔沙漠地带，日间外景，风沙弥漫，能见度降低，远处有巨石堆轮廓，沙丘起伏，天空阴暗云层厚重，风暴前夕的压抑感"
+    },
+    {
+      "backdrop_id": "B5",
+      "backdrop_name": "场3-1 ⽇ 外 沙漠，探险队营地处",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：沙漠中的考古探险队营地，日间外景，帐篷和越野车散布，印有敦煌考古探险队logo，物资箱摆放，骆驼拴在角落，风沙开始肆虐"
+    },
+    {
+      "backdrop_id": "B6",
+      "backdrop_name": "场3-2 ⽇ 外 沙漠，风暴中",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：沙漠风暴中心，日间外景，龙卷风连接天地，沙墙遮天蔽日，闪电在云层中穿梭，越野车在沙地上颠簸，骆驼奔跑，末日般的灾难场景"
+    },
+    {
+      "backdrop_id": "B7",
+      "backdrop_name": "场4-1 ⽇ 外 巨石缝隙，龙卷风边缘",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：沙漠中的巨石缝隙，日间外景，巨大岩石形成天然庇护所，缝隙狭窄，外面龙卷风肆虐，风沙呼啸，闪电频现，危机四伏的避难所"
+    },
+    {
+      "backdrop_id": "B8",
+      "backdrop_name": "场4-2 ⽇ 外 巨石缝隙，龙卷风边缘",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：巨石缝隙内部，日间外景，岩石壁面粗糙，空间狭小，外面风暴声音震耳，绳索绷直在风中摇晃，紧张压抑的避难氛围"
+    },
+    {
+      "backdrop_id": "B9",
+      "backdrop_name": "场4-3 ⽇ 外 巨石缝隙，龙卷风边缘",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：龙卷风边缘的沙漠，日间外景，狂风呼啸，沙石飞舞，能见度极低，绳索在风中剧烈晃动，闪电不时照亮场景，极度危险的户外环境"
+    },
+    {
+      "backdrop_id": "B10",
+      "backdrop_name": "场5-1 ⽇ 外 巨石缝隙，龙卷风边缘",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：风暴逐渐平息的沙漠，日间外景，风沙开始减弱，天空阴云散开，阳光透出，绳索落在地上，灾难过后的平静与未知危险"
+    },
+    {
+      "backdrop_id": "B11",
+      "backdrop_name": "场6-1 ⽇ 内 飞机头等舱",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：飞机头等舱内部，日间内景，重现开场场景，豪华座椅，舷窗阳光，但气氛紧张，预示灾难即将发生"
+    },
+    {
+      "backdrop_id": "B12",
+      "backdrop_name": "场6-2  ⽇ 外 沙漠，飞机残骸",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：沙漠中的飞机残骸，日间外景，重现坠机后场景，残骸冒烟，黄沙覆盖，但新的灾难征兆出现，地面开始震动"
+    }
+  ],
+  "creatures": [
+    {
+      "creature_id": "CR1",
+      "creature_name": "骆驼",
+      "creature_prompt": "纯白色背景，独立生成生物视觉图，无多余元素：沙漠骆驼，体型高大，驼峰饱满，毛发棕黄，眼神温顺，四肢粗壮，适合沙漠生存的健壮生物"
+    }
+  ],
+  "props": [
+    {
+      "prop_id": "P1",
+      "prop_name": "瑞士军刀",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：红色瑞士军刀，多功能工具组合，刀片锋利，各种工具展开，金属质感，实用求生工具"
+    },
+    {
+      "prop_id": "P2",
+      "prop_name": "安全带绳索",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：飞机安全带制成的绳索，尼龙材质，结实耐用，长度约3-4米，可用于捆绑和救援"
+    },
+    {
+      "prop_id": "P3",
+      "prop_name": "打火机",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：普通塑料打火机，小巧便携，金属打火轮，透明油仓，基本求生工具"
+    },
+    {
+      "prop_id": "P4",
+      "prop_name": "半瓶酒",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：半瓶白酒，透明玻璃瓶，标签部分磨损，液体澄澈，可用于消毒和取暖"
+    },
+    {
+      "prop_id": "P5",
+      "prop_name": "小书包",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：儿童卡通书包，彩色图案，双肩背带，内装求生工具，帆布材质，实用可爱"
+    },
+    {
+      "prop_id": "P6",
+      "prop_name": "金链子",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：粗大金链子，黄金材质，闪亮夺目，象征财富，沉重质感，土豪配饰"
+    },
+    {
+      "prop_id": "P7",
+      "prop_name": "墨镜",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：时尚墨镜，黑色镜片，金属框架，潮流配饰，后来在灾难中歪斜"
+    },
+    {
+      "prop_id": "P8",
+      "prop_name": "大金表",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：奢华大金表，黄金表壳，皮质表带，钻石刻度，象征身份地位的名表"
+    },
+    {
+      "prop_id": "P9",
+      "prop_name": "长美甲",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：精致长美甲，彩色甲油，装饰亮片，延长甲片，女性美容配饰"
+    },
+    {
+      "prop_id": "P10",
+      "prop_name": "金丝边眼镜",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：金丝边眼镜，金属框架，透明镜片，学者气质，精致配饰"
+    },
+    {
+      "prop_id": "P11",
+      "prop_name": "探险队logo",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：敦煌考古探险队logo，专业设计，文字图案结合，印在越野车和物资箱上"
+    },
+    {
+      "prop_id": "P12",
+      "prop_name": "秒表",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：专业秒表，黑色塑料外壳，数字显示屏，计时功能，用于精确计时"
+    }
+  ]
+}
