@@ -20,11 +20,11 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # 读取 system.md 文件内容
-with open('script_analysis.md', 'r', encoding='utf-8') as f:
+with open('series_analysis.md', 'r', encoding='utf-8') as f:
     system_content = f.read().strip()
 
 # 读取剧本文件内容
-with open('绝境先知-黄金瞳.txt', 'r', encoding='utf-8') as f:
+with open('script.txt', 'r', encoding='utf-8') as f:
     script_content = f.read().strip()
 
 client = Ark(
