@@ -1,109 +1,964 @@
-2026-02-09 18:32:37,415 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
-2026-02-09 18:32:37,419 [INFO] 格式化JSON输出:
+2026-02-10 20:29:01,950 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-10 20:29:01,955 [INFO] 格式化JSON输出:
 {
   "script_info": {
-    "script_description": "神话战斗+天庭震怒+三界反应+复仇震慑"
+    "script_description": "重生救赎+豪门争斗+校园霸凌+亲情反转"
   },
   "characters": [
     {
       "character_id": "C1",
-      "character_name": "孙悟空",
-      "character_background": "中国，男性，猴王，斗战胜佛，因巨灵神激怒而爆发雷霆之怒，金箍棒贯穿三界，火眼金睛燃烧，性格狂暴威严",
-      "character_appearance_prompt": "中国，男性，猴王面容，金毛倒竖，火眼金睛喷吐实质烈焰，面容扭曲狰狞，牙齿紧咬，指节发白，浑身散发狂暴威压",
-      "character_style_prompt": "中国，约30岁，男性，锁子黄金甲上衣，虎皮战裙下装，脚穿藕丝步云履，头戴凤翅紫金冠配饰，披红披风，双手紧握金箍棒，周身雷霆环绕"
+      "character_name": "傅子岸",
+      "character_background": "中国，18岁，男性，傅氏集团唯一继承人，表面是不良少年，实则内心善良，因母亲早逝而叛逆，最终被重生母亲闻溪救赎",
+      "character_appearance_prompt": "中国，18岁，男性，面容俊朗，蓬松棕发，耳朵戴耳钉，眼神不羁中带着脆弱，五官立体分明，小麦色健康肤色",
+      "character_style_prompt": "中国，18岁，男性，黑色皮夹克上衣，破洞牛仔裤下装，黑色机车靴，银色耳钉配饰，不良少年风格，叛逆中带着贵气"
     },
     {
       "character_id": "C2",
-      "character_name": "众仙",
-      "character_background": "中国，多年龄，多性别，天庭神仙群体，包括杨戬、哪吒及众天兵，在孙悟空威压下运法力站稳，震惊劝阻",
-      "character_appearance_prompt": "中国，多年龄，多性别，天庭神仙面容各异，杨戬三眼威严，哪吒少年英气，天兵盔甲整齐，表情震惊紧张，法力护体光晕",
-      "character_style_prompt": "中国，多年龄，多性别，天庭官服铠甲多样，杨戬银甲三尖刀，哪吒红绫乾坤圈，天兵制式盔甲，各持法器，在狂风中努力站稳"
+      "character_name": "闻溪",
+      "character_background": "中国，外表18岁实际已逝母亲，重生回到儿子少年时期，傅子岸生母，天才建筑师，为救儿子改变命运而回归",
+      "character_appearance_prompt": "中国，外表18岁，女性，面容清秀酷似傅太太，扎高马尾，眼神坚定犀利，五官精致柔和，白皙肤色",
+      "character_style_prompt": "中国，外表18岁，女性，学生校服上衣，格子裙下装，白色运动鞋，简约发型，清纯学生造型中透着成熟气质"
     },
     {
       "character_id": "C3",
-      "character_name": "太上老君",
-      "character_background": "中国，男性，老年，兜率宫主人，炼丹大师，天庭震动中扶住炼丹炉，无奈叹息孙悟空惹事",
-      "character_appearance_prompt": "中国，男性，老年，白发长须，道骨仙风，面容慈祥无奈，眉头微皱，手持拂尘，仙气缭绕",
-      "character_style_prompt": "中国，老年，男性，八卦道袍上衣，宽大袖摆，下穿云纹长裤，脚穿布鞋，腰挂葫芦配饰，在摇晃宫殿中稳守丹炉"
+      "character_name": "傅先生",
+      "character_background": "中国，45岁，男性，傅氏集团总裁，傅子岸父亲，深情专一，十五年未再婚，深爱亡妻闻溪",
+      "character_appearance_prompt": "中国，45岁，男性，成熟英俊面容，剑眉星目，黑发掺杂银丝，眼神深邃威严，健康肤色，轮廓分明",
+      "character_style_prompt": "中国，45岁，男性，黑色定制西装上衣，白色衬衫打底，深色西裤下装，黑色皮鞋，银色腕表配饰，商务精英风格"
     },
     {
       "character_id": "C4",
-      "character_name": "玉皇大帝",
-      "character_background": "中国，男性，中年，天庭至尊，凌霄宝殿主宰，感受天宫震颤，对孙悟空行为不悦皱眉",
-      "character_appearance_prompt": "中国，男性，中年，帝王威严面容，头戴冕旒，眼神不悦，眉头紧皱，表情沉肃，天庭之主气度",
-      "character_style_prompt": "中国，中年，男性，九龙皇袍上衣，十二章纹饰，下穿龙纹长裙，脚穿金丝靴，端坐宝座，冠冕流苏晃动，彰显天帝威严"
+      "character_name": "乔安然",
+      "character_background": "中国，30岁，女性，傅先生秘书，野心勃勃想取代闻溪位置，设计陷害傅子岸，最终失败",
+      "character_appearance_prompt": "中国，30岁，女性，面容精致但略显人工，大眼睛高鼻梁，妆容精致，长发披肩，表情常常带着算计",
+      "character_style_prompt": "中国，30岁，女性，金色礼服或职业套装，高跟鞋，精致首饰配饰，打扮时髦但透着刻意"
     },
     {
       "character_id": "C5",
-      "character_name": "如来佛祖",
-      "character背景": "中国，男性，佛祖，西方灵山主宰，讲经时感知东方变故，慈悲叹息孙悟空惹祸",
-      "character_appearance_prompt": "中国，男性，佛祖面容，庄严慈悲，肉髻螺发，耳垂及肩，眼神深邃叹息，周身佛光普照，表情悲悯",
-      "character_style_prompt": "中国，约40岁，男性，金色袈裟上衣，赤足盘坐莲台，手持念珠配饰，讲经法相庄严，佛光环绕灵山"
+      "character_name": "张雪",
+      "character_background": "中国，18岁，女性，明德大学学生，班长，嫉妒闻溪和傅子岸，参与陷害傅子岸",
+      "character_appearance_prompt": "中国，18岁，女性，清秀面容，黑发束起，眼神中带着傲气和嫉妒，标准学生长相",
+      "character_style_prompt": "中国，18岁，女性，红色格子校服上衣，同款裙子下装，黑色皮鞋，简约学生造型"
     },
     {
       "character_id": "C6",
-      "character_name": "东海龙王",
-      "character_background": "中国，男性，老年，东海主宰，龙宫因金箍棒引发海啸惊慌，扶冠担忧孙悟空惹事",
-      "character_appearance_prompt": "中国，男性，老年，龙首人身，龙角峥嵘，龙须飘动，面容惊慌，扶住王冠，眼神担忧，龙族威严",
-      "character_style_prompt": "中国，老年，男性，龙王朝服上衣，绣海浪龙纹，下穿宽大龙裤，脚穿云头靴，头戴珍珠王冠配饰，在摇晃龙宫中稳定身形"
+      "character_name": "苏小小",
+      "character_background": "中国，18岁，女性，明德大学学生，家境贫困但成绩优异，被继父虐待，傅子岸暗中保护的对象",
+      "character_appearance_prompt": "中国，18岁，女性，清纯面容，黑直长发，大眼睛透着柔弱，肤色白皙，表情常常带着忧郁",
+      "character_style_prompt": "中国，18岁，女性，蓝色格子校服，白色衬衫，深色裙子，朴素穿着，透着贫困但自尊的气质"
     },
     {
       "character_id": "C7",
-      "character_name": "菩提老祖",
-      "character_background": "中国，男性，老年，斜月三星洞主人，孙悟空师父，山巅观弟子练功，穿透虚空看金箍棒叹息",
-      "character_appearance_prompt": "中国，男性，老年，仙风道骨，白发白须，目光深邃穿透虚空，表情叹息轻声，道家高人风范",
-      "character_style_prompt": "中国，老年，男性，朴素道袍上衣，宽大袖袍，下穿麻布长裤，脚穿草鞋，手持拂尘配饰，山巅站立观天象变化"
+      "character_name": "梁思远",
+      "character_background": "中国，40岁，男性，建筑大师，闻溪生前弟子，暗恋闻溪多年，在比赛中认出重生闻溪",
+      "character_appearance_prompt": "中国，40岁，男性，儒雅面容，戴眼镜，文质彬彬，黑发整齐，眼神中带着学者气质",
+      "character_style_prompt": "中国，40岁，男性，浅色西装或休闲装，衬衫领带，皮鞋，简约知识分子风格"
     },
     {
       "character_id": "C8",
-      "character_name": "巨灵神",
-      "character_background": "中国，男性，壮年，地府轮回井执行者，正投掷魂魄时被金箍棒震慑，惊恐绝望瘫软",
-      "character_appearance_prompt": "中国，男性，壮年，巨灵神将面容，身材魁梧，瞳孔缩成针尖，面色惊恐到极点，浑身僵硬颤抖，绝望表情",
-      "character_style_prompt": "中国，壮年，男性，神将盔甲上衣，厚重肩甲，下穿战裙护腿，保持投掷姿势僵立，在金箍棒威压下双腿发软"
+      "character_name": "陈明",
+      "character_background": "中国，50岁，男性，苏小小继父，赌徒，家暴苏小小，最终被法律制裁",
+      "character_appearance_prompt": "中国，50岁，男性，面容猥琐，眼神凶狠，头发凌乱，面色蜡黄，透着落魄和邪恶",
+      "character_style_prompt": "中国，50岁，男性，破旧夹克，脏污裤子，邋遢打扮，整体透着落魄和不良气息"
     },
     {
       "character_id": "C9",
-      "character_name": "阎罗王",
-      "character_background": "中国，男性，中年，地府主宰，轮回井旁瘫坐惊恐，看着定海神针震撼",
-      "character_appearance_prompt": "中国，男性，中年，阎王威严面容，此刻惊恐瘫坐，眼神震撼看着金箍棒，表情恐惧，地府之主气度受损",
-      "character_style_prompt": "中国，中年，男性，阎王朝服上衣，黑色官袍，下穿宽大官裤，头戴判官帽配饰，瘫坐地面仰视金箍棒"
+      "character_name": "眼镜男",
+      "character_background": "中国，18岁，男性，明德大学学生，被傅子岸同学欺负的受害者",
+      "character_appearance_prompt": "中国，18岁，男性，戴眼镜，面容清秀但怯懦，眼神惊恐，标准学生长相",
+      "character_style_prompt": "中国，18岁，男性，普通校服，眼镜配饰，朴素学生造型"
     },
     {
       "character_id": "C10",
-      "character_name": "鬼差",
-      "character_background": "中国，多年龄，多性别，地府差役群体，被金箍棒气浪掀飞，惊慌失措",
-      "character_appearance_prompt": "中国，多年龄，多性别，鬼差青面獠牙或正常鬼吏面容，表情惊恐，被气浪冲击飞起，混乱不堪",
-      "character_style_prompt": "中国，多年龄，多性别，地府差役制服，黑色差服，手持锁链刑具，在狂暴气浪中东倒西歪掀飞"
+      "character_name": "男同学1",
+      "character_background": "中国，18岁，男性，傅子岸的不良少年同伴",
+      "character_appearance_prompt": "中国，18岁，男性，普通青少年面容，表情嚣张，标准不良少年长相",
+      "character_style_prompt": "中国，18岁，男性，休闲装或校服，随意打扮，透着不良气息"
+    },
+    {
+      "character_id": "C11",
+      "character_name": "男同学2",
+      "character_background": "中国，18岁，男性，傅子岸的不良少年同伴",
+      "character_appearance_prompt": "中国，18岁，男性，普通青少年面容，表情跟随，标准跟班长相",
+      "character_style_prompt": "中国，18岁，男性，休闲装或校服，普通学生造型"
+    },
+    {
+      "character_id": "C12",
+      "character_name": "男同学3",
+      "character_background": "中国，18岁，男性，傅子岸的不良少年同伴",
+      "character_appearance_prompt": "中国，18岁，男性，普通青少年面容，表情怯懦，标准跟班长相",
+      "character_style_prompt": "中国，18岁，男性，休闲装或校服，普通学生造型"
+    },
+    {
+      "character_id": "C13",
+      "character_name": "男同学4",
+      "character_background": "中国，18岁，男性，傅子岸的不良少年同伴",
+      "character_appearance_prompt": "中国，18岁，男性，普通青少年面容，表情茫然，标准跟班长相",
+      "character_style_prompt": "中国，18岁，男性，休闲装或校服，普通学生造型"
+    },
+    {
+      "character_id": "C14",
+      "character_name": "大哥",
+      "character_background": "中国，20岁，男性，傅子岸的社会朋友，讲义气，在图书馆保护闻溪",
+      "character_appearance_prompt": "中国，20岁，男性，粗犷面容，身材健壮，表情凶狠但重义气，标准社会青年长相",
+      "character_style_prompt": "中国，20岁，男性，黑色西装戴墨镜，社会人打扮，透着江湖气息"
+    },
+    {
+      "character_id": "C15",
+      "character_name": "队员1",
+      "character_background": "中国，20岁，男性，大哥的社会同伴",
+      "character_appearance_prompt": "中国，20岁，男性，普通青年面容，身材中等，标准跟班长相",
+      "character_style_prompt": "中国，20岁，男性，休闲装或西装，社会青年造型"
+    },
+    {
+      "character_id": "C16",
+      "character_name": "队员2",
+      "character_background": "中国，20岁，男性，大哥的社会同伴",
+      "character_appearance_prompt": "中国，20岁，男性，普通青年面容，身材中等，标准跟班长相",
+      "character_style_prompt": "中国，20岁，男性，休闲装或西装，社会青年造型"
+    },
+    {
+      "character_id": "C17",
+      "character_name": "宋校长",
+      "character_background": "中国，55岁，男性，明德大学校长，趋炎附势，最终被罢免",
+      "character_appearance_prompt": "中国，55岁，男性，中年发福面容，戴眼镜，表情谄媚，标准官僚长相",
+      "character_style_prompt": "中国，55岁，男性，西装领带，正式打扮，透着官僚气息"
+    },
+    {
+      "character_id": "C18",
+      "character_name": "许特助",
+      "character_background": "中国，35岁，男性，傅先生助理，忠诚能干，负责处理各项事务",
+      "character_appearance_prompt": "中国，35岁，男性，精明干练面容，戴眼镜，表情专业，标准助理长相",
+      "character_style_prompt": "中国，35岁，男性，商务西装，领带皮鞋，专业职场造型"
+    },
+    {
+      "character_id": "C19",
+      "character_name": "女嘉宾1",
+      "character_background": "中国，35岁，女性，金色礼服女嘉宾，趋炎附势，针对闻溪",
+      "character_appearance_prompt": "中国，35岁，女性，妆容精致，表情刻薄，标准贵妇长相",
+      "character_style_prompt": "中国，35岁，女性，金色晚礼服，高跟鞋，奢华首饰，贵妇打扮"
+    },
+    {
+      "character_id": "C20",
+      "character_name": "女嘉宾2",
+      "character_background": "中国，35岁，女性，酒红色礼服女嘉宾，附和金色礼服女嘉宾",
+      "character_appearance_prompt": "中国，35岁，女性，妆容艳丽，表情附和，标准宴会嘉宾长相",
+      "character_style_prompt": "中国，35岁，女性，酒红色亮片礼服，高跟鞋，宴会造型"
+    },
+    {
+      "character_id": "C21",
+      "character_name": "男嘉宾1",
+      "character_background": "中国，40岁，男性，深色西装男嘉宾，附和女嘉宾们",
+      "character_appearance_prompt": "中国，40岁，男性，中年面容，表情世故，标准商务人士长相",
+      "character_style_prompt": "中国，40岁，男性，深色西装，领带，正式宴会造型"
+    },
+    {
+      "character_id": "C22",
+      "character_name": "保安1",
+      "character_background": "中国，30岁，男性，图书馆保安",
+      "character_appearance_prompt": "中国，30岁，男性，普通安保人员面容，身材健壮，标准保安长相",
+      "character_style_prompt": "中国，30岁，男性，保安制服，对讲机配饰，安保人员造型"
+    },
+    {
+      "character_id": "C23",
+      "character_name": "保安2",
+      "character_background": "中国，30岁，男性，图书馆保安",
+      "character_appearance_prompt": "中国，30岁，男性，普通安保人员面容，身材中等，标准保安长相",
+      "character_style_prompt": "中国，30岁，男性，保安制服，对讲机配饰，安保人员造型"
+    },
+    {
+      "character_id": "C24",
+      "character_name": "医生",
+      "character_background": "中国，40岁，男性，医院医生，负责DNA检测",
+      "character_appearance_prompt": "中国，40岁，男性，戴眼镜，表情专业，标准医生长相",
+      "character_style_prompt": "中国，40岁，男性，白大褂，听诊器，医生职业造型"
+    },
+    {
+      "character_id": "C25",
+      "character_name": "警察",
+      "character_background": "中国，35岁，男性，审讯傅子岸的警察",
+      "character_appearance_prompt": "中国，35岁，男性，严肃面容，表情威严，标准警察长相",
+      "character_style_prompt": "中国，35岁，男性，警服，警帽，警察职业造型"
+    },
+    {
+      "character_id": "C26",
+      "character_name": "老师",
+      "character_background": "中国，40岁，女性，明德大学老师",
+      "character_appearance_prompt": "中国，40岁，女性，温和面容，戴眼镜，标准教师长相",
+      "character_style_prompt": "中国，40岁，女性，职业装，简约打扮，教师造型"
+    },
+    {
+      "character_id": "C27",
+      "character_name": "主持人",
+      "character_background": "中国，30岁，男性，建筑设计大赛主持人",
+      "character_appearance_prompt": "中国，30岁，男性，帅气面容，表情专业，标准主持人长相",
+      "character_style_prompt": "中国，30岁，男性，黑色西装，领带，主持人造型"
+    },
+    {
+      "character_id": "C28",
+      "character_name": "评审A",
+      "character_background": "中国，50岁，男性，建筑设计大赛评审",
+      "character_appearance_prompt": "中国，50岁，男性，学者面容，戴眼镜，表情严肃，标准评审长相",
+      "character_style_prompt": "中国，50岁，男性，西装，领带，学者造型"
+    },
+    {
+      "character_id": "C29",
+      "character_name": "评审B",
+      "character_background": "中国，45岁，女性，建筑设计大赛评审",
+      "character_appearance_prompt": "中国，45岁，女性，知性面容，表情专业，标准女评审长相",
+      "character_style_prompt": "中国，45岁，女性，职业套装，简约打扮，评审造型"
+    },
+    {
+      "character_id": "C30",
+      "character_name": "评审3",
+      "character_background": "中国，40岁，男性，建筑设计大赛评审",
+      "character_appearance_prompt": "中国，40岁，男性，普通面容，表情中立，标准评审长相",
+      "character_style_prompt": "中国，40岁，男性，西装，领带，评审造型"
+    },
+    {
+      "character_id": "C31",
+      "character_name": "记者A",
+      "character_background": "中国，30岁，男性，医院现场记者",
+      "character_appearance_prompt": "中国，30岁，男性，精明面容，表情急切，标准记者长相",
+      "character_style_prompt": "中国，30岁，男性，休闲装，记者证，记者造型"
+    },
+    {
+      "character_id": "C32",
+      "character_name": "记者B",
+      "character_background": "中国，28岁，女性，医院现场记者",
+      "character_appearance_prompt": "中国，28岁，女性，干练面容，表情专业，标准女记者长相",
+      "character_style_prompt": "中国，28岁，女性，职业装，记者证，记者造型"
+    },
+    {
+      "character_id": "C33",
+      "character_name": "记者C",
+      "character_background": "中国，35岁，男性，医院现场记者",
+      "character_appearance_prompt": "中国，35岁，男性，普通面容，表情好奇，标准记者长相",
+      "character_style_prompt": "中国，35岁，男性，休闲装，记者证，记者造型"
+    },
+    {
+      "character_id": "C34",
+      "character_name": "混混头子",
+      "character_background": "中国，20岁，男性，傅子岸的社会朋友",
+      "character_appearance_prompt": "中国，20岁，男性，凶狠面容，纹身，标准混混长相",
+      "character_style_prompt": "中国，20岁，男性，皮夹克，破洞裤，纹身配饰，混混造型"
+    },
+    {
+      "character_id": "C35",
+      "character_name": "混混1",
+      "character_background": "中国，20岁，男性，傅子岸的社会朋友",
+      "character_appearance_prompt": "中国，20岁，男性，普通青年面容，表情凶狠，标准跟班长相",
+      "character_style_prompt": "中国，20岁，男性，休闲装，随意打扮，混混造型"
+    },
+    {
+      "character_id": "C36",
+      "character_name": "混混2",
+      "character_background": "中国，20岁，男性，傅子岸的社会朋友",
+      "character_appearance_prompt": "中国，20岁，男性，普通青年面容，表情茫然，标准跟班长相",
+      "character_style_prompt": "中国，20岁，男性，休闲装，随意打扮，混混造型"
+    },
+    {
+      "character_id": "C37",
+      "character_name": "学生甲",
+      "character_background": "中国，18岁，男性，明德大学学生，傅子岸同学",
+      "character_appearance_prompt": "中国，18岁，男性，普通学生面容，表情愤怒，标准男生长相",
+      "character_style_prompt": "中国，18岁，男性，校服，普通学生造型"
+    },
+    {
+      "character_id": "C38",
+      "character_name": "学生乙",
+      "character_background": "中国，18岁，女性，明德大学学生，支持傅子岸",
+      "character_appearance_prompt": "中国，18岁，女性，清秀面容，表情坚定，标准女生长相",
+      "character_style_prompt": "中国，18岁，女性，校服，普通学生造型"
+    },
+    {
+      "character_id": "C39",
+      "character_name": "学生丙",
+      "character_background": "中国，18岁，男性，明德大学学生",
+      "character_appearance_prompt": "中国，18岁，男性，普通学生面容，表情好奇，标准男生长相",
+      "character_style_prompt": "中国，18岁，男性，校服，普通学生造型"
+    },
+    {
+      "character_id": "C40",
+      "character_name": "学生丁",
+      "character_background": "中国，18岁，女性，明德大学学生",
+      "character_appearance_prompt": "中国，18岁，女性，普通学生面容，表情不屑，标准女生长相",
+      "character_style_prompt": "中国，18岁，女性，校服，普通学生造型"
+    },
+    {
+      "character_id": "C41",
+      "character_name": "年轻女子A",
+      "character_background": "中国，20岁，女性，医院现场围观者，帮助苏小小",
+      "character_appearance_prompt": "中国，20岁，女性，清秀面容，表情正义，标准年轻女性长相",
+      "character_style_prompt": "中国，20岁，女性，休闲装，简约打扮，普通青年造型"
+    },
+    {
+      "character_id": "C42",
+      "character_name": "年轻女子B",
+      "character_background": "中国，20岁，女性，医院现场围观者，帮助苏小小",
+      "character_appearance_prompt": "中国，20岁，女性，普通面容，表情热心，标准年轻女性长相",
+      "character_style_prompt": "中国，20岁，女性，休闲装，简约打扮，普通青年造型"
+    },
+    {
+      "character_id": "C43",
+      "character_name": "病患家属",
+      "character_background": "中国，40岁，男性，医院现场围观者",
+      "character_appearance_prompt": "中国，40岁，男性，普通中年面容，表情同情，标准病患家属长相",
+      "character_style_prompt": "中国，40岁，男性，休闲装，普通中年造型"
+    },
+    {
+      "character_id": "C44",
+      "character_name": "警官1",
+      "character_background": "中国，35岁，男性，医院现场警察",
+      "character_appearance_prompt": "中国，35岁，男性，严肃面容，表情威严，标准警察长相",
+      "character_style_prompt": "中国，35岁，男性，警服，警察职业造型"
+    },
+    {
+      "character_id": "C45",
+      "character_name": "警官2",
+      "character_background": "中国，30岁，男性，医院现场警察",
+      "character_appearance_prompt": "中国，30岁，男性，普通面容，表情严肃，标准警察长相",
+      "character_style_prompt": "中国，30岁，男性，警服，警察职业造型"
+    },
+    {
+      "character_id": "C46",
+      "character_name": "傅太太的替身",
+      "character_background": "中国，25岁，女性，傅先生雇佣照顾傅子岸的替身，虐待傅子岸",
+      "character_appearance_prompt": "中国，25岁，女性，面容酷似闻溪但略显人工，表情凶狠，标准替身长相",
+      "character_style_prompt": "中国，25岁，女性，普通家居服，简约打扮，保姆造型"
+    },
+    {
+      "character_id": "C47",
+      "character_name": "小傅子岸",
+      "character_background": "中国，5岁，男性，傅子岸童年时期",
+      "character_appearance_prompt": "中国，5岁，男性，可爱孩童面容，大眼睛，表情委屈，标准儿童长相",
+      "character_style_prompt": "中国，5岁，男性，蓝色睡衣，抱小熊，孩童造型"
+    },
+    {
+      "character_id": "C48",
+      "character_name": "傅总的员工",
+      "character_background": "中国，30岁，男性，傅氏集团员工，参加投票",
+      "character_appearance_prompt": "中国，30岁，男性，普通职场面容，表情专业，标准员工长相",
+      "character_style_prompt": "中国，30岁，男性，商务西装，职场造型"
+    },
+    {
+      "character_id": "C49",
+      "character_name": "乔夫人",
+      "character_background": "中国，50岁，女性，乔安然母亲，阴谋策划者",
+      "character_appearance_prompt": "中国，50岁，女性，贵妇面容，表情阴险，标准贵妇长相",
+      "character_style_prompt": "中国，50岁，女性，奢华服饰，珠宝配饰，贵妇造型"
+    },
+    {
+      "character_id": "C50",
+      "character_name": "竞争者同学",
+      "character_background": "中国，18岁，女性，明德大学学生，梁思远追求者",
+      "character_appearance_prompt": "中国，18岁，女性，漂亮面容，表情嫉妒，标准女生长相",
+      "character_style_prompt": "中国，18岁，女性，校服，精致打扮，学生造型"
     }
   ],
   "backdrops": [
     {
       "backdrop_id": "B1",
-      "backdrop_name": "30—1场景：日，外，天庭雷部废墟",
-      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：天庭雷部废墟，日间外景，破碎的云层地板，崩碎的宫殿残骸，风云变色天空，狂风席卷废墟，雷霆隐隐，毁灭气息弥漫，天庭威严受损景象"
+      "backdrop_name": "场 1-1 日 外 绿荫小道 - 公园",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：绿荫小道公园，日间外景，幽静的林荫小道，树冠茂密，阳光透过树叶洒下斑驳光影，小道尽头隐约可见建筑轮廓，红色横幅悬挂上方，静谧中带着神秘氛围"
     },
     {
       "backdrop_id": "B2",
-      "backdrop_name": "30—2场景：蒙太奇快剪（各界反应）",
-      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：蒙太奇快速剪辑场景，包含兜率宫炼丹炉、凌霄宝殿震颤、灵山讲经台、东海龙宫摇晃、斜月三星洞山巅等多地点切换，三界震动统一氛围"
+      "backdrop_name": "场 1-2 日 外 小道旁 - 墙角",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：小道旁墙角，日间外景，破旧砖墙，墙角杂草丛生，光线昏暗，压抑紧张的氛围，墙面有涂鸦痕迹"
     },
     {
       "backdrop_id": "B3",
-      "backdrop_name": "30—3场景：暗，内，地府轮回井",
-      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：地府轮回井区域，黑暗内景，穹顶崩碎碎石飞溅，金色金箍棒贯穿天地矗立井旁，气浪痕迹残留，阴森幽暗氛围，轮回井神秘光芒，地府威严被破景象"
+      "backdrop_name": "场 2-1 日 外 小道旁 - 墙角",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：小道旁墙角，日间外景，与第一集相同场景，破旧砖墙，墙角区域，光线略有变化，紧张氛围延续"
+    },
+    {
+      "backdrop_id": "B4",
+      "backdrop_name": "场 3-1 日 外 学校走廊/小道旁 - 墙角",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：学校走廊与小道旁交界处，日间外景，教学楼走廊延伸至室外，墙面有公告栏，走廊立柱，室外绿植，学习氛围与紧张感交织"
+    },
+    {
+      "backdrop_id": "B5",
+      "backdrop_name": "场 4-1 日 外 学校走廊/小道旁",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：学校走廊区域，日间外景，教学楼外部走廊，水泥地面，金属栏杆，墙面有班级标识，简洁校园环境"
+    },
+    {
+      "backdrop_id": "B6",
+      "backdrop_name": "场 4-2 日 外 学校走廊/小道旁",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：学校走廊与小道旁连接区域，日间外景，走廊与室外过渡空间，有长椅绿植，相对开阔的校园环境"
+    },
+    {
+      "backdrop_id": "B7",
+      "backdrop_name": "场 5-1 日 外 学校走廊/小道旁",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：学校走廊小道旁，日间外景，教学楼外部空间，有树木绿植，水泥路面，校园标志性建筑背景"
+    },
+    {
+      "backdrop_id": "B8",
+      "backdrop_name": "场 6-1 日 外 学校走廊/小道旁",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：学校走廊小道旁，日间外景，与前几场相同区域，光线角度略有变化，校园环境持续"
+    },
+    {
+      "backdrop_id": "B9",
+      "backdrop_name": "场 6-2 日 内 图书馆",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆内部，日间内景，高大书架林立，书籍整齐排列，木质桌椅，柔和灯光，学术氛围浓厚，展示区有照片展示"
+    },
+    {
+      "backdrop_id": "B10",
+      "backdrop_name": "场 7-1 日 外 学校走廊/小道旁",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：学校走廊小道旁，日间外景，教学楼外部走廊区域，有楼梯连接，绿植点缀，校园日常环境"
+    },
+    {
+      "backdrop_id": "B11",
+      "backdrop_name": "场 7-2 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式现场，日间内景，华丽布置，鲜花装饰，演讲台，嘉宾座椅，灯光璀璨，庆典氛围浓厚"
+    },
+    {
+      "backdrop_id": "B12",
+      "backdrop_name": "场 8-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式核心区域，日间内景，中央大厅，破碎画作地面，华丽装饰，灯光聚焦主宾区"
+    },
+    {
+      "backdrop_id": "B13",
+      "backdrop_name": "场 9-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式争议区域，日间内景，地面有破碎艺术品碎片，宾客围观区域，紧张氛围空间"
+    },
+    {
+      "backdrop_id": "B14",
+      "backdrop_name": "场 10-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式主会场，日间内景，傅先生入场区域，台阶高处，视野开阔，庄严氛围"
+    },
+    {
+      "backdrop_id": "B15",
+      "backdrop_name": "场 11-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式对峙区域，日间内景，闻溪与傅先生对峙空间，灯光聚焦，紧张氛围升级"
+    },
+    {
+      "backdrop_id": "B16",
+      "backdrop_name": "场 12-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式冲突中心，日间内景，乔安然与傅先生争执区域，宾客围观，戏剧性氛围"
+    },
+    {
+      "backdrop_id": "B17",
+      "backdrop_name": "场 12-2 回忆 夜 内 傅宅地下室",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：傅宅地下室，夜间内景，昏暗空间，水泥墙面，简陋家具，懒人沙发，压抑恐怖的氛围"
+    },
+    {
+      "backdrop_id": "B18",
+      "backdrop_name": "场 12-3 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式高潮区域，日间内景，傅先生保护傅子岸时刻，空间紧张感达到顶点"
+    },
+    {
+      "backdrop_id": "B19",
+      "backdrop_name": "场 13-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式尾声区域，日间内景，宾客议论纷纷，场面混乱但渐趋平静"
+    },
+    {
+      "backdrop_id": "B20",
+      "backdrop_name": "场 13-2 回忆 / 幻想 夜 内 医院病房",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：医院病房，夜间内景，温馨但悲伤的氛围，病床医疗设备，柔和小夜灯，窗外夜色"
+    },
+    {
+      "backdrop_id": "B21",
+      "backdrop_name": "场 13-3 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式收尾区域，日间内景，人群逐渐散开，庆典氛围转为肃穆"
+    },
+    {
+      "backdrop_id": "B22",
+      "backdrop_name": "场 14-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式超现实空间，日间内景，乔安然与傅子岸特殊互动区域，光影效果梦幻"
+    },
+    {
+      "backdrop_id": "B23",
+      "backdrop_name": "场 14-2 夜 内 办公室/书房 - 回忆/幻象",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：办公室书房，夜间内景，温馨家庭办公空间，电脑书桌，舒适座椅，柔和小台灯"
+    },
+    {
+      "backdrop_id": "B24",
+      "backdrop_name": "场 14-3 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式现实回归，日间内景，所有宾客恢复正常，场景回归实际庆典氛围"
+    },
+    {
+      "backdrop_id": "B25",
+      "backdrop_name": "场 15-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式调查区域，日间内景，傅先生调查闻溪身份空间，紧张对峙氛围"
+    },
+    {
+      "backdrop_id": "B26",
+      "backdrop_name": "场 15-2 夜 内 傅先生的私人空间/幻象",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：傅先生私人空间，夜间内景，奢华但冷清的个人领域，暗色调装饰，孤独氛围"
+    },
+    {
+      "backdrop_id": "B27",
+      "backdrop_name": "场 15-3 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式决裂时刻，日间内景，傅先生与闻溪关系破裂空间，冰冷氛围"
+    },
+    {
+      "backdrop_id": "B28",
+      "backdrop_name": "场 16-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式证据展示区，日间内景，手机证据对峙空间，灯光聚焦关键证据"
+    },
+    {
+      "backdrop_id": "B29",
+      "backdrop_name": "场 17-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式密码揭秘区，日间内景，闻溪证明身份关键空间，紧张期待氛围"
+    },
+    {
+      "backdrop_id": "B30",
+      "backdrop_name": "场 18-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式最终对峙区，日间内景，DNA检测前紧张空间，最后确认时刻"
+    },
+    {
+      "backdrop_id": "B31",
+      "backdrop_name": "场 19-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式商业间谍指控区，日间内景，乔安娜阴谋揭露空间，阴谋氛围浓厚"
+    },
+    {
+      "backdrop_id": "B32",
+      "backdrop_name": "场 20-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式采血冲突区，日间内景，保安控制闻溪空间，医疗紧张氛围"
+    },
+    {
+      "backdrop_id": "B33",
+      "backdrop_name": "场 21-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式验血执行区，日间内景，傅先生亲自采血空间，决绝冷酷氛围"
+    },
+    {
+      "backdrop_id": "B34",
+      "backdrop_name": "场 22-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式DNA检测区，日间内景，琥珀头发证据展示空间，科学验证氛围"
+    },
+    {
+      "backdrop_id": "B35",
+      "backdrop_name": "场 23-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式结果等待区，日间内景，所有人等待DNA结果空间， suspense氛围"
+    },
+    {
+      "backdrop_id": "B36",
+      "backdrop_name": "场 24-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式结果公布区，日间内景，DNA匹配成功揭示空间，震惊反转氛围"
+    },
+    {
+      "backdrop_id": "B37",
+      "backdrop_name": "场 24-2 日 内 医院 - 化验室外",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：医院化验室外，日间内景，走廊等待区，医疗设备背景，紧张等待氛围"
+    },
+    {
+      "backdrop_id": "B38",
+      "backdrop_name": "场 24-3 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式耳光冲突区，日间内景，闻溪反击乔安娜空间，戏剧性高潮"
+    },
+    {
+      "backdrop_id": "B39",
+      "backdrop_name": "场 25-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式最终解决区，日间内景，证据确凿对峙空间，真相大白时刻"
+    },
+    {
+      "backdrop_id": "B40",
+      "backdrop_name": "场 26-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式身份确认区，日间内景，闻溪身份最终确认空间，情感高潮"
+    },
+    {
+      "backdrop_id": "B41",
+      "backdrop_name": "场 27-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式家庭团聚区，日间内景，傅家父子团聚空间，温馨感人氛围"
+    },
+    {
+      "backdrop_id": "B42",
+      "backdrop_name": "场 28-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式清算时刻区，日间内景，乔安娜罪行清算空间，正义伸张氛围"
+    },
+    {
+      "backdrop_id": "B43",
+      "backdrop_name": "场 29-1 日 内 图书馆 - 开馆仪式",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：图书馆开馆仪式结束区，日间内景，庆典正式结束空间，人群散去氛围"
+    },
+    {
+      "backdrop_id": "B44",
+      "backdrop_name": "场 29-2 日 内 傅宅 - 客厅",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：傅宅客厅，日间内景，奢华家庭空间，真皮沙发，大理石地面，落地窗外花园景观"
+    },
+    {
+      "backdrop_id": "B45",
+      "backdrop_name": "场 30-1 日 内 傅宅 - 客厅",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：傅宅客厅家庭时刻，日间内景，牛奶杯茶几，温馨家庭互动空间，柔和日光"
+    },
+    {
+      "backdrop_id": "B46",
+      "backdrop_name": "场 31-1 日 内 教室 - 课堂",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学教室，日间内景，整齐课桌椅，黑板讲台，阳光透过窗户，学习氛围浓厚"
+    },
+    {
+      "backdrop_id": "B47",
+      "backdrop_name": "场 32-1 日 内 咖啡厅",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：咖啡厅内部，日间内景，雅致装修，皮质卡座，咖啡器具，温馨商业氛围"
+    },
+    {
+      "backdrop_id": "B48",
+      "backdrop_name": "场 32-2 日 内 教室 - 课堂",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：教室课堂展示区，日间内景，闻溪学习进步空间，试卷书本，成就感氛围"
+    },
+    {
+      "backdrop_id": "B49",
+      "backdrop_name": "场 33-1 日 内 教室走廊",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：教室走廊，日间内景，教学楼内部走廊， locker储物柜，公告栏，学生活动空间"
+    },
+    {
+      "backdrop_id": "B50",
+      "backdrop_name": "场 35-1 日 内 傅宅书房",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：傅宅书房，日间内景，奢华书房空间，高大书架，实木书桌，家庭办公氛围"
+    },
+    {
+      "backdrop_id": "B51",
+      "backdrop_name": "场 36-1 日 内 傅宅书房",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：傅宅书房情感空间，日间内景，照片纸箱记忆物品，家庭情感交流区域"
+    },
+    {
+      "backdrop_id": "B52",
+      "backdrop_name": "场 36-2 日 内 傅氏集团办公室",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：傅氏集团办公室，日间内景，奢华总裁办公室，落地窗城市景观，现代办公设备"
+    },
+    {
+      "backdrop_id": "B53",
+      "backdrop_name": "场 37-1 日 内 傅氏集团办公室",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：傅氏集团办公室决策区，日间内景，比赛安排工作空间，商业决策氛围"
+    },
+    {
+      "backdrop_id": "B54",
+      "backdrop_name": "场 37-2 日 外 城市 - 大学礼堂",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学礼堂外部，日间外景，现代建筑外观，玻璃幕墙，学术机构气派"
+    },
+    {
+      "backdrop_id": "B55",
+      "backdrop_name": "场 38-1 日 内 大学礼堂 - 投票区",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学礼堂投票区，日间内景，建筑设计大赛投票空间，展板投票箱，竞赛氛围"
+    },
+    {
+      "backdrop_id": "B56",
+      "backdrop_name": "场 39-1 日 内 大学礼堂 - 投票区",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学礼堂投票紧张区，日间内景，票数接近时刻，竞争激烈氛围"
+    },
+    {
+      "backdrop_id": "B57",
+      "backdrop_name": "场 40-1 日 内 大学礼堂 - 投票区",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学礼堂投票反转区，日间内景，傅氏员工投票支持空间，企业力量展示"
+    },
+    {
+      "backdrop_id": "B58",
+      "backdrop_name": "场 41-1 日 内 大学礼堂 - 演讲台/评审区",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学礼堂演讲台，日间内景，建筑设计大赛评审区，专业舞台灯光，学术竞赛氛围"
+    },
+    {
+      "backdrop_id": "B59",
+      "backdrop_name": "场 42-1 日 内 大学礼堂 - 演讲台/评审区",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学礼堂闻溪演讲区，日间内景，设计理念阐述空间，专业设计氛围"
+    },
+    {
+      "backdrop_id": "B60",
+      "backdrop_name": "场 43-1 日 内 大学礼堂 - 演讲台/评审区",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学礼堂抄袭指控区，日间内景，争议设计作品展示空间，紧张对峙氛围"
+    },
+    {
+      "backdrop_id": "B61",
+      "backdrop_name": "场 44-1 日 内 大学礼堂 - 演讲台/评审区/观众席",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学礼堂签名揭秘区，日间内景，透明签名证据空间，科学验证氛围"
+    },
+    {
+      "backdrop_id": "B62",
+      "backdrop_name": "场 45-1 日 内 轿车",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：豪华轿车内部，日间内景，真皮座椅，木纹装饰，移动办公空间"
+    },
+    {
+      "backdrop_id": "B63",
+      "backdrop_name": "场 45-2 日 内 轿车 - 傅子煜视角",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：轿车内部手机视角，日间内景，手机屏幕反光，移动中城市景观"
+    },
+    {
+      "backdrop_id": "B64",
+      "backdrop_name": "场 45-3 日 内 大学礼堂 - 演讲台/评审区/观众席",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学礼堂梁思远入场区，日间内景，建筑大师出场空间，权威认证氛围"
+    },
+    {
+      "backdrop_id": "B65",
+      "backdrop_name": "场 46-1 日 内 大学礼堂 - 演讲台/评审区/观众席",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学礼堂身份确认区，日间内景，梁思远认出闻溪空间，情感认证时刻"
+    },
+    {
+      "backdrop_id": "B66",
+      "backdrop_name": "场 46-2 日 内 大学礼堂 - 傅子煜（梁思远）视角",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学礼堂浪漫视角，日间内景，鲜花准备浪漫氛围，特殊情感空间"
+    },
+    {
+      "backdrop_id": "B67",
+      "backdrop_name": "场 47-1 日 内 大学礼堂 - 演讲台/评审区/观众席",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学礼堂最终确认区，日间内景，闻溪身份最终确认空间，家庭团聚氛围"
+    },
+    {
+      "backdrop_id": "B68",
+      "backdrop_name": "场 48-1 日 内 大学礼堂 - 演讲台/评审区/观众席",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学礼堂庆祝胜利区，日间内景，比赛获胜庆祝空间，喜悦氛围"
+    },
+    {
+      "backdrop_id": "B69",
+      "backdrop_name": "场 49-1 日 内 大学礼堂 - 演讲台/评审区/观众席",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学礼堂成绩质疑区，日间内景，考试成绩争议空间，学术诚信氛围"
+    },
+    {
+      "backdrop_id": "B70",
+      "backdrop_name": "场 50-1 日 内 大学礼堂 - 演讲台/评审区/观众席",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学礼堂成绩公布区，日间内景，成绩单展示空间，学术成就氛围"
+    },
+    {
+      "backdrop_id": "B71",
+      "backdrop_name": "场 50-2 日 外 别墅外 - 台阶",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：别墅外部台阶，日间外景，豪华住宅入口，石材台阶，绿植环绕"
+    },
+    {
+      "backdrop_id": "B72",
+      "backdrop_name": "场 51-1 日 内 大学礼堂 / 图书馆",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学礼堂与图书馆连接区，日间内景，学术机构内部空间，知识传承氛围"
+    },
+    {
+      "backdrop_id": "B73",
+      "backdrop_name": "场 51-2 日 外 大学台阶",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学外部台阶，日间外景，教学楼外部楼梯，事故现场空间"
+    },
+    {
+      "backdrop_id": "B74",
+      "backdrop_name": "场 52-1 日 外 大学台阶",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学台阶事故区，日间外景，苏小小坠楼现场，紧张医疗氛围"
+    },
+    {
+      "backdrop_id": "B75",
+      "backdrop_name": "场 52-2 日 外 大学台阶",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学台阶对峙区，日间外景，张雪指责傅子岸空间，冲突升级氛围"
+    },
+    {
+      "backdrop_id": "B76",
+      "backdrop_name": "场 53-1 日 外 大学台阶",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学台阶救护区，日间外景，医护人员抢救空间，紧急医疗氛围"
+    },
+    {
+      "backdrop_id": "B77",
+      "backdrop_name": "场 53-2 日 外 大学台阶",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学台阶质问区，日间外景，傅先生质问傅子岸空间，家庭冲突氛围"
+    },
+    {
+      "backdrop_id": "B78",
+      "backdrop_name": "场 54-1 日 外 大学台阶",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学台阶真相区，日间外景，闻溪保护傅子岸空间，母爱护卫氛围"
+    },
+    {
+      "backdrop_id": "B79",
+      "backdrop_name": "场 54-2 日 内 大学教室",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学教室谣言区，日间内景，学生议论傅子岸空间，校园舆论氛围"
+    },
+    {
+      "backdrop_id": "B80",
+      "backdrop_name": "场 54-3 夜 内 审讯室",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：警察局审讯室，夜间内景，简单桌椅，单向镜，严肃法律氛围"
+    },
+    {
+      "backdrop_id": "B81",
+      "backdrop_name": "场 55-1 日 内 大学教室/广播室",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学教室与广播室，日间内景，张雪广播揭露空间，舆论操纵氛围"
+    },
+    {
+      "backdrop_id": "B82",
+      "backdrop_name": "场 56-1 日 内 大学教室/广播室",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学教室广播影响区，日间内景，录音证据播放空间，舆论反转氛围"
+    },
+    {
+      "backdrop_id": "B83",
+      "backdrop_name": "场 57-1 日 内 大学教室",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：大学教室支持区，日间内景，同学支持傅子岸空间，校园团结氛围"
+    },
+    {
+      "backdrop_id": "B84",
+      "backdrop_name": "场 58-1 日 内 医院走廊",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：医院走廊交易区，日间内景，乔安然与继父阴谋空间，黑暗交易氛围"
+    },
+    {
+      "backdrop_id": "B85",
+      "backdrop_name": "场 58-2 夜 内 医院走廊 - 病房",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：医院病房阴谋区，夜间内景，继父下毒手空间，危险医疗氛围"
+    },
+    {
+      "backdrop_id": "B86",
+      "backdrop_name": "场 59-1 夜 内 医院病房",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：医院病房陷阱区，夜间内景，傅子岸设伏空间，反制阴谋氛围"
+    },
+    {
+      "backdrop_id": "B87",
+      "backdrop_name": "场 59-2 夜 内 医院走廊",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：医院走廊冲突区，夜间内景，继父表演闹剧空间，戏剧性冲突氛围"
+    },
+    {
+      "backdrop_id": "B88",
+      "backdrop_name": "场 60-1 夜 内 医院走廊",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：医院走廊媒体区，夜间内景，记者围攻空间，舆论风暴中心"
+    },
+    {
+      "backdrop_id": "B89",
+      "backdrop_name": "场 61-1 夜 内 医院走廊",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：医院走廊真相区，夜间内景，证据揭露空间，真相大白时刻"
+    },
+    {
+      "backdrop_id": "B90",
+      "backdrop_name": "场 62-1 夜 内 医院走廊",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：医院走廊对峙区，夜间内景，苏小小指证继父空间，受害者发声时刻"
+    },
+    {
+      "backdrop_id": "B91",
+      "backdrop_name": "场 63-1 夜 内 医院走廊",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：医院走廊报警区，夜间内景，苏小小报警空间，法律维权时刻"
+    },
+    {
+      "backdrop_id": "B92",
+      "backdrop_name": "场 64-1 夜 内 医院走廊",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：医院走廊逮捕区，夜间内景，警察逮捕罪犯空间，正义执行氛围"
+    },
+    {
+      "backdrop_id": "B93",
+      "backdrop_name": "场 64-2 夜 内 医院走廊",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：医院走廊温情区，夜间内景，傅家团聚空间，家庭和解氛围"
+    },
+    {
+      "backdrop_id": "B94",
+      "backdrop_name": "场 65-1 夜 内 医院走廊",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：医院走廊救赎区，夜间内景，傅子岸获得救赎空间，情感治愈氛围"
+    },
+    {
+      "backdrop_id": "B95",
+      "backdrop_name": "场 65-2 夜 内 医院病房门口",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：医院病房门口，夜间内景，傅子岸守护苏小小空间，温情守护氛围"
+    },
+    {
+      "backdrop_id": "B96",
+      "backdrop_name": "场 65-3 夜 内 医院病房门口",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：医院病房门口家庭区，夜间内景，傅家父子和解空间，家庭温暖氛围"
+    },
+    {
+      "backdrop_id": "B97",
+      "backdrop_name": "场 66-1 日 内 教室 - 傅子岸的梦境/母亲的过往",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：教室毕业典礼，日间内景，学术殿堂空间，毕业氛围浓厚"
+    },
+    {
+      "backdrop_id": "B98",
+      "backdrop_name": "场 66-2 夜 内 傅子岸家客厅 - 傅子岸的梦境",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：傅宅客厅梦境区，夜间内景，温馨家庭空间，梦境柔和氛围"
+    },
+    {
+      "backdrop_id": "B99",
+      "backdrop_name": "场 66-3 日 外 学校草坪 - 傅子岸的梦境/母亲的过往",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：学校草坪毕业照，日间外景，阳光草坪空间，青春校园氛围"
+    },
+    {
+      "backdrop_id": "B100",
+      "backdrop_name": "场 66-4 日 外 学校草坪 - 傅子岸的幸福未来",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：学校草坪合影区，日间外景，幸福未来空间，圆满结局氛围"
     }
   ],
   "creatures": [],
   "props": [
     {
       "prop_id": "P1",
-      "prop_name": "金箍棒",
-      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：孙悟空金箍棒，可变化擎天巨柱，金色柱身，刻有龙纹符文，两端金箍，散发恐怖热量雷霆，定海神针威压，毁灭气势磅礴"
+      "prop_name": "黑色摩托车",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：黑色重型摩托车，流线型车身，金属质感，机车风格，酷炫造型"
     },
     {
       "prop_id": "P2",
-      "prop_name": "炼丹炉",
-      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：太上老君炼丹炉，青铜材质，三足鼎立，炉身八卦图案，炉火旺盛，炉盖精致，仙家法器，在震动中炉火四溅"
+      "prop_name": "头盔",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：黑色机车头盔，流线型设计，护目镜，皮质内衬，专业防护装备"
+    },
+    {
+      "prop_id": "P3",
+      "prop_name": "菜刀",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：明晃晃的菜刀，不锈钢材质，锋利刀刃，木质刀柄，危险武器"
+    },
+    {
+      "prop_id": "P4",
+      "prop_name": "粉色卡通手帕",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：粉红色手帕，印有可爱卡通图案，棉质材质，方形设计，少女风格"
+    },
+    {
+      "prop_id": "P5",
+      "prop_name": "钢管",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：金属钢管，银色材质，圆柱形，表面光滑，可作为武器"
+    },
+    {
+      "prop_id": "P6",
+      "prop_name": "手机",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：智能手机，触摸屏设计，现代科技感，证据展示工具"
+    },
+    {
+      "prop_id": "P7",
+      "prop_name": "认罪书",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：官方认罪文书，纸质材质，正式格式，法律文件"
+    },
+    {
+      "prop_id": "P8",
+      "prop_name": "琥珀项链",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：银色项链，琥珀坠子，内嵌一缕黑发，精致首饰，情感信物"
+    },
+    {
+      "prop_id": "P9",
+      "prop_name": "采血笔",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：医用采血笔，精密医疗器械，DNA检测工具"
+    },
+    {
+      "prop_id": "P10",
+      "prop_name": "DNA检测报告",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：基因检测报告文件，纸质文档，科学数据，身份验证证据"
+    },
+    {
+      "prop_id": "P11",
+      "prop_name": "建筑设计图",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：建筑设计图纸，专业绘图，线条精确，创意设计方案"
+    },
+    {
+      "prop_id": "P12",
+      "prop_name": "奖杯",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：建筑设计大赛奖杯，金属材质，刻有获奖信息，荣誉象征"
+    },
+    {
+      "prop_id": "P13",
+      "prop_name": "试卷",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：学生考试试卷，纸质文档，分数标记，学术评价工具"
+    },
+    {
+      "prop_id": "P14",
+      "prop_name": "耳环",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：精致耳环，金属材质，镶嵌装饰，女性饰品"
+    },
+    {
+      "prop_id": "P15",
+      "prop_name": "牛奶杯",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：玻璃牛奶杯，透明材质，家庭饮品容器"
+    },
+    {
+      "prop_id": "P16",
+      "prop_name": "录音设备",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：专业录音设备，麦克风设计，证据收集工具"
+    },
+    {
+      "prop_id": "P17",
+      "prop_name": "输液袋",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：医用输液袋，透明塑料材质，药品容器，医疗设备"
+    },
+    {
+      "prop_id": "P18",
+      "prop_name": "现金手提箱",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：银色手提箱，金属材质，装满现金，交易工具"
+    },
+    {
+      "prop_id": "P19",
+      "prop_name": "小药瓶",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：小型药瓶，玻璃材质，危险药品容器"
+    },
+    {
+      "prop_id": "P20",
+      "prop_name": "拍立得照片",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：拍立得照片，方形相纸，泛黄效果，记忆载体"
     }
   ]
 }

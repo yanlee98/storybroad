@@ -89,19 +89,54 @@
 
 ## 强制规则
 
-1. **只输出合法JSON**，无任何解释文字
-2. **严格遵循"输出格式模板"**
-3. **前后一致性**：角色、场景、道具描述与输入信息保持一致
-4. **ID引用准确**：所有ID必须与输入的资产列表对应，shot_id格式为"SH"开头
-5. **长度控制**：严格遵守字数限制，避免超出32k tokens
-6. **分镜逻辑**：镜头顺序符合叙事逻辑和视觉连贯性
-7. **镜头角度要求**：
-   - 对话场景必须在shot_static_prompt和shot_dynamic_prompt中明确使用正反镜头（正打+反打）或过肩镜头
-   - 冲突、打斗场景必须在提示词中明确使用过肩镜头或正反镜头突出关系
-   - shot_static_prompt必须明确说明景别和镜头角度
-   - shot_dynamic_prompt必须明确说明镜头角度设计和运镜控制
+### 输出格式规则（严格执行）
 
-## 输出格式模板（不要输出任何其他文字，只输出 JSON）
+1. **只输出 JSON 对象**：格式为 `{...}`，**不能**是数组 `[...]`
+2. **不要添加任何额外内容（严格执行）**：
+   - ❌ **绝对禁止**添加 Markdown 代码块标记（如 ` ```json ` 或 ` ``` `）
+   - ❌ **绝对禁止**添加解释文字、说明、注释
+   - ❌ **绝对禁止**添加 `//` 或 `/* */` 注释
+   - ✅ **第一个字符必须是 `{`，最后一个字符必须是 `}`**
+3. **顶层字段完整性**：
+   - 顶层对象**必须**包含且仅包含以下2个字段：`scene_backdrop`, `shotlist`
+   - ❌ **禁止缺少**任一必填字段
+   - ❌ **禁止添加**任何其他字段
+4. **shotlist 中每个分镜对象的字段完整性**：
+   - 每个分镜对象**必须**包含且仅包含以下7个字段：`shot_id`, `shot_name`, `shot_related_characters`, `shot_related_creatures`, `shot_related_props`, `shot_static_prompt`, `shot_dynamic_prompt`
+   - ❌ **禁止缺少**任一必填字段（每个分镜都必须有7个字段，缺一不可）
+   - ❌ **禁止添加**任何其他字段
+5. **字段唯一性**：
+   - 顶层对象内，每个字段名只能出现一次（不能有两个 `scene_backdrop` 或 `shotlist`）
+   - 每个分镜对象内，每个字段名只能出现一次（不能有两个 `shot_id` 或 `shot_name`）
+6. **shot_id 唯一性**：每个 shot_id 必须唯一，不能重复（如：SH1, SH2, SH3...）
+7. **必须是有效 JSON**：可以直接被 JSON 解析器解析，无需任何预处理
+
+### 内容规则
+
+8. **严格遵循"输出格式模板"**
+9. **前后一致性**：角色、场景、道具描述与输入信息保持一致
+10. **ID引用准确**：所有ID必须与输入的资产列表对应，shot_id格式为"SH"开头
+11. **长度控制**：严格遵守字数限制，避免超出32k tokens
+12. **分镜逻辑**：镜头顺序符合叙事逻辑和视觉连贯性
+13. **镜头角度要求**：
+    - 对话场景必须在shot_static_prompt和shot_dynamic_prompt中明确使用正反镜头（正打+反打）或过肩镜头
+    - 冲突、打斗场景必须在提示词中明确使用过肩镜头或正反镜头突出关系
+    - shot_static_prompt必须明确说明景别和镜头角度
+    - shot_dynamic_prompt必须明确说明镜头角度设计和运镜控制
+
+## 输出格式模板
+
+**输出要求**：
+- 不要输出任何其他文字，只输出 JSON 对象
+- 第一个字符必须是 `{`，最后一个字符必须是 `}`
+- 不要添加 Markdown 代码块标记（` ```json ` 或 ` ``` `）
+- 顶层对象**必须**包含2个字段：scene_backdrop, shotlist，**不能缺少任一字段**
+- 顶层对象**只能**包含上述2个字段，不能添加其他字段
+- 每个分镜对象**必须**包含7个字段：shot_id, shot_name, shot_related_characters, shot_related_creatures, shot_related_props, shot_static_prompt, shot_dynamic_prompt，**不能缺少任一字段**
+- 每个分镜对象**只能**包含上述7个字段，不能添加其他字段
+- 每个字段名在对象内只能出现一次，不能重复
+
+**正确的输出格式**：
 
 {
   "scene_backdrop": ["B1"],
@@ -135,3 +170,109 @@
     }
   ]
 }
+
+## 错误示例（绝对不能这样输出）
+
+**错误1：添加了 Markdown 代码块标记**
+```
+❌ ```json
+{"scene_backdrop": ["B1"], "shotlist": [...]}
+```
+```
+
+**错误2：顶层对象缺少字段**
+```
+❌ {
+  "shotlist": [...]
+  // 缺少 scene_backdrop 字段！
+}
+```
+
+**错误3：顶层对象添加了额外字段**
+```
+❌ {
+  "scene_backdrop": ["B1"],
+  "shotlist": [...],
+  "scene_description": "..."  // 不允许的额外字段！
+}
+```
+
+**错误4：分镜对象重复的字段名**
+```
+❌ {
+  "scene_backdrop": ["B1"],
+  "shotlist": [
+    {
+      "shot_id": "SH1",
+      "shot_name": "分镜1",
+      "shot_related_characters": ["C1"],
+      "shot_related_creatures": [],
+      "shot_related_props": [],
+      "shot_static_prompt": "...",
+      "shot_dynamic_prompt": "...",
+      "shot_static_prompt": "..."  // 重复了！
+    }
+  ]
+}
+```
+
+**错误5：分镜对象重复的 shot_id**
+```
+❌ {
+  "scene_backdrop": ["B1"],
+  "shotlist": [
+    {"shot_id": "SH1", ...},
+    {"shot_id": "SH1", ...}  // shot_id 重复了！
+  ]
+}
+```
+
+**错误6：分镜对象添加了额外字段**
+```
+❌ {
+  "scene_backdrop": ["B1"],
+  "shotlist": [
+    {
+      "shot_id": "SH1",
+      "shot_name": "分镜1",
+      "shot_related_characters": ["C1"],
+      "shot_related_creatures": [],
+      "shot_related_props": [],
+      "shot_static_prompt": "...",
+      "shot_dynamic_prompt": "...",
+      "shot_description": "..."  // 不允许的额外字段！
+    }
+  ]
+}
+```
+
+**错误7：分镜对象缺少了字段**
+```
+❌ {
+  "scene_backdrop": ["B1"],
+  "shotlist": [
+    {
+      "shot_id": "SH1",
+      "shot_name": "分镜1",
+      "shot_static_prompt": "...",
+      "shot_dynamic_prompt": "..."
+      // 缺少 shot_related_characters、shot_related_creatures、shot_related_props！
+    }
+  ]
+}
+```
+
+**错误8：添加了说明文字**
+```
+❌ 以下是场景分镜解析结果：
+{"scene_backdrop": ["B1"], "shotlist": [...]}
+```
+
+**再次强调**：
+- 第一个输出字符必须是 `{`
+- 最后一个输出字符必须是 `}`
+- 中间不能有任何非 JSON 内容
+- 顶层对象**必须且只能**包含2个字段：scene_backdrop, shotlist，**不能缺少任一字段**
+- 每个分镜对象**必须且只能**包含7个字段：shot_id, shot_name, shot_related_characters, shot_related_creatures, shot_related_props, shot_static_prompt, shot_dynamic_prompt，**不能缺少任一字段**
+- 每个字段名只能出现一次，不能重复
+- 所有 shot_id 必须唯一

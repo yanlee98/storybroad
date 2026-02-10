@@ -24,7 +24,7 @@ with open('script_analysis.md', 'r', encoding='utf-8') as f:
     system_content = f.read().strip()
 
 # 读取剧本文件内容
-with open('episodes/EP30.txt', 'r', encoding='utf-8') as f:
+with open('剧本2.txt', 'r', encoding='utf-8') as f:
     script_content = f.read().strip()
 
 client = Ark(
@@ -42,7 +42,7 @@ completion = client.chat.completions.create(
         {"role": "user", "content": script_content}
     ],
     thinking={"type": "disabled"},
-    max_tokens=32768,  # 模型最大回答 32k，默认 4k 易截断
+    max_tokens=32000,  # 模型最大回答 32k，默认 4k 易截断
 )
 
 # 获取返回内容
