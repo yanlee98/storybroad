@@ -20,11 +20,11 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # 读取 system.md 文件内容
-with open('series_analysis.md', 'r', encoding='utf-8') as f:
+with open('script_analysis.md', 'r', encoding='utf-8') as f:
     system_content = f.read().strip()
 
 # 读取剧本文件内容
-with open('script.txt', 'r', encoding='utf-8') as f:
+with open('episodes/EP30.txt', 'r', encoding='utf-8') as f:
     script_content = f.read().strip()
 
 client = Ark(
@@ -45,4 +45,14 @@ completion = client.chat.completions.create(
     max_tokens=32768,  # 模型最大回答 32k，默认 4k 易截断
 )
 
-logger.info(completion.choices[0].message.content)
+# 获取返回内容
+response_content = completion.choices[0].message.content
+
+# 尝试解析并格式化JSON
+try:
+    data = json.loads(response_content)
+    formatted_json = json.dumps(data, ensure_ascii=False, indent=2)
+    logger.info(f"格式化JSON输出:\n{formatted_json}")
+except json.JSONDecodeError:
+    # 如果不是JSON，直接输出原内容
+    logger.info(response_content)

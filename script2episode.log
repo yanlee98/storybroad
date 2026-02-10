@@ -1,93 +1,109 @@
-2026-02-09 15:43:34,671 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
-2026-02-09 15:43:34,674 [INFO] {
-  "episode_id": "EP6",
-  "episode_description": "李宪在天兵校场诬陷林叶贪墨并欲斩首，王主簿劝阻并回忆孙悟空曾托付照顾林叶，但李宪仗势欺人坚持行刑，林叶愤怒揭露李宪才是真正贪墨者",
-  "episode_backdrops_sequence": [
+2026-02-09 18:32:37,415 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-09 18:32:37,419 [INFO] 格式化JSON输出:
+{
+  "script_info": {
+    "script_description": "神话战斗+天庭震怒+三界反应+复仇震慑"
+  },
+  "characters": [
     {
-      "episode_backdrop": [],
-      "backdrop_related_characters": ["C6", "C11", "C23", "C49"],
-      "backdrop_related_creatures": [],
-      "backdrop_related_props": [],
-      "episode_backdrop_description": "李宪在天兵校场准备处决林叶，王主簿急忙劝阻并提及孙悟空曾托付照顾林叶，但李宪仗势欺人坚持行刑",
-      "backdrop_script_content": "2—1场景：日，外，天兵校场\n人物：李宪，王主簿，林叶，天兵们\n\n△李宪眉头紧皱，满脸不悦。\n\n李宪（愤怒，转身）：是谁？好大的狗胆，敢阻拦我做事？\n\n△王主簿气喘吁吁地从人群中冲出来，帽子都跑歪了，扑通一声跪在李宪面前。\n\n王主簿（惊恐，擦汗）：小天王，小天王息怒！这林叶……这人动不得啊！\n\n△画面闪回。"
+      "character_id": "C1",
+      "character_name": "孙悟空",
+      "character_background": "中国，男性，猴王，斗战胜佛，因巨灵神激怒而爆发雷霆之怒，金箍棒贯穿三界，火眼金睛燃烧，性格狂暴威严",
+      "character_appearance_prompt": "中国，男性，猴王面容，金毛倒竖，火眼金睛喷吐实质烈焰，面容扭曲狰狞，牙齿紧咬，指节发白，浑身散发狂暴威压",
+      "character_style_prompt": "中国，约30岁，男性，锁子黄金甲上衣，虎皮战裙下装，脚穿藕丝步云履，头戴凤翅紫金冠配饰，披红披风，双手紧握金箍棒，周身雷霆环绕"
     },
     {
-      "episode_backdrop": ["B7"],
-      "backdrop_related_characters": ["C11", "C27"],
-      "backdrop_related_creatures": [],
-      "backdrop_related_props": ["P46"],
-      "episode_backdrop_description": "王主簿回忆孙悟空到天军征兵处托付照顾林叶，孙悟空警告若林叶出事将不留情面",
-      "backdrop_script_content": "2—2场景：日，内，天军征兵处\n人物：王主簿，孙悟空\n\n△王主簿正趴在案桌上打瞌睡，口水流了一地。\n△忽然，一道金光闪过，王主簿猛然惊醒。\n△孙悟空身披金甲，肩扛金箍棒，威风凛凛地站在案前，一双火眼金睛盯着王主簿。\n\n王主簿（震惊，连忙滚下椅子跪拜）：大……大圣？大圣来此，不知有何要事？\n\n孙悟空（漫不经心，挠了挠手背）：俺老孙听说，有个叫林叶的小家伙刚刚加入了天军。他和俺老孙有旧，你们要好生照顾，莫要让他受了委屈。\n\n王主簿（震惊，瞪大眼睛）：林叶？那个刚刚飞升的毛头小子，竟然和大圣有旧？\n\n孙悟空（将金箍棒往地上一顿，地面震颤）：若是那小子出了什么事情，别怪俺老孙的棒子不留情面！\n\n△画面切回现实。"
+      "character_id": "C2",
+      "character_name": "众仙",
+      "character_background": "中国，多年龄，多性别，天庭神仙群体，包括杨戬、哪吒及众天兵，在孙悟空威压下运法力站稳，震惊劝阻",
+      "character_appearance_prompt": "中国，多年龄，多性别，天庭神仙面容各异，杨戬三眼威严，哪吒少年英气，天兵盔甲整齐，表情震惊紧张，法力护体光晕",
+      "character_style_prompt": "中国，多年龄，多性别，天庭官服铠甲多样，杨戬银甲三尖刀，哪吒红绫乾坤圈，天兵制式盔甲，各持法器，在狂风中努力站稳"
     },
     {
-      "episode_backdrop": ["B43"],
-      "backdrop_related_characters": ["C6", "C11", "C23"],
-      "backdrop_related_creatures": [],
-      "backdrop_related_props": [],
-      "episode_backdrop_description": "李宪无视王主簿劝阻，坚持要斩首林叶，林叶愤怒揭露李宪才是真正贪墨者，李宪嚣张承认并强调自己权势",
-      "backdrop_script_content": "2—3场景：日，外，天兵校场\n人物：李宪，王主簿，林叶\n\n王主簿（颤抖，磕头）：小天王，若是动了林叶，恐怕会惹出滔天大祸啊！\n\n李宪（愤怒，指着自己鼻子）：你以为我是谁？我是李天王之子！这天兵天将中，难道还能有我动不得的人物！\n\n王主簿（急切）：可是……\n\n李宪（暴怒，一脚踢翻王主簿）：住口！再敢多言，连你一并处死！\n\n△王主簿吓得瑟瑟发抖，不敢再言。\n△李宪转身，愤怒地指着被按在地上的林叶。\n\n李宪（面目狰狞）：还愣着干什么？把这个家伙给我斩首示众！让人知道，在天军中贪墨，是什么下场！\n\n林叶（怒视李宪，奋力挣扎）：岂是我林叶贪墨？这天军上下，任谁都知道，真正贪墨的人，是你李宪！你不过是拿我来顶罪！\n\n李宪（冷笑，蹲下身拍了拍林叶的脸）：是我贪墨又如何？你不过是个下界飞升的泥腿子，没背景没靠山。我说你有罪，那你就是有罪！在这校场之上，我的话就是天规！\n​"
+      "character_id": "C3",
+      "character_name": "太上老君",
+      "character_background": "中国，男性，老年，兜率宫主人，炼丹大师，天庭震动中扶住炼丹炉，无奈叹息孙悟空惹事",
+      "character_appearance_prompt": "中国，男性，老年，白发长须，道骨仙风，面容慈祥无奈，眉头微皱，手持拂尘，仙气缭绕",
+      "character_style_prompt": "中国，老年，男性，八卦道袍上衣，宽大袖摆，下穿云纹长裤，脚穿布鞋，腰挂葫芦配饰，在摇晃宫殿中稳守丹炉"
+    },
+    {
+      "character_id": "C4",
+      "character_name": "玉皇大帝",
+      "character_background": "中国，男性，中年，天庭至尊，凌霄宝殿主宰，感受天宫震颤，对孙悟空行为不悦皱眉",
+      "character_appearance_prompt": "中国，男性，中年，帝王威严面容，头戴冕旒，眼神不悦，眉头紧皱，表情沉肃，天庭之主气度",
+      "character_style_prompt": "中国，中年，男性，九龙皇袍上衣，十二章纹饰，下穿龙纹长裙，脚穿金丝靴，端坐宝座，冠冕流苏晃动，彰显天帝威严"
+    },
+    {
+      "character_id": "C5",
+      "character_name": "如来佛祖",
+      "character背景": "中国，男性，佛祖，西方灵山主宰，讲经时感知东方变故，慈悲叹息孙悟空惹祸",
+      "character_appearance_prompt": "中国，男性，佛祖面容，庄严慈悲，肉髻螺发，耳垂及肩，眼神深邃叹息，周身佛光普照，表情悲悯",
+      "character_style_prompt": "中国，约40岁，男性，金色袈裟上衣，赤足盘坐莲台，手持念珠配饰，讲经法相庄严，佛光环绕灵山"
+    },
+    {
+      "character_id": "C6",
+      "character_name": "东海龙王",
+      "character_background": "中国，男性，老年，东海主宰，龙宫因金箍棒引发海啸惊慌，扶冠担忧孙悟空惹事",
+      "character_appearance_prompt": "中国，男性，老年，龙首人身，龙角峥嵘，龙须飘动，面容惊慌，扶住王冠，眼神担忧，龙族威严",
+      "character_style_prompt": "中国，老年，男性，龙王朝服上衣，绣海浪龙纹，下穿宽大龙裤，脚穿云头靴，头戴珍珠王冠配饰，在摇晃龙宫中稳定身形"
+    },
+    {
+      "character_id": "C7",
+      "character_name": "菩提老祖",
+      "character_background": "中国，男性，老年，斜月三星洞主人，孙悟空师父，山巅观弟子练功，穿透虚空看金箍棒叹息",
+      "character_appearance_prompt": "中国，男性，老年，仙风道骨，白发白须，目光深邃穿透虚空，表情叹息轻声，道家高人风范",
+      "character_style_prompt": "中国，老年，男性，朴素道袍上衣，宽大袖袍，下穿麻布长裤，脚穿草鞋，手持拂尘配饰，山巅站立观天象变化"
+    },
+    {
+      "character_id": "C8",
+      "character_name": "巨灵神",
+      "character_background": "中国，男性，壮年，地府轮回井执行者，正投掷魂魄时被金箍棒震慑，惊恐绝望瘫软",
+      "character_appearance_prompt": "中国，男性，壮年，巨灵神将面容，身材魁梧，瞳孔缩成针尖，面色惊恐到极点，浑身僵硬颤抖，绝望表情",
+      "character_style_prompt": "中国，壮年，男性，神将盔甲上衣，厚重肩甲，下穿战裙护腿，保持投掷姿势僵立，在金箍棒威压下双腿发软"
+    },
+    {
+      "character_id": "C9",
+      "character_name": "阎罗王",
+      "character_background": "中国，男性，中年，地府主宰，轮回井旁瘫坐惊恐，看着定海神针震撼",
+      "character_appearance_prompt": "中国，男性，中年，阎王威严面容，此刻惊恐瘫坐，眼神震撼看着金箍棒，表情恐惧，地府之主气度受损",
+      "character_style_prompt": "中国，中年，男性，阎王朝服上衣，黑色官袍，下穿宽大官裤，头戴判官帽配饰，瘫坐地面仰视金箍棒"
+    },
+    {
+      "character_id": "C10",
+      "character_name": "鬼差",
+      "character_background": "中国，多年龄，多性别，地府差役群体，被金箍棒气浪掀飞，惊慌失措",
+      "character_appearance_prompt": "中国，多年龄，多性别，鬼差青面獠牙或正常鬼吏面容，表情惊恐，被气浪冲击飞起，混乱不堪",
+      "character_style_prompt": "中国，多年龄，多性别，地府差役制服，黑色差服，手持锁链刑具，在狂暴气浪中东倒西歪掀飞"
     }
-  ]
-}
-2026-02-09 15:57:24,895 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
-2026-02-09 15:57:24,898 [INFO] {
-  "episode_id": "EP2",
-  "episode_description": "李宪在天兵校场诬陷林叶贪墨并准备斩首，王主簿劝阻无效，闪回显示孙悟空曾托付王主簿照顾林叶，但李宪仗势欺人坚持行刑",
-  "episode_backdrops_sequence": [
+  ],
+  "backdrops": [
     {
-      "episode_backdrop": ["B75"],
-      "backdrop_related_characters": ["C6", "C11", "C23", "C49"],
-      "backdrop_related_creatures": [],
-      "backdrop_related_props": [],
-      "episode_backdrop_description": "李宪在天兵校场准备处决林叶，王主簿匆忙赶来劝阻，李宪愤怒质问谁敢阻拦",
-      "backdrop_script_content": "2—1场景：日，外，天兵校场\n人物：李宪，王主簿，林叶，天兵们\n\n△李宪眉头紧皱，满脸不悦。\n李宪（愤怒，转身）：是谁？好大的狗胆，敢阻拦我做事？\n△王主簿气喘吁吁地从人群中冲出来，帽子都跑歪了，扑通一声跪在李宪面前。\n王主簿（惊恐，擦汗）：小天王，小天王息怒！这林叶……这人动不得啊！\n△画面闪回。"
+      "backdrop_id": "B1",
+      "backdrop_name": "30—1场景：日，外，天庭雷部废墟",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：天庭雷部废墟，日间外景，破碎的云层地板，崩碎的宫殿残骸，风云变色天空，狂风席卷废墟，雷霆隐隐，毁灭气息弥漫，天庭威严受损景象"
     },
     {
-      "episode_backdrop": ["B7"],
-      "backdrop_related_characters": ["C11", "C27"],
-      "backdrop_related_creatures": [],
-      "backdrop_related_props": ["P46"],
-      "episode_backdrop_description": "闪回天军征兵处，孙悟空现身警告王主簿要照顾好林叶，否则金箍棒不留情面",
-      "backdrop_script_content": "2—2场景：日，内，天军征兵处\n人物：王主簿，孙悟空\n\n△王主簿正趴在案桌上打瞌睡，口水流了一地。\n△忽然，一道金光闪过，王主簿猛然惊醒。\n△孙悟空身披金甲，肩扛金箍棒，威风凛凛地站在案前，一双火眼金睛盯着王主簿。\n王主簿（震惊，连忙滚下椅子跪拜）：大……大圣？大圣来此，不知有何要事？\n孙悟空（漫不经心，挠了挠手背）：俺老孙听说，有个叫林叶的小家伙刚刚加入了天军。他和俺老孙有旧，你们要好生照顾，莫要让他受了委屈。\n王主簿（震惊，瞪大眼睛）：林叶？那个刚刚飞升的毛头小子，竟然和大圣有旧？\n孙悟空（将金箍棒往地上一顿，地面震颤）：若是那小子出了什么事情，别怪俺老孙的棒子不留情面！\n△画面切回现实。"
+      "backdrop_id": "B2",
+      "backdrop_name": "30—2场景：蒙太奇快剪（各界反应）",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：蒙太奇快速剪辑场景，包含兜率宫炼丹炉、凌霄宝殿震颤、灵山讲经台、东海龙宫摇晃、斜月三星洞山巅等多地点切换，三界震动统一氛围"
     },
     {
-      "episode_backdrop": ["B43"],
-      "backdrop_related_characters": ["C6", "C11", "C23"],
-      "backdrop_related_creatures": [],
-      "backdrop_related_props": [],
-      "episode_backdrop_description": "回到校场，李宪不顾王主簿劝阻，坚持要斩首林叶，林叶怒斥李宪才是真正贪墨之人",
-      "backdrop_script_content": "2—3场景：日，外，天兵校场\n人物：李宪，王主簿，林叶\n\n王主簿（颤抖，磕头）：小天王，若是动了林叶，恐怕会惹出滔天大祸啊！\n李宪（愤怒，指着自己鼻子）：你以为我是谁？我是李天王之子！这天兵天将中，难道还能有我动不得的人物！\n王主簿（急切）：可是……\n李宪（暴怒，一脚踢翻王主簿）：住口！再敢多言，连你一并处死！\n△王主簿吓得瑟瑟发抖，不敢再言。\n△李宪转身，愤怒地指着被按在地上的林叶。\n李宪（面目狰狞）：还愣着干什么？把这个家伙给我斩首示众！让人知道，在天军中贪墨，是什么下场！\n林叶（怒视李宪，奋力挣扎）：岂是我林叶贪墨？这天军上下，任谁都知道，真正贪墨的人，是你李宪！你不过是拿我来顶罪！\n李宪（冷笑，蹲下身拍了拍林叶的脸）：是我贪墨又如何？你不过是个下界飞升的泥腿子，没背景没靠山。我说你有罪，那你就是有罪！在这校场之上，我的话就是天规！"
+      "backdrop_id": "B3",
+      "backdrop_name": "30—3场景：暗，内，地府轮回井",
+      "backdrop_prompt": "生成场景背景视觉图，严格剔除人物及所有生物类元素，仅保留场景相关内容：地府轮回井区域，黑暗内景，穹顶崩碎碎石飞溅，金色金箍棒贯穿天地矗立井旁，气浪痕迹残留，阴森幽暗氛围，轮回井神秘光芒，地府威严被破景象"
     }
-  ]
-}
-2026-02-09 16:00:56,521 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
-2026-02-09 16:00:56,524 [INFO] {
-  "episode_id": "EP2",
-  "episode_description": "天兵校场上李宪诬陷林叶贪墨欲斩首，王主簿劝阻提及孙悟空与林叶有旧，李宪仗势欺人坚持行刑，林叶揭露李宪才是真正贪墨者",
-  "episode_backdrops_sequence": [
+  ],
+  "creatures": [],
+  "props": [
     {
-      "episode_backdrop": ["B75"],
-      "backdrop_related_characters": ["C6", "C11", "C23", "C49"],
-      "backdrop_related_creatures": [],
-      "backdrop_related_props": [],
-      "episode_backdrop_description": "天兵校场上李宪愤怒质问谁敢阻拦，王主簿冲出来劝阻李宪不要动林叶，引发闪回回忆",
-      "backdrop_script_content": "2—1场景：日，外，天兵校场\n人物：李宪，王主簿，林叶，天兵们\n\n△李宪眉头紧皱，满脸不悦。\n\n李宪（愤怒，转身）：是谁？好大的狗胆，敢阻拦我做事？\n\n△王主簿气喘吁吁地从人群中冲出来，帽子都跑歪了，扑通一声跪在李宪面前。\n\n王主簿（惊恐，擦汗）：小天王，小天王息怒！这林叶……这人动不得啊！\n\n△画面闪回。"
+      "prop_id": "P1",
+      "prop_name": "金箍棒",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：孙悟空金箍棒，可变化擎天巨柱，金色柱身，刻有龙纹符文，两端金箍，散发恐怖热量雷霆，定海神针威压，毁灭气势磅礴"
     },
     {
-      "episode_backdrop": ["B7"],
-      "backdrop_related_characters": ["C11", "C27"],
-      "backdrop_related_creatures": [],
-      "backdrop_related_props": ["P46"],
-      "episode_backdrop_description": "天军征兵处闪回，孙悟空现身警告王主簿要好生照顾林叶，否则金箍棒不留情面",
-      "backdrop_script_content": "2—2场景：日，内，天军征兵处\n人物：王主簿，孙悟空\n\n△王主簿正趴在案桌上打瞌睡，口水流了一地。\n△忽然，一道金光闪过，王主簿猛然惊醒。\n△孙悟空身披金甲，肩扛金箍棒，威风凛凛地站在案前，一双火眼金睛盯着王主簿。\n\n王主簿（震惊，连忙滚下椅子跪拜）：大……大圣？大圣来此，不知有何要事？\n\n孙悟空（漫不经心，挠了挠手背）：俺老孙听说，有个叫林叶的小家伙刚刚加入了天军。他和俺老孙有旧，你们要好生照顾，莫要让他受了委屈。\n\n王主簿（震惊，瞪大眼睛）：林叶？那个刚刚飞升的毛头小子，竟然和大圣有旧？\n\n孙悟空（将金箍棒往地上一顿，地面震颤）：若是那小子出了什么事情，别怪俺老孙的棒子不留情面！\n\n△画面切回现实。"
-    },
-    {
-      "episode_backdrop": ["B43"],
-      "backdrop_related_characters": ["C6", "C11", "C23"],
-      "backdrop_related_creatures": [],
-      "backdrop_related_props": [],
-      "episode_backdrop_description": "回到天兵校场，李宪仗势欺人坚持要斩首林叶，林叶愤怒揭露李宪才是真正贪墨者",
-      "backdrop_script_content": "2—3场景：日，外，天兵校场\n人物：李宪，王主簿，林叶\n\n王主簿（颤抖，磕头）：小天王，若是动了林叶，恐怕会惹出滔天大祸啊！\n\n李宪（愤怒，指着自己鼻子）：你以为我是谁？我是李天王之子！这天兵天将中，难道还能有我动不得的人物！\n\n王主簿（急切）：可是……\n\n李宪（暴怒，一脚踢翻王主簿）：住口！再敢多言，连你一并处死！\n\n△王主簿吓得瑟瑟发抖，不敢再言。\n△李宪转身，愤怒地指着被按在地上的林叶。\n\n李宪（面目狰狞）：还愣着干什么？把这个家伙给我斩首示众！让人知道，在天军中贪墨，是什么下场！\n\n林叶（怒视李宪，奋力挣扎）：岂是我林叶贪墨？这天军上下，任谁都知道，真正贪墨的人，是你李宪！你不过是拿我来顶罪！\n\n李宪（冷笑，蹲下身拍了拍林叶的脸）：是我贪墨又如何？你不过是个下界飞升的泥腿子，没背景没靠山。我说你有罪，那你就是有罪！在这校场之上，我的话就是天规！"
+      "prop_id": "P2",
+      "prop_name": "炼丹炉",
+      "prop_prompt": "纯白色背景，独立生成道具视觉图，无多余元素：太上老君炼丹炉，青铜材质，三足鼎立，炉身八卦图案，炉火旺盛，炉盖精致，仙家法器，在震动中炉火四溅"
     }
   ]
 }
