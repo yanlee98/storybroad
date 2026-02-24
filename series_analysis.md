@@ -99,6 +99,7 @@ def find_all_scenes(episode_content, 映射表):
 
 # 重要说明：
 # - 必须在整个 episode_content 中搜索，不是在已切分的 backdrop_script_content 中
+# - **边界**：搜索范围包含剧本开头——若 episode_content 第一行/开头就是场景名（如「3—1场景：日，外，天兵校场」），该位置（位置 0）也必须被匹配并加入 matched_scenes，不得遗漏
 # - 匹配必须是完整的字符串匹配，不能部分匹配
 # - "2—1场景：日，外，天兵校场" 可以匹配，但 "2—1场景：日" 不能匹配
 # - **关键**：如果同一个场景名在 episode_content 中出现多次，必须找出所有出现位置
@@ -116,6 +117,7 @@ def find_all_scenes(episode_content, 映射表):
 
 **严格约束**：
 - ✅ 必须在整个 episode_content 中搜索，不是在切分后的内容中搜索
+- ✅ **边界**：剧本开头若是场景名（如第一行即为「X—X场景：…」），也必须匹配并计入 matched_scenes，该场景的 episode_backdrop 不得为空
 - ✅ 场景名称必须作为完整子串出现
 - ✅ 字符必须逐个相等（包括空格、标点、特殊字符）
 - ✅ **关键**：如果同一个场景名在 episode_content 中出现多次，必须找出所有出现位置，生成多个独立的场景
@@ -181,6 +183,7 @@ def split_scenes(episode_content, matched_scenes):
 
 2. **生成 backdrop_script_content**：
    - 直接使用切分后的文本内容
+   - **backdrop_script_content 必须以场景名称开头**（如「55—1场景：日，内，凌霄宝殿」），**不得包含「第X集」等剧集标题行**；若切分得到的文本开头有此类行，须去掉后再填入
    - 包含场景名称及其后续的所有内容（人物、台词、场景描述等）
    - 如果场景名称后紧跟另一个场景名称，则内容很短（只有场景标识）
 
@@ -188,6 +191,7 @@ def split_scenes(episode_content, matched_scenes):
    - 每个场景的 `episode_backdrop` 直接使用对应位置的 `backdrop_id`
    - 格式：`["backdrop_id"]`（数组内只有1个元素）
    - **关键**：同一场景名出现多次 → 生成多个场景，使用相同的 backdrop_id
+   - **重要**：首个场景也必须正确填入对应 backdrop_id；只要该场景的 backdrop_name 在资产列表中匹配到，episode_backdrop 不得为 `[]`
 
 4. **关联元素识别**：
    - 在该场景的 `backdrop_script_content` 中识别实际出现的角色、生物、道具
@@ -216,9 +220,9 @@ def split_scenes(episode_content, matched_scenes):
       "backdrop_script_content": "场景剧本原文完整内容"
     },
     {
-      "episode_backdrop": [],
+      "episode_backdrop": ["B2"],
       "backdrop_related_characters": ["C3"],
-      "backdrop_related_creatures": [],
+      "backdrop_related_creatures": ["CR1"],
       "backdrop_related_props": ["P5"],
       "episode_backdrop_description": "场景简要描述（100字以内）",
       "backdrop_script_content": "场景剧本原文完整内容"
@@ -232,12 +236,12 @@ def split_scenes(episode_content, matched_scenes):
 - **episode_id**：当前剧集 ID（与输入一致，如 "EP1"）
 - **episode_description**：剧集简要描述（100字以内）
 - **episode_backdrops_sequence**：场景序列数组，每个元素包含：
-  - **episode_backdrop**：场景 ID 数组，只能包含 0 或 1 个元素（如 `["B1"]` 或 `[]`）
+  - **episode_backdrop**：场景 ID 数组，只能包含 1 个元素（如 `["B1"]` ）
   - **backdrop_related_characters**：本场景实际出现的角色 ID 数组
   - **backdrop_related_creatures**：本场景实际出现的生物 ID 数组
   - **backdrop_related_props**：本场景实际出现的道具 ID 数组
   - **episode_backdrop_description**：场景简要描述（100字以内）
-  - **backdrop_script_content**：场景剧本原文完整内容
+  - **backdrop_script_content**：场景剧本原文完整内容，**必须以场景名称开头，不得以「第X集」开头**
 
 ---
 
@@ -265,7 +269,7 @@ def split_scenes(episode_content, matched_scenes):
    - 根据位置切分 episode_content：
      - 场景 i 的内容：从 `matched_scenes[i].pos` 到 `matched_scenes[i+1].pos` 之前
      - 最后一个场景：从最后一个位置到 episode_content 结束
-   - 每个场景的 episode_backdrop 填入对应的 `["backdrop_id"]`
+   - 每个场景的 episode_backdrop 填入对应的 `["backdrop_id"]` 。场景 ID 数组，只能包含 1 个元素（如 `["B1"]` ），坚决不能为空，因为backdrop_script_content是根据匹配的场景名称进行切分的，所以只要有backdrop_script_content则必然有对应的场景名称及场景id。
    - **重要**：如果 "2—2场景" 出现2次，matched_scenes 中有2个条目，必须生成2个独立场景
    - **严禁**：合并同名场景，跳过某些位置，或根据语义推理
 7. **场景数量验证**：
@@ -278,7 +282,7 @@ def split_scenes(episode_content, matched_scenes):
 ### 长度控制
 
 10. **episode_backdrop_description**：不超过 100 字
-11. **总输出**：不超过 32k tokens，必要时优先保证 backdrop_script_content 完整
+11. **总输出**：不超过 32k tokens，必要时优先保证 episode_backdrop 和 backdrop_script_content 完整
 
 ---
 
@@ -305,7 +309,7 @@ def split_scenes(episode_content, matched_scenes):
   - 例如：找到5个位置 → 必须输出5个场景
 - ✅ **第五步**：已根据位置切分 episode_content，生成每个场景的 backdrop_script_content
   - 场景 i：从 matched_scenes[i].pos 到 matched_scenes[i+1].pos 之前
-- ✅ **第六步**：每个场景的 episode_backdrop 已正确设置为对应位置的 backdrop_id
+- ✅ **第六步**：每个场景的 episode_backdrop 已正确设置为对应位置的 backdrop_id （最重要）
 - ✅ **示例验证1**：
   - episode_content 包含 `"3—1场景：日，外，天兵校场40—1场景：日，内，天庭凌霄宝殿6—1场景：日，外，天兵校场"`
   - 应识别出3个场景，分别对应 B74, B9, B3
@@ -524,7 +528,9 @@ matched_scenes = [
 - 第2个 B7 场景有完整内容（王主簿和孙悟空的对话）
 - **不能合并**，**不能跳过**，每个位置对应一个场景
 
-### 示例-4（字符串不匹配时返回 []）
+### 示例-4（只按资产库中的场景名搜索，不识别剧本中的其他“场景行”）
+
+**要点**：不会从剧本里“解析出场景名”再拿去对资产库。流程是：**仅用资产库里的 backdrop_name 去 episode_content 里做字符串搜索**；剧本中未被列入资产库的某行（哪怕格式像场景名）也**不会被当作场景名去匹配**，只是普通正文。
 
 **假设资产库 backdrops 包含**：
 ```json
@@ -534,40 +540,24 @@ matched_scenes = [
 ]
 ```
 
-**剧本内容**（场景名与资产库不匹配）：
+**剧本内容 episode_content**（其中「场4-1 日 外 沙漠，营地处」只是剧本里的一行字，不在资产库中，因此**从未被当作场景名去查**）：
+```
+场4-1 日 外 沙漠，营地处
+人物：沈乐、沈明远、林芳...
+△乌云如墨，闪电如利爪撕裂长空...
 
-```json
-{
-  "episode_id": "EP3",
-  "episode_description": "沙漠风暴场景",
-  "episode_backdrops_sequence": [
-    {
-      "episode_backdrop": [],
-      "backdrop_related_characters": ["C1", "C2", "C3"],
-      "backdrop_related_creatures": ["CR1"],
-      "backdrop_related_props": ["P9"],
-      "episode_backdrop_description": "龙卷风袭击沙漠营地，幸存者混乱逃生",
-      "backdrop_script_content": "场4-1 ⽇ 外 沙漠，营地处\n人物：沈乐、沈明远、林芳...\n∆乌云如墨，闪电如利爪撕裂长空..."
-    },
-    {
-      "episode_backdrop": ["B6"],
-      "backdrop_related_characters": ["C1", "C2", "C3"],
-      "backdrop_related_creatures": ["CR1"],
-      "backdrop_related_props": ["P9"],
-      "episode_backdrop_description": "沙漠风暴中，越野车队遭遇雷击和翻车事故",
-      "backdrop_script_content": "场3-2 日 外 沙漠，风暴中\n人物：沈乐、沈明远、林芳...\n【镜头语言：上帝视角俯拍..."
-    }
-  ]
-}
+场3-2 日 外 沙漠，风暴中
+人物：沈乐、沈明远、林芳...
+【镜头语言：上帝视角俯拍...
 ```
 
-**执行流程解释**：
-1. **步骤1**：构建映射表，包含 B5: "场3-1 日 外 沙漠，探险队营地处", B6: "场3-2 日 外 沙漠，风暴中"
-2. **步骤2**：在 episode_content 中搜索：
-   - 未找到 `"场4-1 ⽇ 外 沙漠，营地处"` ❌
-   - 找到 `"场3-2 日 外 沙漠，风暴中"` ✅ → 匹配 B6
-3. **步骤3**：根据实际剧本结构切分（假设有其他场景标识）：
-   - **场景1**：包含 `"场4-1 ⽇ 外 沙漠，营地处"`，但资产库中无此场景名 → episode_backdrop: `[]`
-   - **场景2**：包含 `"场3-2 日 外 沙漠，风暴中"`，匹配到 B6 → episode_backdrop: `["B6"]`
+**执行流程**：
+1. **步骤1**：用资产库构建映射表，得到 2 个 key：仅「场3-1 日 外 沙漠，探险队营地处」和「场3-2 日 外 沙漠，风暴中」。
+2. **步骤2**：在 episode_content 中**只搜索这两个 key**：
+   - 搜索「场3-1 日 外 沙漠，探险队营地处」→ 未找到 ❌
+   - 搜索「场3-2 日 外 沙漠，风暴中」→ 找到 1 处 ✅ → 对应 B6
+3. **步骤3**：仅对上述 1 个匹配位置切分，故只生成 **1 个场景**。剧本里的「场4-1…」那一段从未被当作“场景名”参与匹配，只是落在第一段匹配内容之前的正文，不单独产出场景条目。
+
+**正确输出**：仅 1 个场景（B6 对应的那一段），此处略。
 
 ---
