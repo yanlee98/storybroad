@@ -1,0 +1,525 @@
+2026-02-24 12:33:14,914 [INFO] 找到 56 个剧集文件，开始并行分析...
+2026-02-24 12:33:14,914 [INFO] 开始分析 EP1
+2026-02-24 12:33:14,915 [INFO] 开始分析 EP10
+2026-02-24 12:33:14,915 [INFO] 开始分析 EP11
+2026-02-24 12:33:14,915 [INFO] 开始分析 EP12
+2026-02-24 12:33:14,916 [INFO] 开始分析 EP13
+2026-02-24 12:33:44,889 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:33:44,894 [INFO] ✓ EP13 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:33:44,894 [INFO] 开始分析 EP14
+2026-02-24 12:33:45,652 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:33:45,656 [INFO] ✓ EP10 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:33:45,656 [INFO] 开始分析 EP15
+2026-02-24 12:33:48,056 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:33:48,058 [INFO] ✓ EP1 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:33:48,059 [INFO] 开始分析 EP16
+2026-02-24 12:33:53,752 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:33:53,755 [INFO] ✓ EP11 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:33:53,756 [INFO] 开始分析 EP17
+2026-02-24 12:34:00,422 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:34:00,425 [INFO] ✓ EP12 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 12:34:00,426 [INFO] 开始分析 EP18
+2026-02-24 12:34:11,529 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:34:11,532 [INFO] ✓ EP15 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:34:11,533 [INFO] 开始分析 EP19
+2026-02-24 12:34:14,702 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:34:14,705 [INFO] ✓ EP14 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:34:14,705 [INFO] 开始分析 EP2
+2026-02-24 12:34:33,367 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:34:33,370 [INFO] ✓ EP16 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:34:33,370 [INFO] 开始分析 EP20
+2026-02-24 12:34:37,065 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:34:37,068 [INFO] ✓ EP17 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:34:37,068 [INFO] 开始分析 EP21
+2026-02-24 12:34:39,776 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:34:39,779 [INFO] ✓ EP18 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:34:39,779 [INFO] 开始分析 EP22
+2026-02-24 12:34:42,901 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:34:42,903 [INFO] ✓ EP19 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:34:42,904 [INFO] 开始分析 EP23
+2026-02-24 12:34:46,068 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:34:46,071 [INFO] ✓ EP2 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 12:34:46,072 [INFO] 开始分析 EP24
+2026-02-24 12:35:10,690 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:35:10,693 [INFO] ✓ EP22 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:35:10,693 [INFO] 开始分析 EP25
+2026-02-24 12:35:11,405 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:35:11,408 [INFO] ✓ EP20 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:35:11,409 [INFO] 开始分析 EP26
+2026-02-24 12:35:17,356 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:35:17,359 [INFO] ✓ EP24 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:35:17,360 [INFO] 开始分析 EP27
+2026-02-24 12:35:28,758 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:35:28,761 [INFO] ✓ EP21 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:35:28,761 [INFO] 开始分析 EP28
+2026-02-24 12:35:35,548 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:35:35,551 [INFO] ✓ EP23 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 12:35:35,552 [INFO] 开始分析 EP29
+2026-02-24 12:35:52,413 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:35:52,416 [INFO] ✓ EP27 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:35:52,416 [INFO] 开始分析 EP3
+2026-02-24 12:35:52,556 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:35:52,559 [INFO] ✓ EP26 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 12:35:52,559 [INFO] 开始分析 EP30
+2026-02-24 12:35:57,782 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:35:57,785 [INFO] ✓ EP25 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 12:35:57,785 [INFO] 开始分析 EP31
+2026-02-24 12:36:05,337 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:36:05,340 [INFO] ✓ EP29 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 12:36:05,340 [INFO] 开始分析 EP32
+2026-02-24 12:36:07,175 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:36:07,177 [INFO] ✓ EP28 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 12:36:07,178 [INFO] 开始分析 EP33
+2026-02-24 12:36:32,775 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:36:32,778 [INFO] ✓ EP3 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 12:36:32,778 [INFO] 开始分析 EP34
+2026-02-24 12:36:36,892 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:36:36,896 [INFO] ✓ EP30 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 12:36:36,896 [INFO] 开始分析 EP35
+2026-02-24 12:36:39,424 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:36:39,427 [INFO] ✓ EP31 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 12:36:39,427 [INFO] 开始分析 EP36
+2026-02-24 12:36:40,822 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:36:40,825 [INFO] ✓ EP32 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:36:40,825 [INFO] 开始分析 EP37
+2026-02-24 12:36:57,770 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:36:57,773 [INFO] ✓ EP33 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 12:36:57,773 [INFO] 开始分析 EP38
+2026-02-24 12:37:02,723 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:37:02,725 [INFO] ✓ EP34 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:37:02,725 [INFO] 开始分析 EP39
+2026-02-24 12:37:05,792 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:37:05,795 [INFO] ✓ EP35 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:37:05,795 [INFO] 开始分析 EP4
+2026-02-24 12:37:06,378 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:37:06,381 [INFO] ✓ EP36 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:37:06,381 [INFO] 开始分析 EP40
+2026-02-24 12:37:19,963 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:37:19,966 [INFO] ✓ EP37 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 12:37:19,967 [INFO] 开始分析 EP41
+2026-02-24 12:37:29,612 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:37:29,614 [INFO] ✓ EP38 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:37:29,615 [INFO] 开始分析 EP42
+2026-02-24 12:37:33,304 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:37:33,307 [INFO] ✓ EP39 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:37:33,307 [INFO] 开始分析 EP43
+2026-02-24 12:37:40,671 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:37:40,674 [INFO] ✓ EP4 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 12:37:40,674 [INFO] 开始分析 EP44
+2026-02-24 12:37:42,442 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:37:42,445 [INFO] ✓ EP40 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:37:42,445 [INFO] 开始分析 EP45
+2026-02-24 12:37:47,248 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:37:47,252 [INFO] ✓ EP41 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:37:47,252 [INFO] 开始分析 EP46
+2026-02-24 12:37:58,321 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:37:58,324 [INFO] ✓ EP42 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:37:58,324 [INFO] 开始分析 EP47
+2026-02-24 12:38:05,607 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:38:05,610 [INFO] ✓ EP43 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:38:05,610 [INFO] 开始分析 EP48
+2026-02-24 12:38:11,548 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:38:11,551 [INFO] ✓ EP44 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:38:11,552 [INFO] 开始分析 EP49
+2026-02-24 12:38:24,233 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:38:24,236 [INFO] ✓ EP45 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:38:24,237 [INFO] 开始分析 EP5
+2026-02-24 12:38:30,668 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:38:30,671 [INFO] ✓ EP47 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:38:30,672 [INFO] 开始分析 EP50
+2026-02-24 12:38:36,499 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:38:36,502 [INFO] ✓ EP46 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:38:36,502 [INFO] 开始分析 EP51
+2026-02-24 12:38:40,540 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:38:40,543 [INFO] ✓ EP48 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:38:40,544 [INFO] 开始分析 EP52
+2026-02-24 12:38:46,515 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:38:46,518 [INFO] ✓ EP49 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:38:46,518 [INFO] 开始分析 EP53
+2026-02-24 12:38:58,803 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:38:58,804 [INFO] ✓ EP5 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 12:38:58,804 [INFO] 开始分析 EP54
+2026-02-24 12:39:07,046 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:39:07,047 [INFO] ✓ EP50 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:39:07,047 [INFO] 开始分析 EP55
+2026-02-24 12:39:07,140 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:39:07,141 [INFO] ✓ EP51 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:39:07,141 [INFO] 开始分析 EP56
+2026-02-24 12:39:16,611 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:39:16,612 [INFO] ✓ EP52 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:39:16,612 [INFO] 开始分析 EP6
+2026-02-24 12:39:20,367 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:39:20,368 [INFO] ✓ EP53 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:39:20,369 [INFO] 开始分析 EP7
+2026-02-24 12:39:37,505 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:39:37,507 [INFO] ✓ EP55 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:39:37,507 [INFO] 开始分析 EP8
+2026-02-24 12:39:38,699 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:39:38,699 [INFO] ✓ EP54 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 12:39:38,699 [INFO] 开始分析 EP9
+2026-02-24 12:39:49,451 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:39:49,453 [INFO] ✓ EP56 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 12:39:55,266 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:39:55,270 [INFO] ✓ EP6 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 12:39:57,666 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:39:57,669 [INFO] ✓ EP7 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 12:40:04,647 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:40:04,651 [INFO] ✓ EP9 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 12:40:15,605 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 12:40:15,607 [INFO] ✓ EP8 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 12:40:15,607 [INFO] ============================================================
+2026-02-24 12:40:15,608 [INFO] 分析完成！
+2026-02-24 12:40:15,608 [INFO]   成功: 56/56
+2026-02-24 12:40:15,608 [INFO]   失败: 0/56
+2026-02-24 12:40:15,608 [INFO]   总空场景数: 0
+2026-02-24 12:40:15,608 [INFO] 所有剧集场景ID都已正确匹配！
+2026-02-24 13:58:04,682 [INFO] 找到 56 个剧集文件，开始并行分析...
+2026-02-24 13:58:04,684 [INFO] 开始分析 EP1
+2026-02-24 13:58:04,684 [INFO] 开始分析 EP10
+2026-02-24 13:58:04,684 [INFO] 开始分析 EP11
+2026-02-24 13:58:04,685 [INFO] 开始分析 EP12
+2026-02-24 13:58:04,685 [INFO] 开始分析 EP13
+2026-02-24 13:58:37,399 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 13:58:37,403 [INFO] ✓ EP1 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 13:58:37,403 [INFO] 开始分析 EP14
+2026-02-24 13:58:37,974 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 13:58:37,977 [INFO] ✓ EP13 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 13:58:37,978 [INFO] 开始分析 EP15
+2026-02-24 13:58:44,119 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 13:58:44,122 [INFO] ✓ EP11 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 13:58:44,122 [INFO] 开始分析 EP16
+2026-02-24 13:58:48,012 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 13:58:48,015 [INFO] ✓ EP10 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 13:58:48,015 [INFO] 开始分析 EP17
+2026-02-24 13:58:52,699 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 13:58:52,703 [INFO] ✓ EP12 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 13:58:52,703 [INFO] 开始分析 EP18
+2026-02-24 13:59:09,549 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 13:59:09,551 [INFO] ✓ EP14 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 13:59:09,552 [INFO] 开始分析 EP19
+2026-02-24 13:59:13,909 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 13:59:13,910 [INFO] ✓ EP15 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 13:59:13,910 [INFO] 开始分析 EP2
+2026-02-24 13:59:33,686 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 13:59:33,689 [INFO] ✓ EP16 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 13:59:33,689 [INFO] 开始分析 EP20
+2026-02-24 13:59:35,885 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 13:59:35,888 [INFO] ✓ EP18 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 13:59:35,889 [INFO] 开始分析 EP21
+2026-02-24 13:59:44,138 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 13:59:44,141 [INFO] ✓ EP19 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 13:59:44,141 [INFO] 开始分析 EP22
+2026-02-24 13:59:44,741 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 13:59:44,744 [INFO] ✓ EP17 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 13:59:44,744 [INFO] 开始分析 EP23
+2026-02-24 13:59:49,874 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 13:59:49,876 [INFO] ✓ EP2 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 13:59:49,876 [INFO] 开始分析 EP24
+2026-02-24 14:00:19,215 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:00:19,219 [INFO] ✓ EP20 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:00:19,219 [INFO] 开始分析 EP25
+2026-02-24 14:00:24,175 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:00:24,179 [INFO] ✓ EP24 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:00:24,179 [INFO] 开始分析 EP26
+2026-02-24 14:00:25,838 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:00:25,842 [INFO] ✓ EP22 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:00:25,842 [INFO] 开始分析 EP27
+2026-02-24 14:00:37,588 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:00:37,591 [INFO] ✓ EP21 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:00:37,591 [INFO] 开始分析 EP28
+2026-02-24 14:00:40,145 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:00:40,148 [INFO] ✓ EP23 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:00:40,148 [INFO] 开始分析 EP29
+2026-02-24 14:01:01,391 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:01:01,392 [INFO] ✓ EP27 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:01:01,393 [INFO] 开始分析 EP3
+2026-02-24 14:01:05,386 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:01:05,388 [INFO] ✓ EP26 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:01:05,388 [INFO] 开始分析 EP30
+2026-02-24 14:01:06,059 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:01:06,059 [INFO] ✓ EP25 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:01:06,060 [INFO] 开始分析 EP31
+2026-02-24 14:01:12,671 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:01:12,675 [INFO] ✓ EP29 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:01:12,676 [INFO] 开始分析 EP32
+2026-02-24 14:01:20,176 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:01:20,177 [INFO] ✓ EP28 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:01:20,177 [INFO] 开始分析 EP33
+2026-02-24 14:01:41,118 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:01:41,121 [INFO] ✓ EP3 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 14:01:41,122 [INFO] 开始分析 EP34
+2026-02-24 14:01:47,978 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:01:47,981 [INFO] ✓ EP31 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 14:01:47,981 [INFO] 开始分析 EP35
+2026-02-24 14:01:49,166 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:01:49,167 [INFO] ✓ EP32 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:01:49,167 [INFO] 开始分析 EP36
+2026-02-24 14:01:52,517 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:01:52,518 [INFO] ✓ EP30 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 14:01:52,518 [INFO] 开始分析 EP37
+2026-02-24 14:02:10,432 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:02:10,435 [INFO] ✓ EP33 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 14:02:10,435 [INFO] 开始分析 EP38
+2026-02-24 14:02:19,463 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:02:19,466 [INFO] ✓ EP34 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:02:19,466 [INFO] 开始分析 EP39
+2026-02-24 14:02:20,781 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:02:20,782 [INFO] ✓ EP35 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:02:20,782 [INFO] 开始分析 EP4
+2026-02-24 14:02:21,547 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:02:21,548 [INFO] ✓ EP36 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:02:21,548 [INFO] 开始分析 EP40
+2026-02-24 14:02:35,135 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:02:35,137 [INFO] ✓ EP37 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:02:35,137 [INFO] 开始分析 EP41
+2026-02-24 14:02:48,237 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:02:48,238 [INFO] ✓ EP38 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:02:48,238 [INFO] 开始分析 EP42
+2026-02-24 14:02:56,539 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:02:56,540 [INFO] ✓ EP4 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:02:56,540 [INFO] 开始分析 EP43
+2026-02-24 14:02:57,557 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:02:57,560 [INFO] ✓ EP39 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:02:57,560 [INFO] 开始分析 EP44
+2026-02-24 14:03:00,325 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:03:00,328 [INFO] ✓ EP40 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:03:00,328 [INFO] 开始分析 EP45
+2026-02-24 14:03:10,974 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:03:10,977 [INFO] ✓ EP41 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:03:10,977 [INFO] 开始分析 EP46
+2026-02-24 14:03:21,931 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:03:21,934 [INFO] ✓ EP42 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:03:21,935 [INFO] 开始分析 EP47
+2026-02-24 14:03:30,119 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:03:30,120 [INFO] ✓ EP43 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:03:30,121 [INFO] 开始分析 EP48
+2026-02-24 14:03:33,374 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:03:33,377 [INFO] ✓ EP44 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:03:33,377 [INFO] 开始分析 EP49
+2026-02-24 14:03:39,546 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:03:39,549 [INFO] ✓ EP45 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:03:39,549 [INFO] 开始分析 EP5
+2026-02-24 14:03:56,673 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:03:56,676 [INFO] ✓ EP47 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:03:56,676 [INFO] 开始分析 EP50
+2026-02-24 14:04:03,477 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:04:03,478 [INFO] ✓ EP46 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:04:03,478 [INFO] 开始分析 EP51
+2026-02-24 14:04:06,976 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:04:06,979 [INFO] ✓ EP48 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:04:06,979 [INFO] 开始分析 EP52
+2026-02-24 14:04:10,898 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:04:10,899 [INFO] ✓ EP49 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:04:10,900 [INFO] 开始分析 EP53
+2026-02-24 14:04:14,802 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:04:14,803 [INFO] ✓ EP5 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:04:14,803 [INFO] 开始分析 EP54
+2026-02-24 14:04:35,879 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:04:35,880 [INFO] ✓ EP50 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:04:35,880 [INFO] 开始分析 EP55
+2026-02-24 14:04:36,012 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:04:36,014 [INFO] ✓ EP51 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:04:36,014 [INFO] 开始分析 EP56
+2026-02-24 14:04:43,236 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:04:43,238 [INFO] ✓ EP52 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:04:43,238 [INFO] 开始分析 EP6
+2026-02-24 14:04:47,008 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:04:47,009 [INFO] ✓ EP53 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:04:47,009 [INFO] 开始分析 EP7
+2026-02-24 14:04:53,990 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:04:53,993 [INFO] ✓ EP54 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:04:53,993 [INFO] 开始分析 EP8
+2026-02-24 14:05:06,073 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:05:06,076 [INFO] ✓ EP55 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:05:06,076 [INFO] 开始分析 EP9
+2026-02-24 14:05:18,699 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:05:18,702 [INFO] ✓ EP56 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:05:23,066 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:05:23,069 [INFO] ✓ EP6 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:05:23,585 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:05:23,588 [INFO] ✓ EP7 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:05:31,630 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:05:31,634 [INFO] ✓ EP8 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 14:05:35,431 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:05:35,434 [INFO] ✓ EP9 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:05:35,435 [INFO] ============================================================
+2026-02-24 14:05:35,435 [INFO] 分析完成！
+2026-02-24 14:05:35,435 [INFO]   成功: 56/56
+2026-02-24 14:05:35,435 [INFO]   失败: 0/56
+2026-02-24 14:05:35,435 [INFO]   总空场景数: 0
+2026-02-24 14:05:35,435 [INFO] 所有剧集场景ID都已正确匹配！
+2026-02-24 14:15:10,770 [INFO] 找到 56 个剧集文件，开始并行分析...
+2026-02-24 14:15:10,771 [INFO] 开始分析 EP1
+2026-02-24 14:15:10,771 [INFO] 开始分析 EP10
+2026-02-24 14:15:10,771 [INFO] 开始分析 EP11
+2026-02-24 14:15:10,772 [INFO] 开始分析 EP12
+2026-02-24 14:15:10,773 [INFO] 开始分析 EP13
+2026-02-24 14:15:41,477 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:15:41,481 [INFO] ✓ EP13 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:15:41,481 [INFO] 开始分析 EP14
+2026-02-24 14:15:44,754 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:15:44,757 [INFO] ✓ EP10 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:15:44,758 [INFO] 开始分析 EP15
+2026-02-24 14:15:45,367 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:15:45,369 [INFO] ✓ EP1 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:15:45,369 [INFO] 开始分析 EP16
+2026-02-24 14:15:56,841 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:15:56,844 [INFO] ✓ EP11 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:15:56,844 [INFO] 开始分析 EP17
+2026-02-24 14:15:57,422 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:15:57,426 [INFO] ✓ EP12 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 14:15:57,426 [INFO] 开始分析 EP18
+2026-02-24 14:16:16,366 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:16:16,369 [INFO] ✓ EP14 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:16:16,369 [INFO] 开始分析 EP19
+2026-02-24 14:16:20,688 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:16:20,691 [INFO] ✓ EP15 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:16:20,691 [INFO] 开始分析 EP2
+2026-02-24 14:16:35,227 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:16:35,228 [INFO] ✓ EP16 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:16:35,228 [INFO] 开始分析 EP20
+2026-02-24 14:16:37,196 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:16:37,199 [INFO] ✓ EP17 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:16:37,199 [INFO] 开始分析 EP21
+2026-02-24 14:16:38,119 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:16:38,123 [INFO] ✓ EP18 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:16:38,123 [INFO] 开始分析 EP22
+2026-02-24 14:16:51,037 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:16:51,040 [INFO] ✓ EP19 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:16:51,041 [INFO] 开始分析 EP23
+2026-02-24 14:16:59,615 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:16:59,618 [INFO] ✓ EP2 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 14:16:59,618 [INFO] 开始分析 EP24
+2026-02-24 14:17:15,581 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:17:15,584 [INFO] ✓ EP22 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:17:15,584 [INFO] 开始分析 EP25
+2026-02-24 14:17:17,291 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:17:17,294 [INFO] ✓ EP20 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:17:17,294 [INFO] 开始分析 EP26
+2026-02-24 14:17:28,257 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:17:28,260 [INFO] ✓ EP21 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:17:28,260 [INFO] 开始分析 EP27
+2026-02-24 14:17:33,091 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:17:33,096 [INFO] ✓ EP24 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:17:33,096 [INFO] 开始分析 EP28
+2026-02-24 14:17:46,121 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:17:46,124 [INFO] ✓ EP23 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:17:46,124 [INFO] 开始分析 EP29
+2026-02-24 14:17:58,195 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:17:58,198 [INFO] ✓ EP26 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:17:58,198 [INFO] 开始分析 EP3
+2026-02-24 14:18:01,898 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:18:01,900 [INFO] ✓ EP27 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:18:01,901 [INFO] 开始分析 EP30
+2026-02-24 14:18:03,058 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:18:03,061 [INFO] ✓ EP25 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:18:03,061 [INFO] 开始分析 EP31
+2026-02-24 14:18:16,410 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:18:16,413 [INFO] ✓ EP28 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:18:16,414 [INFO] 开始分析 EP32
+2026-02-24 14:18:23,063 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:18:23,066 [INFO] ✓ EP29 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:18:23,067 [INFO] 开始分析 EP33
+2026-02-24 14:18:39,445 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:18:39,448 [INFO] ✓ EP3 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 14:18:39,448 [INFO] 开始分析 EP34
+2026-02-24 14:18:45,397 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:18:45,401 [INFO] ✓ EP31 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 14:18:45,401 [INFO] 开始分析 EP35
+2026-02-24 14:18:47,240 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:18:47,243 [INFO] ✓ EP30 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 14:18:47,243 [INFO] 开始分析 EP36
+2026-02-24 14:18:58,107 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:18:58,110 [INFO] ✓ EP32 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:18:58,111 [INFO] 开始分析 EP37
+2026-02-24 14:19:13,604 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:19:13,606 [INFO] ✓ EP33 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 14:19:13,607 [INFO] 开始分析 EP38
+2026-02-24 14:19:15,370 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:19:15,372 [INFO] ✓ EP34 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:19:15,372 [INFO] 开始分析 EP39
+2026-02-24 14:19:19,064 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:19:19,067 [INFO] ✓ EP36 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:19:19,067 [INFO] 开始分析 EP4
+2026-02-24 14:19:21,124 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:19:21,127 [INFO] ✓ EP35 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:19:21,127 [INFO] 开始分析 EP40
+2026-02-24 14:19:38,227 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:19:38,230 [INFO] ✓ EP37 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:19:38,230 [INFO] 开始分析 EP41
+2026-02-24 14:19:47,799 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:19:47,802 [INFO] ✓ EP38 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:19:47,802 [INFO] 开始分析 EP42
+2026-02-24 14:19:49,064 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:19:49,068 [INFO] ✓ EP39 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:19:49,068 [INFO] 开始分析 EP43
+2026-02-24 14:19:57,286 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:19:57,288 [INFO] ✓ EP40 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:19:57,288 [INFO] 开始分析 EP44
+2026-02-24 14:19:58,719 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:19:58,722 [INFO] ✓ EP4 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:19:58,722 [INFO] 开始分析 EP45
+2026-02-24 14:20:05,703 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:20:05,707 [INFO] ✓ EP41 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:20:05,707 [INFO] 开始分析 EP46
+2026-02-24 14:20:20,036 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:20:20,039 [INFO] ✓ EP42 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:20:20,039 [INFO] 开始分析 EP47
+2026-02-24 14:20:26,430 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:20:26,433 [INFO] ✓ EP43 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:20:26,434 [INFO] 开始分析 EP48
+2026-02-24 14:20:31,788 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:20:31,792 [INFO] ✓ EP44 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:20:31,792 [INFO] 开始分析 EP49
+2026-02-24 14:20:37,920 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:20:37,923 [INFO] ✓ EP45 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:20:37,923 [INFO] 开始分析 EP5
+2026-02-24 14:20:54,077 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:20:54,080 [INFO] ✓ EP47 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:20:54,080 [INFO] 开始分析 EP50
+2026-02-24 14:20:57,934 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:20:57,937 [INFO] ✓ EP46 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:20:57,937 [INFO] 开始分析 EP51
+2026-02-24 14:21:05,418 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:21:05,421 [INFO] ✓ EP48 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:21:05,421 [INFO] 开始分析 EP52
+2026-02-24 14:21:10,491 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:21:10,494 [INFO] ✓ EP49 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:21:10,494 [INFO] 开始分析 EP53
+2026-02-24 14:21:17,322 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:21:17,325 [INFO] ✓ EP5 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:21:17,325 [INFO] 开始分析 EP54
+2026-02-24 14:21:30,714 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:21:30,716 [INFO] ✓ EP50 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:21:30,716 [INFO] 开始分析 EP55
+2026-02-24 14:21:34,617 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:21:34,620 [INFO] ✓ EP51 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:21:34,621 [INFO] 开始分析 EP56
+2026-02-24 14:21:41,003 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:21:41,006 [INFO] ✓ EP52 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:21:41,006 [INFO] 开始分析 EP6
+2026-02-24 14:21:47,589 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:21:47,590 [INFO] ✓ EP53 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:21:47,591 [INFO] 开始分析 EP7
+2026-02-24 14:21:49,889 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:21:49,892 [INFO] ✓ EP54 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:21:49,892 [INFO] 开始分析 EP8
+2026-02-24 14:22:07,730 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:22:07,734 [INFO] ✓ EP55 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:22:07,734 [INFO] 开始分析 EP9
+2026-02-24 14:22:18,066 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:22:18,069 [INFO] ✓ EP56 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:22:19,280 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:22:19,283 [INFO] ✓ EP6 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:22:24,885 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:22:24,889 [INFO] ✓ EP7 分析完成 - 场景数: 2, 空场景数: 0
+2026-02-24 14:22:28,548 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:22:28,551 [INFO] ✓ EP8 分析完成 - 场景数: 3, 空场景数: 0
+2026-02-24 14:22:36,106 [INFO] HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2026-02-24 14:22:36,110 [INFO] ✓ EP9 分析完成 - 场景数: 1, 空场景数: 0
+2026-02-24 14:22:36,111 [INFO] ============================================================
+2026-02-24 14:22:36,111 [INFO] 分析完成！
+2026-02-24 14:22:36,111 [INFO]   成功: 56/56
+2026-02-24 14:22:36,111 [INFO]   失败: 0/56
+2026-02-24 14:22:36,111 [INFO]   总空场景数: 0
+2026-02-24 14:22:36,111 [INFO] 所有剧集场景ID都已正确匹配！
